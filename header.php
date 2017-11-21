@@ -1,0 +1,52 @@
+<?php ?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" media="all" href="css/style.css?ver=1.0.1"></link>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/jquery.fortune.min.js"></script>
+<script src="js/jquery.touchSwipe.min.js"></script>
+<script src="js/subprices-ccw.js?ver=1.0.3"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body class="">
+<header>
+	<!-- nav -->
+	<div class="nav-holder">
+		<nav class="navbar navbar-default">
+			  <div class="container-fluid">			  	
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">			      
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			    </div>
+
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			    <img class="logo menu-logo" src="img/mobile-menu-logo.png">
+			      <nav class="nav">
+					<div>
+						<ul>
+							<li><a href="<?php echo strtok($_SERVER["REQUEST_URI"],'?'); ?>">HOME</a></li>
+							<li><a href="">PRIZES</a></li>
+							<li><a href="">RULES</a></li>
+							<li><a href="">FAQS</a></li>
+						</ul>
+					</div>
+				</nav>
+			    </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+		</nav>
+	</div>
+	<!-- /nav -->	
+</header>
+<img class="logo small_logo" src="img/jj-logo.png">
+<main>

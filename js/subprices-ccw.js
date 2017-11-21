@@ -1,0 +1,271 @@
+jQuery(document).ready(function($) {
+
+    // CONFIGURE SPINNER ================================ 
+    var options = {
+        prices: [{
+                name: 'Fruit <br>Punch',
+                bg: '#df2626',
+                slug: 'fruit_punch'
+            },
+            {
+                name: 'Strawberry <br>Watermelon',
+                bg: '#f27e5a',
+                slug: 'str_melon'
+            },
+            {
+                name: 'Kiwi <br>Strawberry',
+                bg: '#f97799',
+                slug: 'kiwi_str'
+            },
+            {
+                name: 'Apple <br>Raspberry',
+                bg: '#d31a68',
+                slug: 'apple_ras'
+            },
+            {
+                name: 'Cherry',
+                bg: '#b92654',
+                slug: 'cherry'
+            },
+            {
+                name: 'Cranberry <br>Apple',
+                bg: '#892433',
+                slug: 'cran_apple'
+            },
+            {
+                name: 'Passion <br>Dragonfruit',
+                bg: '#9c2164',
+                slug: 'pdrfr'
+            },
+            {
+                name: 'Grape',
+                bg: '#94398b',
+                slug: 'grape'
+            },
+            {
+                name: 'Berry',
+                bg: '#477bbd',
+                slug: 'berry'
+            },
+            {
+                name: 'Grand Prize',
+                bg: '#fff',
+                slug: 'hurricane_white'
+            },
+            {
+                name: 'Tropical',
+                bg: '#138995',
+                slug: 'tropical'
+            },
+            {
+                name: 'Apple',
+                bg: '#65a521',
+                slug: 'apple'
+            },
+            {
+                name: 'White <br>Grape',
+                bg: '#9ca943',
+                slug: 'w_grape'
+            },
+            {
+                name: 'Strawberry <br>Banana',
+                bg: '#fec53d',
+                slug: 'str_ban'
+            },
+            {
+                name: 'Orange <br>Tangerine',
+                bg: '#f18a23',
+                slug: 'or_tang'
+            },
+            {
+                name: 'Peach <br>Apple',
+                bg: '#f27e5a',
+                slug: 'p_apple'
+            },
+            {
+                name: 'Mango',
+                bg: '#e5541b',
+                slug: 'mango'
+            }
+        ],
+        duration: 3500,
+        clockWise: false,
+        min_spins: 1, // The minimum number of spins 
+        max_spins: 10, // The maximum number of spins
+    };
+
+    var $r = $('.roulette').fortune(options);
+
+    var clickHandler = function() {
+        $('.spin').off('click');
+        $('.spinner span').hide();
+        //var price = Math.floor((Math.random() * 8));
+        $r.spin().done(function(price) {
+            $('.prize_info')
+                .html(function() {
+                    setTimeout(function() {
+                        $('.prize_info span').html(price.name)
+                    }, 0);
+                    setTimeout(function() {
+                        $('.prize_info span').fadeOut();
+                    }, 2000);
+                    setTimeout(function() {
+                        $('.prize_info span').html('<img src="img/bottles/' + price.slug + '.png">').fadeIn();
+                    }, 2500);
+                });
+            // $('.spinner').css('background-color', price.bg);
+            $('#prize_hurricane')
+                .attr('src', 'img/' + price.slug + '.png')
+                .css('opacity', 1);
+            // $('.spin').on('click', clickHandler);
+            $('.spinner span').show();
+        });
+    };
+    $('.spin').on('click', clickHandler);
+
+    if($('.spin_holder').hasClass('registered')) {
+        $("#roulette").swipe( {
+            swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+              // $("#test").text("You swiped " + direction + " with " + fingerCount + " fingers");
+              document.getElementById('spin_btn_1').click();
+            },
+            threshold:0,
+            fingers:'all'
+        });
+    }
+
+
+    // END OF SPINNER CONFIG ====================================
+
+    $('#register').submit(function() {
+        // Clear Form Errors
+        $('.has-error').each(function() { $(this).removeClass('has-error'); });
+        $('label[for="age"]').removeClass('red');
+        // Get form data
+        var formData = $(this).serialize();
+        // Process the form
+        $.ajax({
+            type: 'POST',
+            url: 'process.php',
+            data: formData,
+            dataType: 'json',
+            encode: true
+        }).done(function(data) {
+            console.log(data);
+
+            // if errors exist
+            if (!data.success) {
+                if (data.errors.email) {
+                    $('#email-group').addClass('has-error');
+                }
+                if (data.errors.age) {
+                    $('#age-group').addClass('has-error');
+                }
+                if (data.errors.recaptcha) {
+                    $('#recaptcha').addClass('has-error');
+                }
+            }
+            // if no errors
+            else {
+                console.log(data.safety_string);
+                // $('#register').append('<div class="alert alert-success">' + data.message + '</div>');
+                var form = '<form id="safety" action="?page=spin" method="POST"><input type="hidden" name="dsid" id="dsid" value="' + data.safety_string + '"></form>';
+                $('body').append(form);
+                $('#safety').submit();
+            }
+        });
+
+        event.preventDefault();
+    });
+
+    /********************** MEMORY MATCH ********************/
+
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+    var play = getParameterByName('play');
+    if (play == 'grape') {
+        $('.game_holder').css('background', 'url(memory-images/grape_bg.png)');
+        end_message = '“White” grapes are <br>actually green.';
+        end_fruit = 'grape';
+    }
+    if (play == 'cherry') {
+        $('.game_holder').css('background', 'url(memory-images/cherry_bg.png)');
+        end_message = 'The world record <br>for cherry pit-spitting <br>is a whopping <br>93 feet 6.5 inches.';
+        end_fruit = 'cherry';
+    }
+    if (play == 'kiwi-strawberry') {
+        $('.game_holder').css('background', 'url(memory-images/kiwi_strawberry_bg.png)');
+        end_message = 'Kiwis and strawberries<br>both have more<br>Vitamin C than oranges.';
+        end_fruit = 'kiwi_str';
+    }
+
+    function end_action(end_message_holder, end_fruit_holder) {
+        $('.memory_game_board').append($('<div class="completed_holder"> <img class="you_did_it" src="img/you_did_it.png"> <div class="ctext">You’ve completed the Memory Match Game.</div><div class="message_board"> <div class="holder"> <img class="fruit_fact_head" src="img/fruit_fact_head_'+end_fruit_holder+'.png"> <div class="fruit_fact_info">'+end_message_holder+'</div></div><div class="ghost"></div><img class="girl" src="img/girl.png"> <img class="fruit_fact" src="img/fruit_fact_'+end_fruit_holder+'.png"> </div><div class="end_ctas"><a class="play_again" href="">PLAY AGAIN <span class="glyphicon glyphicon-play" aria-hidden="true"></span></a><a class="spin_again" href="/flavordiscovery/">SPIN <span class="glyphicon glyphicon-play" aria-hidden="true"></span></a><br><a class="get_coupon_btn" href="#">GET COUPON</a></div></div>').hide().fadeIn(1000));
+    }    
+
+    $.fn.shuffle = function() {
+        var allElems = this.get(),
+            getRandom = function(max) {
+                return Math.floor(Math.random() * max);
+            },
+            shuffled = $.map(allElems, function() {
+                var random = getRandom(allElems.length),
+                    randEl = $(allElems[random]).clone(true)[0];
+                allElems.splice(random, 1);
+                return randEl;
+            });
+        this.each(function(i) {
+            $(this).replaceWith($(shuffled[i]));
+        });
+        return $(shuffled);
+    }
+
+    $('.clickme').shuffle();
+
+    $(".clickme").flip({
+        axis: 'x',
+        trigger: 'manual'
+    });
+
+    var selected_values = [];
+    var i = 0;    
+    $('.clickme').click(function() {
+
+        // If not clicked on the same card
+        if (!$(this).hasClass('selected')) {
+            i++;
+            $(this)
+                .stop()
+                .flip(true)
+                .addClass('selected');                 
+            selected_values.push($(this).attr('data-value'));
+            if(i==2) {
+                if (selected_values[1] == selected_values[0]) {
+                    $('.selected').each(function() {
+                        $(this).removeClass('clickme').removeClass('selected').addClass('solved');
+                    });
+                }
+                selected_values = [];
+            } 
+            if(i>2) {
+                $('.clickme').not(this).removeClass('selected').stop().flip(false);
+                i = 1;                
+            } 
+            if($('.clickme').length == 0) {
+                setTimeout(function() {
+                    end_action(end_message, end_fruit);
+                }, 1500);                
+            }
+        } 
+    });
+    // end_action(end_message, end_fruit);
+    
+
+});
