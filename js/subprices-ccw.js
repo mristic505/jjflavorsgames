@@ -227,7 +227,7 @@ jQuery(document).ready(function($) {
         return $(shuffled);
     }
 
-    // $('.clickme').shuffle();
+    $('.clickme').shuffle();
 
     $(".clickme").flip({
         axis: 'x',
