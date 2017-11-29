@@ -252,6 +252,11 @@ jQuery(document).ready(function($) {
                         $(this).removeClass('clickme').removeClass('selected').addClass('solved');
                     });
                 }
+                else {
+                    setTimeout(function() {
+                        $('.clickme').removeClass('selected').stop().flip(false);
+                    }, 500); 
+                }
                 selected_values = [];
             } 
             if(i>2) {
