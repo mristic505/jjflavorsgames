@@ -227,7 +227,7 @@ jQuery(document).ready(function($) {
         return $(shuffled);
     }
 
-    $('.clickme').shuffle();
+    // $('.clickme').shuffle();
 
     $(".clickme").flip({
         axis: 'x',
@@ -246,6 +246,7 @@ jQuery(document).ready(function($) {
                 .flip(true)
                 .addClass('selected');                 
             selected_values.push($(this).attr('data-value'));
+            console.log(selected_values);
             if(i==2) {
                 if (selected_values[1] == selected_values[0]) {
                     $('.selected').each(function() {
@@ -253,8 +254,9 @@ jQuery(document).ready(function($) {
                     });
                 }
                 else {
+                    $('.clickme').removeClass('selected')
                     setTimeout(function() {
-                        $('.clickme').removeClass('selected').stop().flip(false);
+                        $('.clickme').stop().flip(false);
                     }, 600); 
                 }
                 selected_values = [];
