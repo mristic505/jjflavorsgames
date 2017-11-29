@@ -255,7 +255,7 @@ jQuery(document).ready(function($) {
                 else {
                     setTimeout(function() {
                         $('.clickme').removeClass('selected').stop().flip(false);
-                    }, 500); 
+                    }, 600); 
                 }
                 selected_values = [];
             } 
