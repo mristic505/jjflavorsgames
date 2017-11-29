@@ -241,7 +241,7 @@ img {
 /*********** HEADER ***********/
 /******************************/
 .nav div ul {
-    display: table;
+    /*display: table;*/
     width: 100%;
     list-style: none;
     padding-left: 0;
@@ -250,27 +250,28 @@ img {
     margin-bottom: 0;
     font-size: 16px;
     letter-spacing: 1px;
+    text-align: center;
+    padding: 5px 0;
 }
 .nav {
     background-color: #1a5632;
     margin-top: 10px;
 }
-.nav div ul li {
-    display: table-cell;
-    text-align: center;
+@media screen and (min-width: 769px) {
+    .nav div ul li {
+        display: inline-block;
+        text-align: center;    
+        margin-right: 130px;
+    }
 }
 .nav div ul li a {
     display: block;
     color: #fff;
 }
-.nav div ul li:first-child {
-    text-align: left;
-}
 .nav div ul li:last-child {
-    text-align: right;
+    margin-right: 0;
 }
-.nav div {
-    width: 666px;
+.nav div {    
     margin:auto;
     padding: 7px 25px;
 }
@@ -370,7 +371,7 @@ footer {
     color: #1a5632;
     font-size: 24px;
     line-height: normal;
-    margin-top: 60px;
+    margin-top: 70px;
 }
 #email-group input {
     max-width: 380px;
@@ -540,7 +541,7 @@ main {
         position: absolute;
         overflow: hidden;
         width: 100%;
-        z-index: 9;
+        z-index: 99;
     }  
     .navbar-default .navbar-collapse {
         background: #fff;
@@ -781,15 +782,26 @@ main {
     background-size: 100% 100%;
     z-index: 2;
 }
+@media screen and (min-width: 769px) {
+    .how_to_play .holder {
+        position: relative;
+        bottom: 20px;
+    }
+}
 .how_to_play .instructions {
-    max-width: 310px;
+    max-width: 320px;
     font-size: 18px;
     margin: auto;
+    color: #1a5633;
+    line-height: initial;
+}
+.how_to_play h3 {
+    color: #1a5633;
 }
 .start-game-button {
     font-family: "CabritoNorExB";
     margin-top: 20px;
-    padding: 15px 58px;
+    padding: 10px 53px;
     color: #ffffff;
     background-color: #1a5632;
     border: 0;

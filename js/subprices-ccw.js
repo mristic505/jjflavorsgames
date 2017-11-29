@@ -246,7 +246,7 @@ jQuery(document).ready(function($) {
                 .flip(true)
                 .addClass('selected');                 
             selected_values.push($(this).attr('data-value'));
-            console.log(selected_values);
+            // console.log(selected_values);
             if(i==2) {
                 if (selected_values[1] == selected_values[0]) {
                     $('.selected').each(function() {
@@ -254,10 +254,15 @@ jQuery(document).ready(function($) {
                     });
                 }
                 else {
-                    $('.clickme').removeClass('selected')
-                    setTimeout(function() {
-                        $('.clickme').stop().flip(false);
-                    }, 600); 
+                    // // $('.clickme').removeClass('selected');
+                       
+                    // for(var z = 0; z < 2; z++) {
+                    //         console.log(selected_values[z]);
+                    //         // $('.clickme[data-value="'+selected_values[z]+'"]').stop().flip(false);
+                    //     setTimeout(function() {
+                    //         $('[data-value='+selected_values[z]+']').stop().flip(false);
+                    //     }, 600);     
+                    // }                 
                 }
                 selected_values = [];
             } 
