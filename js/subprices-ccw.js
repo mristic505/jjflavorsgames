@@ -271,6 +271,14 @@ jQuery(document).ready(function($) {
         } 
     });
     // end_action(end_message, end_fruit);
+
+    $('.start-game-button').click(function(){
+        $('.completed_holder').fadeOut(function(){
+            setTimeout(function() {
+                     $('.completed_holder').remove();
+                }, 1000);
+        });
+    });
     
 
 });

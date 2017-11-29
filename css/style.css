@@ -720,9 +720,10 @@ main {
 .fruit_fact_info {
     color: #1a5632;
     line-height: normal;
+    font-size: 18px;
 }
 .fruit_fact_head {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 .ghost {
     height: 100%;
@@ -733,13 +734,13 @@ main {
 }
 .girl {
     position: absolute;
-    left: 0px;
-    bottom: 0px;
+    left: -40px;
+    bottom: -30px;
 }
 .fruit_fact {
     position: absolute;
     top: 0;
-    right: 0;
+    right: -30px;
 }
 .play_again, .spin_again {
     color: #fff;
@@ -770,7 +771,34 @@ main {
     color: #fff;
     text-decoration: none;
 }
-
+.how_to_play {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(../img/mm_how_to_play_bg.png);
+    background-size: 100% 100%;
+    z-index: 2;
+}
+.how_to_play .instructions {
+    max-width: 310px;
+    font-size: 18px;
+    margin: auto;
+}
+.start-game-button {
+    font-family: "CabritoNorExB";
+    margin-top: 20px;
+    padding: 15px 58px;
+    color: #ffffff;
+    background-color: #1a5632;
+    border: 0;
+    font-size: 18px;
+    border-radius: 0;
+}
+.completed_holder {
+    z-index: 9;
+}
 @media screen and (max-width: 600px) {
     .memory_game_board {
         width: 450px;
@@ -813,6 +841,22 @@ main {
     .you_did_it {
         max-width: 300px;
         width: 80%;
+    }
+    .fruit_fact {
+        top: 50px;
+        right: 0;
+        height: 100px;
+    }
+    .girl {
+        left: 0;
+        bottom: 0;
+        height: 90px;
+    }
+    .fruit_fact_info {
+        font-size: 14px;
+    }
+    .fruit_fact_head {
+        width: 150px;
     }
 }
 
