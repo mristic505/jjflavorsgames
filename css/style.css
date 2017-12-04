@@ -870,6 +870,22 @@ main {
     .fruit_fact_head {
         width: 150px;
     }
+    .how_to_play h3 {
+        font-size: 14px;
+    }
+    .how_to_play .instructions {
+        font-size: 11px;
+        max-width: 180px;
+    }
+    .how_to_play img {
+        height: 85px;
+    }
+    .start-game-button {
+        padding: 0;
+        width: 90px;
+        height: 30px;
+        font-size: 10px;
+    }
 }
 
 @media screen and (max-width: 470px) {
