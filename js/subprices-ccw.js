@@ -227,7 +227,7 @@ jQuery(document).ready(function($) {
         return $(shuffled);
     }
 
-    $('.clickme').shuffle();
+    // $('.clickme').shuffle();
 
     $(".clickme").flip({
         axis: 'x',
@@ -250,15 +250,15 @@ jQuery(document).ready(function($) {
             if(i==2) {
                 if (selected_values[1] == selected_values[0]) {
                     $('.selected').each(function() {
-                        $(this).removeClass('clickme').removeClass('selected').addClass('solved');
+                        $(this).removeClass('clickme').removeClass('selected').delay(2000).addClass('solved');
                     });
                 }
-                else {
-                    $('.clickme').removeClass('selected')
-                    setTimeout(function() {
-                        $('.clickme').stop().flip(false);
-                    }, 600); 
-                }
+                // else {
+                //     $('.clickme').removeClass('selected')
+                //     setTimeout(function() {
+                //         $('.clickme').stop().flip(false);
+                //     }, 600); 
+                // }
                 selected_values = [];
             } 
             if(i>2) {

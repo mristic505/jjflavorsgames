@@ -671,6 +671,11 @@ main {
     -moz-transition: opacity 0.5s;
     -o-transition: opacity 0.5s;
     transition: opacity 0.5s;
+    /*delay*/
+    -webkit-transition-delay: 1s; /* Safari */
+    -moz-transition-delay: opacity 1s;
+    -o-transition-delay: opacity 1s;
+    transition-delay: 1s;
     padding: 0;
 }
 .game_holder td img {
