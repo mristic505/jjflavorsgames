@@ -19,6 +19,12 @@ if (strpos($url_string, 'page') !== false) {
     if ($page == 'memory-match') {
         include 'memory-match.php';          
     }
+    if ($page == 'pop-a-fruit') {
+        include 'pop_a_fruit.php';          
+    }
+    if ($page == 'matching-numbers') {
+        include 'matching_numbers.php';          
+    }
         
 } else {
     include 'register.php';
