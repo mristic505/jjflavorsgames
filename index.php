@@ -29,13 +29,13 @@ if (strpos($url_string, 'page') !== false) {
         include 'prize_claim_form.php';          
     }
     if ($page == 'official-rules') {
-	include 'official_rules.php';
+	    include 'official_rules.php';
     }
     if ($page == 'faq') {
-	include 'faq.php';
+	    include 'faq.php';
     }
     if ($page == 'prizes') {
-	include 'prizes.php';
+	    include 'prizes.php';
     }
         
 } else {
