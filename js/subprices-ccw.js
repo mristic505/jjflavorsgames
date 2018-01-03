@@ -198,12 +198,15 @@ jQuery(document).ready(function($) {
         // Clear Form Errors
         $('.has-error').each(function() { $(this).removeClass('has-error'); });
         $('label[for="age"]').removeClass('red');
+        $('.help-block').each(function(){
+            $(this).remove();
+        });
         // Get form data
         var formData = $(this).serialize();
         // Process the form
         $.ajax({
             type: 'POST',
-            url: 'prize_claim_form.php',
+            url: 'process_prize_claim.php',
             data: formData,
             dataType: 'json',
             encode: true
@@ -211,16 +214,44 @@ jQuery(document).ready(function($) {
             console.log(data);
 
             // if errors exist
-            if (!data.success) {
-                // if (data.errors.email) {
-                //     $('#email-group').addClass('has-error');
-                // }
-                // if (data.errors.age) {
-                //     $('#age-group').addClass('has-error');
-                // }
-                // if (data.errors.recaptcha) {
-                //     $('#recaptcha').addClass('has-error');
-                // }
+            if (!data.success) {                  
+                if (data.errors.first_name) {
+                    $('#first-name-group').addClass('has-error');
+                }  
+                if (data.errors.last_name) {
+                    $('#last-name-group').addClass('has-error');
+                } 
+                if (data.errors.email) {
+                    $('#email-group').addClass('has-error');
+                }               
+                if (data.errors.email_conf) {
+                    $('#email-conf-group').addClass('has-error');
+                }
+                if (data.errors.email_invalid) {
+                    $('#email-group').addClass('has-error').append('<div class="help-block">' + data.errors.email_invalid + '</div>');
+                }
+                if (data.errors.email_conf_invalid) {
+                    $('#email-conf-group').addClass('has-error').append('<div class="help-block">' + data.errors.email_conf_invalid + '</div>');
+                }
+                if (data.errors.email_mismatch) {
+                    $('.email-group-holder').addClass('has-error').append('<div class="help-block">' + data.errors.email_mismatch + '</div>');
+                }
+                if (data.errors.address_1) {
+                    $('#address-group').addClass('has-error');
+                }
+                if (data.errors.city) {
+                    $('#city-group').addClass('has-error');
+                }
+                if (data.errors.state) {
+                    $('#state-group').addClass('has-error');
+                }  
+                if (data.errors.zip) {
+                    $('#zip-group').addClass('has-error');
+                }  
+                if (data.errors.legal) {
+                    $('#legal-group').addClass('has-error');
+                }       
+                console.log(data.errors);
             }
             // if no errors
             else {
@@ -229,7 +260,7 @@ jQuery(document).ready(function($) {
                 // var form = '<form id="safety" action="?page=spin" method="POST"><input type="hidden" name="dsid" id="dsid" value="' + data.safety_string + '"></form>';
                 // $('body').append(form);
                 // $('#safety').submit();
-                alert(data.message);
+                console.log(data.message);
             }
         });
 
