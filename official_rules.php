@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Official Rules</title>
-</head>
-<body>
-	
+
+<style type="text/css">
+	.logo {
+		display: none;
+	}
+</style>
 <div class="officialRulesContainer">
 	
 	<div class="flavorLogoImg">
@@ -50,6 +49,3 @@
 	<p><strong>16.	ADMINISTRATOR: </strong>Epsilon Data Management, LLC, 10 Westport Rd., Wilton, CT 06897.</p>
 
 </div>
-
-</body>
-</html>
