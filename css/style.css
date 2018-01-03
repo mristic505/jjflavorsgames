@@ -1068,6 +1068,55 @@ main {
     margin: auto;
     margin-top: 30px; 
 }
+/*********** Official Rules *************/
+.officialRulesTitle{
+    color: #1a5632;
+    text-align: center;
+    font-family: CabritoNorExB;
+
+}
+.officialRulesContainer {
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: Gotham;
+}
+.flavorLogoImg {
+    max-width: 207px;
+    margin: 0 auto;
+}
+/*************** End of Official Rules  *******************/
+
+/************** FAQ *******************/
+.faqContainer {
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: Gotham;
+}    
+.faqContainer h3 {
+    font-family: CabritoNorExB;
+    font-size: 18px;
+    color: #1a5632;
+}
+.faqContainer p {
+    font-family: Gotham;
+
+}
+
+.faqContainer a {
+    text-decoration: underline;
+    color: #333333;
+
+}
+/*******  end of faq ********/
+/************* Prizes Page **************/
+.prizesContainer {
+    max-width: 450px;
+    margin: auto;
+    color: #1a5632;
+    text-align: center;
+}
+
+/*********** End of Prizes ************/
 @media screen and (min-width: 768px) {
    .form-group-holder .col-sm-6:nth-child(1) {
         padding-left: 0;
@@ -1296,3 +1345,5 @@ main {
         height: 60px;
     }
 }
+
+
