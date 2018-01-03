@@ -35,6 +35,24 @@
          url('../fonts/NexaRustScriptL0.ttf') format('truetype'),
          url('../fonts/NexaRustScriptL0.svg#NexaRustScriptL0') format('svg');
 }
+@font-face {
+    font-family: 'GothamMediumRegular';
+    src: url('../fonts/GothamMediumRegular.eot');
+    src: url('../fonts/GothamMediumRegular.eot') format('embedded-opentype'),
+         url('../fonts/GothamMediumRegular.woff2') format('woff2'),
+         url('../fonts/GothamMediumRegular.woff') format('woff'),
+         url('../fonts/GothamMediumRegular.ttf') format('truetype'),
+         url('../fonts/GothamMediumRegular.svg#GothamMediumRegular') format('svg');
+}
+@font-face {
+    font-family: 'GothamMediumItalic';
+    src: url('../fonts/GothamMediumItalic.eot');
+    src: url('../fonts/GothamMediumItalic.eot') format('embedded-opentype'),
+         url('../fonts/GothamMediumItalic.woff2') format('woff2'),
+         url('../fonts/GothamMediumItalic.woff') format('woff'),
+         url('../fonts/GothamMediumItalic.ttf') format('truetype'),
+         url('../fonts/GothamMediumItalic.svg#GothamMediumItalic') format('svg');
+}
 html {
     min-height: 100%;
 }
@@ -421,7 +439,8 @@ label[for="age"] {
     margin: auto;
 }
 
-#register input[type="submit"] {
+#register input[type="submit"],
+#prize_form input[type="submit"] {
     background-color: #65a621;
     color: #fff;
     border: none;
@@ -429,6 +448,7 @@ label[for="age"] {
     font-size: 18px;
     text-transform: uppercase;
     padding: 12px 35px;
+    height: auto;
 
 }
 .help-block {
@@ -794,7 +814,7 @@ main {
     }
 }
 .how_to_play .instructions {
-    max-width: 320px;
+    max-width: 250px;
     font-size: 18px;
     margin: auto;
     color: #1a5633;
@@ -815,6 +835,247 @@ main {
 }
 .completed_holder {
     z-index: 9;
+}
+.fruit_number {
+    border: 1px solid #347a17;
+    background: #fff;
+    margin:auto;
+}
+.numbers, .draggable_numbers {
+    padding: 15px 10px 8px;
+}
+.number_holder, .draggable_number_holder {
+    padding: 0;
+    display: inline-block;
+    margin: 5px;
+    vertical-align: top;
+}
+.draggable_number_holder {
+
+}
+.number_holder .ui-droppable {
+    border: 1px solid #459206;
+    background: #78b340;
+    margin:auto;
+}
+.draggable_number_holder .ui-draggable {
+    border: 1px solid #347a17;
+    background: #fff;
+    margin:auto;
+}
+.draggable_number_holder {
+    vertical-align: top;
+}
+.draggable_numbers {    
+    width: 52.5%;
+}
+.draggable_numbers, .numbers {
+    text-align: center;
+}
+.draggable_number_holder, 
+.dn, 
+.draggable_number_holder .ui-draggable,
+.number_holder .ui-droppable,
+.fruit_number {
+    height: 120px;
+    width: 120px;
+}
+.dn {
+    background: #fff;
+    color: #1a5632;
+    margin:0;
+    border: 1px solid #31761a;
+    font-family: 'CabritoNorExB';
+    font-size: 85px;
+}
+.fruit_number {
+    background-size: 100% !important;
+}
+.fruit_number_1 {
+    background: url(../img/number_1.png);
+}
+.fruit_number_2 {
+    background: url(../img/number_2.png);    
+}
+.fruit_number_3 {
+    background: url(../img/number_3.png);  
+}
+.fruit_number_4 {
+    background: url(../img/number_4.png);  
+}
+.fruit_number_5 {
+    background: url(../img/number_5.png);  
+}
+.fruit_number_6 {
+    background: url(../img/number_6.png); 
+}
+.fruit_number_7 {
+    background: url(../img/number_7.png); 
+}
+.fruit_number_8 {
+    background: url(../img/number_8.png); 
+}
+.ui-widget-header  {
+    border: none !important;
+}
+.draggable_numbers {
+    padding: 0px 10px;   
+}
+.bg_holder {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: #4b9a00;
+}
+.mathching_numbers_htp {
+    background: url(../img/fruit_match_bg.png);
+    background-size: 100% 100%;
+}
+.draggable_numbers, 
+.mn_bottles {
+    display: inline-block;    
+}
+.mn_bottles {
+    width: 45%;
+    top: 10px;
+    position: relative;
+}
+/************ PRIZE CLAIM ***********/
+.form_holder {
+    max-width: 698px;
+    padding: 0 15px;
+    margin: auto;
+}
+.h1_title {
+    color: #1a5632;
+    font-size: 30px;
+    text-align: center;
+}
+.pfi {
+    font-size: 14px;
+    font-family: 'GothamMediumRegular';
+    color: #1a5632;
+    margin-bottom: 10px;
+}
+.pfi span {
+    font-size: 12px;
+    font-family: 'GothamMediumItalic';
+}
+/* Customize the label (the container_2) */
+.container_2 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container_2 input {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border:1px solid #65a621;
+}
+
+/* On mouse-over, add a grey background color */
+.container_2:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container_2 input:checked ~ .checkmark {
+  background-color: #1b5632;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container_2 input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container_2 .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.checkbox_holder {
+    height: 25px;
+    position: absolute;
+}
+.checkbox_label_holder {
+    margin-left: 35px;
+}
+#prize_form input {
+    width: 100%;
+    border: 1px solid #65a621;
+    height: 30px;
+    padding-left: 5px;
+}
+#state select {
+    width: 100%;
+    height: 30px;
+    font-family: 'GothamMediumRegular';
+    
+}
+.placeholder {
+    color: #afafaf;
+}
+#prize_form label {
+    color: #1a5632;
+    font-family: 'GothamMediumRegular';
+}
+.form-group {
+    margin-bottom: 10px;
+}
+#contact_epsilon {
+    padding-top: 20px;
+}
+#prize_form input[type="submit"] {
+    width: auto;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+}
+@media screen and (min-width: 768px) {
+   .form-group-holder .col-sm-6:nth-child(1) {
+        padding-left: 0;
+    }
+    .form-group-holder .col-sm-6:nth-child(2) {
+        padding-right: 0;
+    } 
+}
+@media screen and (max-width: 767px) {
+    .form-group .col-sm-6 {
+        padding: 0;
+    }
 }
 @media screen and (max-width: 600px) {
     .memory_game_board {
@@ -891,6 +1152,20 @@ main {
         height: 30px;
         font-size: 10px;
     }
+    .draggable_number_holder, 
+    .dn, 
+    .draggable_number_holder .ui-draggable,
+    .number_holder .ui-droppable,
+    .fruit_number {
+        height: 80px;
+        width: 80px;
+    }
+    .dn {
+        font-size: 55px;
+    }  
+    .mn_bottles  {
+        top: 22px;
+    }  
 }
 
 @media screen and (max-width: 470px) {
@@ -949,6 +1224,29 @@ main {
         font-size: 25px;
         line-height: 30px;
     }
+    .numbers, .draggable_numbers {
+        padding: 5px 0px 2px;
+    }
+    .draggable_number_holder, 
+    .dn, 
+    .draggable_number_holder .ui-draggable,
+    .number_holder .ui-droppable,
+    .fruit_number {
+        height: 70px;
+        width: 70px;
+    }
+    .dn {
+        font-size: 45px;
+    }
+    .number_holder, .draggable_number_holder {
+        margin: 3px;
+    }
+    .how_to_play img {
+        height: 70px;
+    }
+    .mn_bottles  {
+        top: 3px;
+    }
 }
 
 @media screen and (max-width: 360px) {
@@ -981,5 +1279,16 @@ main {
         bottom: 15px;
         left: 15px;
         right: 15px;
+    }
+    .draggable_number_holder, 
+    .dn, 
+    .draggable_number_holder .ui-draggable,
+    .number_holder .ui-droppable,
+    .fruit_number {
+        height: 60px;
+        width: 60px;
+    }
+    .how_to_play img {
+        height: 60px;
     }
 }

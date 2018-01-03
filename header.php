@@ -1,7 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Spin The Wheel</title>
+<?php
+if (strpos($url_string, 'page') !== false) {
+    
+    $page = $_GET['page'];
+
+    if ($page == 'spin') {  
+        $page_title = 'Spin the Wheel';                  
+    }
+    if ($page == 'test') {
+                 
+    }
+    if ($page == 'memory-match') {
+               
+    }
+    if ($page == 'pop-a-fruit') {
+                
+    }
+    if ($page == 'matching-numbers') {
+		$page_title = 'Matching Numbers';                   
+    }
+    if ($page == 'prize-claim-form') {
+        $page_title = 'Prize Claim Form';          
+    }
+        
+} else {
+    include 'register.php';
+}
+?>	
+<title><?php echo $page_title; ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link type="text/css" rel="stylesheet" media="all" href="css/style.css?ver=1.0.1"></link>

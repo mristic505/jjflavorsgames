@@ -25,6 +25,9 @@ if (strpos($url_string, 'page') !== false) {
     if ($page == 'matching-numbers') {
         include 'matching_numbers.php';          
     }
+    if ($page == 'prize-claim-form') {
+        include 'prize_claim_form.php';          
+    }
         
 } else {
     include 'register.php';

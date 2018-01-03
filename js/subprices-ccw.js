@@ -100,19 +100,30 @@ jQuery(document).ready(function($) {
         $('.spin').off('click');
         $('.spinner span').hide();
         //var price = Math.floor((Math.random() * 8));
-        $r.spin().done(function(price) {
-            $('.prize_info')
-                .html(function() {
-                    setTimeout(function() {
-                        $('.prize_info span').html(price.name)
-                    }, 0);
-                    setTimeout(function() {
-                        $('.prize_info span').fadeOut();
-                    }, 2000);
-                    setTimeout(function() {
-                        $('.prize_info span').html('<img src="img/bottles/' + price.slug + '.png">').fadeIn();
-                    }, 2500);
-                });
+        $r.spin(9).done(function(price) {
+            if (price.name == "Grand Prize") {
+               
+                $('.prize_info')
+                    .html(function() {
+                        setTimeout(function() {
+                            $('.prize_info span').html('<img src="img/winner-logo.png">').fadeIn();
+                        }, 0);                        
+                    });                 
+            } else {
+                $('.prize_info')
+                    .html(function() {
+                        setTimeout(function() {
+                            $('.prize_info span').html(price.name)
+                        }, 0);
+                        setTimeout(function() {
+                            $('.prize_info span').fadeOut();
+                        }, 2000);
+                        setTimeout(function() {
+                            $('.prize_info span').html('<img src="img/bottles/' + price.slug + '.png">').fadeIn();
+                        }, 2500);
+                    });
+            }
+            // console.log(price.name);
             // $('.spinner').css('background-color', price.bg);
             $('#prize_hurricane')
                 .attr('src', 'img/' + price.slug + '.png')
@@ -136,6 +147,9 @@ jQuery(document).ready(function($) {
 
 
     // END OF SPINNER CONFIG ====================================
+
+
+    /***************** REGISTRATION FORM ******************/
 
     $('#register').submit(function() {
         // Clear Form Errors
@@ -172,6 +186,50 @@ jQuery(document).ready(function($) {
                 var form = '<form id="safety" action="?page=spin" method="POST"><input type="hidden" name="dsid" id="dsid" value="' + data.safety_string + '"></form>';
                 $('body').append(form);
                 $('#safety').submit();
+            }
+        });
+
+        event.preventDefault();
+    });
+
+    /***************** PRIZE CLAIM FORM ******************/
+
+    $('#prize_form').submit(function() {
+        // Clear Form Errors
+        $('.has-error').each(function() { $(this).removeClass('has-error'); });
+        $('label[for="age"]').removeClass('red');
+        // Get form data
+        var formData = $(this).serialize();
+        // Process the form
+        $.ajax({
+            type: 'POST',
+            url: 'prize_claim_form.php',
+            data: formData,
+            dataType: 'json',
+            encode: true
+        }).done(function(data) {
+            console.log(data);
+
+            // if errors exist
+            if (!data.success) {
+                // if (data.errors.email) {
+                //     $('#email-group').addClass('has-error');
+                // }
+                // if (data.errors.age) {
+                //     $('#age-group').addClass('has-error');
+                // }
+                // if (data.errors.recaptcha) {
+                //     $('#recaptcha').addClass('has-error');
+                // }
+            }
+            // if no errors
+            else {
+                // console.log(data.safety_string);
+                // // $('#register').append('<div class="alert alert-success">' + data.message + '</div>');
+                // var form = '<form id="safety" action="?page=spin" method="POST"><input type="hidden" name="dsid" id="dsid" value="' + data.safety_string + '"></form>';
+                // $('body').append(form);
+                // $('#safety').submit();
+                alert(data.message);
             }
         });
 
