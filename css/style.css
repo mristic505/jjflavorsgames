@@ -1078,7 +1078,7 @@ main {
 .officialRulesContainer {
     max-width: 700px;
     margin: 0 auto;
-    font-family: Gotham;
+    font-family: 'GothamMediumRegular';
 }
 .flavorLogoImg {
     max-width: 207px;
@@ -1090,7 +1090,7 @@ main {
 .faqContainer {
     max-width: 700px;
     margin: 0 auto;
-    font-family: Gotham;
+    font-family: 'GothamMediumRegular';
 }    
 .faqContainer h3 {
     font-family: CabritoNorExB;
@@ -1098,7 +1098,7 @@ main {
     color: #1a5632;
 }
 .faqContainer p {
-    font-family: Gotham;
+    font-family: 'GothamMediumRegular';
 
 }
 
