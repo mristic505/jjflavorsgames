@@ -28,6 +28,15 @@ if (strpos($url_string, 'page') !== false) {
     if ($page == 'prize-claim-form') {
         include 'prize_claim_form.php';          
     }
+    if ($page == 'official-rules') {
+	include 'official_rules.php';
+    }
+    if ($page == 'faq') {
+	include 'faq.php';
+    }
+    if ($page == 'prizes') {
+	include 'prizes.php';
+    }
         
 } else {
     include 'register.php';
