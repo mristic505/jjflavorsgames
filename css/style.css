@@ -53,6 +53,15 @@
          url('../fonts/GothamMediumItalic.ttf') format('truetype'),
          url('../fonts/GothamMediumItalic.svg#GothamMediumItalic') format('svg');
 }
+@font-face {
+    font-family: 'GothamBoldRegular';
+    src: url('../fonts/GothamBoldRegular.eot');
+    src: url('../fonts/GothamBoldRegular.eot') format('embedded-opentype'),
+         url('../fonts/GothamBoldRegular.woff2') format('woff2'),
+         url('../fonts/GothamBoldRegular.woff') format('woff'),
+         url('../fonts/GothamBoldRegular.ttf') format('truetype'),
+         url('../fonts/GothamBoldRegular.svg#GothamBoldRegular') format('svg');
+}
 html {
     min-height: 100%;
 }
@@ -1078,7 +1087,10 @@ main {
 .officialRulesContainer {
     max-width: 700px;
     margin: 0 auto;
-    font-family: Gotham;
+    font-family: 'GothamMediumRegular';
+}
+.officialRulesContainer p strong {
+    font-family: 'GothamBoldRegular';
 }
 .flavorLogoImg {
     max-width: 207px;
@@ -1090,7 +1102,7 @@ main {
 .faqContainer {
     max-width: 700px;
     margin: 0 auto;
-    font-family: Gotham;
+    font-family: 'GothamMediumRegular';
 }    
 .faqContainer h3 {
     font-family: CabritoNorExB;
@@ -1098,7 +1110,7 @@ main {
     color: #1a5632;
 }
 .faqContainer p {
-    font-family: Gotham;
+    font-family: 'GothamMediumRegular';
 
 }
 
