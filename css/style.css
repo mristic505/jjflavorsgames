@@ -945,6 +945,7 @@ main {
     max-width: 698px;
     padding: 0 15px;
     margin: auto;
+    position: relative;
 }
 .h1_title {
     color: #1a5632;
@@ -1067,6 +1068,52 @@ main {
     display: block;
     margin: auto;
     margin-top: 30px; 
+}
+.thank_you_prize_claim_text {
+    font-family: Helvetica Neue;
+}
+.thank_you_prize_claim_text span {
+    font-family: CabritoNorExB;
+}
+.spin_btn {
+    background-color: #65a621;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 12px 35px;
+    height: auto;
+}
+.spin_btn:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.girl-big {
+    margin: auto;
+    display: block;
+    width: auto;
+    max-width: 100%;
+}
+.thank_you_prize_claim {
+    position: absolute;
+    top: 0;    
+}
+#prize_form, .thank_you_prize_claim, .visible_off {
+    -webkit-transition: opacity 0.7s;
+    transition: opacity 0.7s;
+    opacity: 0;
+}
+#prize_form {
+    position: relative;
+
+}
+.visible_on {
+    opacity: 1 !important;
+    z-index: 9;
+}
+#register input[type="submit"], #prize_form input[type="submit"] {
+    border-radius: 0;
 }
 /*********** Official Rules *************/
 .officialRulesTitle{

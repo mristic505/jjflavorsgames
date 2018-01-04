@@ -5,11 +5,11 @@
 </style>
 <img class="logo logo-2" src="img/logo-2.png">
 <div class="form_holder">
-	<h1 class="h1_title">Prize Claim Form</h1>
+	<h1 class="h1_title pcf_title">Prize Claim Form</h1>
 	<div class="pfi">
 		Please provide the following information to claim your prize upon winner verification:<br><span>All fields are required unless otherwise indicated.</span>
 	</div>
-	<form id="prize_form" action="prize_claim_form.php" method="POST">
+	<form id="prize_form" class="visible_on" action="prize_claim_form.php" method="POST">
 		<div class="form-group-holder clearfix">
 			<div id="first-name-group" class="form-group col-sm-6">
 				<label>First Name</label><br>
@@ -131,19 +131,20 @@
 	</form>
 	<div class="thank_you_prize_claim clearfix">
 		<div class="col-sm-4">
-			<img src="img/girl-big.png">
+			<img class="girl-big" src="img/girl-big.png">
 		</div>
 		<div class="col-sm-8">
 			<h1 style="text-align: left;" class="h1_title">Thanks for completing the prize claim form.</h1>
 			<br>
-			<p>Once you have been verified as a winner, your prize will be shipped directly to the address provided on your prize claim form within 4–6 weeks. You will be notified in the event of a disqualification.
-			<br>
-			<br>
-			As a winner, you will not be eligible for another prize, but there is no limit to the fun you and your kids can have with the Juicy Juice Flavor Discovery Games. 
+			<p class="thank_you_prize_claim_text">Once you have been verified as a winner, your prize will be shipped directly to the address provided on your prize claim form within 4–6 weeks. You will be notified in the event of a disqualification.
+			</p>
+			<p class="thank_you_prize_claim_text">As a winner, you will not be eligible for another prize, but there is no limit to the fun you and your kids can have with the Juicy Juice Flavor Discovery Games. 
 			<br>
 			<br>
 			<span style="color:#65a621;font-size: 20px;">So keep playing and enjoying!</span>
 			</p>
+			<br>
+			<a class="spin_btn" href="?page=spin">SPIN</a>
 		</div>
 	</div>
 </div>
