@@ -260,7 +260,13 @@ jQuery(document).ready(function($) {
                 // var form = '<form id="safety" action="?page=spin" method="POST"><input type="hidden" name="dsid" id="dsid" value="' + data.safety_string + '"></form>';
                 // $('body').append(form);
                 // $('#safety').submit();
-                console.log(data.message);
+                $('.thank_you_prize_claim').addClass('visible_on');
+                $('.pcf_title, .pfi').addClass('visible_off');
+                $('#prize_form').removeClass('visible_on');
+                $('html, body').animate({
+                    scrollTop: $(".logo-2").offset().top
+                }, 500);
+
             }
         });
 
