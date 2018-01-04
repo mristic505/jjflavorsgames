@@ -64,9 +64,9 @@ if (strpos($url_string, 'page') !== false) {
 					<div>
 						<ul>
 							<li><a href="<?php echo strtok($_SERVER["REQUEST_URI"],'?'); ?>">HOME</a></li>
-							<li><a href="">PRIZES</a></li>
-							<li><a href="">RULES</a></li>
-							<li><a href="">FAQS</a></li>
+							<li><a href="?page=prizes">PRIZES</a></li>
+							<li><a href="?page=official-rules">RULES</a></li>
+							<li><a href="?page=faq">FAQS</a></li>
 						</ul>
 					</div>
 				</nav>
