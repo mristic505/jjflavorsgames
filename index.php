@@ -27,7 +27,7 @@ if (strpos($url_string, 'page') !== false) {
     }
     if ($page == 'prize-claim-form') {
         include 'prize_claim_form.php';          
-    }
+    }          
     if ($page == 'official-rules') {
 	    include 'official_rules.php';
     }
@@ -35,7 +35,7 @@ if (strpos($url_string, 'page') !== false) {
 	    include 'faq.php';
     }
     if ($page == 'prizes') {
-	    include 'prizes.php';
+	include 'prizes.php';
     }
         
 } else {

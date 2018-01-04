@@ -129,4 +129,21 @@
         </div>
         <input type="submit" value="Submit">
 	</form>
+	<div class="thank_you_prize_claim clearfix">
+		<div class="col-sm-4">
+			<img src="img/girl-big.png">
+		</div>
+		<div class="col-sm-8">
+			<h1 style="text-align: left;" class="h1_title">Thanks for completing the prize claim form.</h1>
+			<br>
+			<p>Once you have been verified as a winner, your prize will be shipped directly to the address provided on your prize claim form within 4–6 weeks. You will be notified in the event of a disqualification.
+			<br>
+			<br>
+			As a winner, you will not be eligible for another prize, but there is no limit to the fun you and your kids can have with the Juicy Juice Flavor Discovery Games. 
+			<br>
+			<br>
+			<span style="color:#65a621;font-size: 20px;">So keep playing and enjoying!</span>
+			</p>
+		</div>
+	</div>
 </div>
