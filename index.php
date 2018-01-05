@@ -22,6 +22,9 @@ if (strpos($url_string, 'page') !== false) {
     if ($page == 'pop-a-fruit') {
         include 'pop_a_fruit.php';          
     }
+    if ($page == 'jigsaw-puzzle') {
+        include 'jigsaw_puzzle.php';          
+    }
     if ($page == 'hidden-pictures') {
         include 'hidden_pictures.php';          
     }
