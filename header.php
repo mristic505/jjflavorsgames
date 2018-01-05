@@ -26,7 +26,7 @@ if (strpos($url_string, 'page') !== false) {
     }
         
 } else {
-    include 'register.php';
+   
 }
 ?>	
 <title><?php echo $page_title; ?></title>
