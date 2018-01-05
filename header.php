@@ -24,9 +24,15 @@ if (strpos($url_string, 'page') !== false) {
     if ($page == 'prize-claim-form') {
         $page_title = 'Prize Claim Form';          
     }
+    if ($page == 'official-rules') {
+        $page_title = 'Official Rules';          
+    }
+    if ($page == 'faq') {
+        $page_title = 'FAQ';          
+    }
         
 } else {
-   
+   $page_title = 'Register';
 }
 ?>	
 <title><?php echo $page_title; ?></title>
