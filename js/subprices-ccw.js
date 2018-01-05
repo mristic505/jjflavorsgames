@@ -102,8 +102,7 @@ jQuery(document).ready(function($) {
         //var price = Math.floor((Math.random() * 8));
         $r.spin(9).done(function(price) {
             if (price.name == "Grand Prize") {
-               
-                                 
+                   window.location.href = '?page=spin&play=pcf';                             
             } else {
                 $('.prize_info')
                     .html(function() {
@@ -132,18 +131,20 @@ jQuery(document).ready(function($) {
             $('.spinner span').show();
         });
     };
+    
+
     $('.spin').on('click', clickHandler);
 
-    if($('.spin_holder').hasClass('registered')) {
-        $("#roulette").swipe( {
-            swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-              // $("#test").text("You swiped " + direction + " with " + fingerCount + " fingers");
-              document.getElementById('spin_btn_1').click();
-            },
-            threshold:0,
-            fingers:'all'
-        });
-    }
+    // if($('.spin_holder').hasClass('registered')) {
+    //     $("#roulette").swipe( {
+    //         swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+    //           // $("#test").text("You swiped " + direction + " with " + fingerCount + " fingers");
+    //           document.getElementById('spin_btn_1').click();
+    //         },
+    //         threshold:0,
+    //         fingers:'all'
+    //     });
+    // }
 
 
     // END OF SPINNER CONFIG ====================================
@@ -300,6 +301,11 @@ jQuery(document).ready(function($) {
         end_message = 'Kiwis and strawberries<br>both have more<br>Vitamin C than oranges.';
         end_fruit = 'kiwi_str';
     }
+    if (play == 'pcf') {
+        $('#roulette').prepend('<div style="z-index: 99999;" id="register"> <div class="clearfix prc_holder"> <h1 class="h1_title">Congratulations!</h1> <img class="prc_boy_big" src="img/boy_big.png"> <div class="prc_wheel_copy"> <div class="prc1">You are a potential prizewinner.</div><div class="prc2">As soon as we receive your prize claim form and verify your compliance with the Official Rules and game play validation, you will be named an OFFICIAL WINNER! <br><br>To get started, please complete: </div><a class="spin_btn prc_btn" href="?page=prize-claim-form">PRIZE CLAIM FORM</a> </div></div><div class="ghost"></div></div>');
+        $('.spin_holder').after('<div  class="overlay"></div>');
+        $('#roulette .spinner').hide();
+    }
 
     function end_action(end_message_holder, end_fruit_holder) {
         $('.memory_game_board').append($('<div class="completed_holder"> <img class="you_did_it" src="img/you_did_it.png"> <div class="ctext">You’ve completed the Memory Match Game.</div><div class="message_board"> <div class="holder"> <img class="fruit_fact_head" src="img/fruit_fact_head_'+end_fruit_holder+'.png"> <div class="fruit_fact_info">'+end_message_holder+'</div></div><div class="ghost"></div><img class="girl" src="img/girl.png"> <img class="fruit_fact" src="img/fruit_fact_'+end_fruit_holder+'.png"> </div><div class="end_ctas"><a class="play_again" href="">PLAY AGAIN <span class="glyphicon glyphicon-play" aria-hidden="true"></span></a><a class="spin_again" href="/flavordiscovery/">SPIN <span class="glyphicon glyphicon-play" aria-hidden="true"></span></a><br><a class="get_coupon_btn" href="#">GET COUPON</a></div></div>').hide().fadeIn(1000));
@@ -376,6 +382,10 @@ jQuery(document).ready(function($) {
                 }, 1000);
         });
     });
+
+    // $('#roulette').prepend('<div style="z-index: 99999;" id="register"> <div class="clearfix prc_holder"> <h1 class="h1_title">Congratulations!</h1> <img class="prc_boy_big" src="img/boy_big.png"> <div class="prc_wheel_copy"> <div class="prc1">You are a potential prizewinner.</div><div class="prc2">As soon as we receive your prize claim form and verify your compliance with the Official Rules and game play validation, you will be named an OFFICIAL WINNER! <br><br>To get started, please complete: </div><a class="spin_btn prc_btn" href="?page=prize-claim-form">PRIZE CLAIM FORM</a> </div></div><div class="ghost"></div></div>');
+    // $('.spin_holder').after('<div class="overlay"></div>');
+    // $('#roulette .spinner').hide();
     
 
 });

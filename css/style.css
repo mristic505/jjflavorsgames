@@ -356,6 +356,9 @@ header .navbar-default {
     .prize_info img {
         height: 70px;
     }
+    .wheel_logo {
+        width: 60px;
+    }
 }
 /************* footer **************/
 footer {
@@ -434,7 +437,7 @@ footer {
 }
 .big_checkbox {
     position: absolute !important;
-    padding: 6px 9px !important;
+    padding: 6px 8px 3px !important;
 }
 label[for="age"] {
     text-align: left;
@@ -678,6 +681,9 @@ main {
     .help-block {
         margin-bottom: 5px;
         font-size: 12px;
+    }
+    .wheel_logo {
+        width: 50px;
     }
 }
 
@@ -1179,8 +1185,72 @@ main {
     color: #1a5632;
     text-align: center;
 }
-
 /*********** End of Prizes ************/
+
+/**************************************/
+/********* GRAND PRIZE WHEEL **********/
+/**************************************/
+
+.prc_boy_big {
+    display: inline-block;
+    width: 144px;
+    vertical-align: top;
+    margin-right: 10px;
+}
+.prc_wheel_copy {
+    display: inline-block;
+    width: 260px;
+    vertical-align: top;
+    text-align: left;
+}
+.prc_btn {
+    display: inline-block;
+    padding: 12px 15px;
+}
+.prc1 {
+    color: #1a5632;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 10px;
+}
+.prc2 {
+    color: #1a5632;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: 'GothamMediumRegular';
+    margin-bottom: 15px;
+}
+.prc_holder {
+    display: inline-block;
+    vertical-align: middle;
+}
+.prc_holder .h1_title {
+    margin-bottom: 30px;
+    margin-top: 0;
+    font-size: 38px;
+}
+
+@media screen and (max-width: 1025px) {
+   .prc_holder .h1_title {
+        margin-bottom: 15px;
+        font-size: 23px;
+    } 
+    .prc_boy_big {
+        width: 90px;
+        margin-right: 10px;
+    }
+    .prc_wheel_copy {
+        width: 200px;
+    }
+    .prc_btn {
+        font-size: 12px;
+    }
+    .prc2 {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+}
+
 @media screen and (min-width: 768px) {
    .form-group-holder .col-sm-6:nth-child(1) {
         padding-left: 0;
@@ -1192,6 +1262,31 @@ main {
 @media screen and (max-width: 767px) {
     .form-group .col-sm-6 {
         padding: 0;
+    }
+}
+@media screen and (max-width: 700px) {
+    .prc.prc_boy_big {
+        width: 60px;
+    }
+    .prc_wheel_copy {
+        width: 160px;
+    }
+    .prc2 {
+        font-size: 10px;
+        margin-bottom: 10px;
+        line-height: 12px;
+    }
+    .prc_holder .h1_title {
+        font-size: 18px;
+    }
+    .prc1 {
+        font-size: 12px;
+        margin-bottom: 10px;
+        line-height: 14px;
+    }
+    .prc_btn {
+        padding: 5px 5px;
+        font-size: 10px;
     }
 }
 @media screen and (max-width: 600px) {
@@ -1282,7 +1377,7 @@ main {
     }  
     .mn_bottles  {
         top: 22px;
-    }  
+    }      
 }
 
 @media screen and (max-width: 470px) {

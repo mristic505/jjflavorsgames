@@ -1,9 +1,9 @@
 <?php 
-if(empty($_POST['dsid'])) :
-	return_to_hp();
-else :
-	$result = DB::query("SELECT * FROM flavors_games_registered_users WHERE safety_string=%s", $_POST['dsid']);	
-	if(empty($result)) return_to_hp();
+// if(empty($_POST['dsid'])) :
+// 	return_to_hp();
+// else :
+// 	$result = DB::query("SELECT * FROM flavors_games_registered_users WHERE safety_string=%s", $_POST['dsid']);	
+// 	if(empty($result)) return_to_hp();
 ?>
 <style type="text/css">
 	.small_logo {
@@ -29,4 +29,4 @@ else :
 	</div>
 </div>
 <?php 
-endif; ?>
+// endif; ?>
