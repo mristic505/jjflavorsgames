@@ -103,18 +103,17 @@ jQuery(document).ready(function($) {
         $r.spin(9).done(function(price) {
             if (price.name == "Grand Prize") {
                
-                $('.prize_info')
-                    .html(function() {
-                        setTimeout(function() {
-                            $('.prize_info span').html('<img src="img/winner-logo.png">').fadeIn();
-                        }, 0);                        
-                    });                 
+                                 
             } else {
                 $('.prize_info')
                     .html(function() {
                         setTimeout(function() {
-                            $('.prize_info span').html(price.name)
+                            
+                            $('.wheel_logo').fadeOut(600); 
                         }, 0);
+                        setTimeout(function() {
+                            $('.prize_info span').html('<span>'+price.name+'</span>').fadeIn();
+                        }, 700);
                         setTimeout(function() {
                             $('.prize_info span').fadeOut();
                         }, 2000);
@@ -122,6 +121,7 @@ jQuery(document).ready(function($) {
                             $('.prize_info span').html('<img src="img/bottles/' + price.slug + '.png">').fadeIn();
                         }, 2500);
                     });
+                   
             }
             // console.log(price.name);
             // $('.spinner').css('background-color', price.bg);

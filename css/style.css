@@ -92,7 +92,12 @@ body {
     position: relative;
     margin-top: 50px;
 }
-
+.wheel_logo {
+    display: inline-block;
+    vertical-align: middle;
+    z-index: 9999;
+    position: relative;
+}
 /*.inner_holder {
     position: relative;
     overflow: hidden;

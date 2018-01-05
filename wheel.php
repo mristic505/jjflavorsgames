@@ -3,6 +3,7 @@
     <div class="container">     
         <div class="prize_info"><span></span></div>
         <div class="ghost"></div>
+        <img class="wheel_logo" src="img/winner-logo copy.png">
         <div id="roulette" class="roulette">
             <button class="spinner">
                 <span></span>
