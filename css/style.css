@@ -1085,6 +1085,9 @@ main {
 #prize_form #email-group input {
     max-width: none;
 }
+#prize_form .has-error label {
+    color: #a94442 !important;
+}
 #state-group select {
     width: 100%;
     height: 30px;
