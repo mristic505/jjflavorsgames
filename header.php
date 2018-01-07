@@ -13,7 +13,7 @@ if (strpos($url_string, 'page') !== false) {
                  
     }
     if ($page == 'memory-match') {
-               
+        $page_title = 'Fruity Match';       
     }
     if ($page == 'pop-a-fruit') {
                 
