@@ -33,7 +33,7 @@
 	                            <input type="checkbox" autocomplete="off" name="age" id="age">
 	                            <span class="glyphicon glyphicon-ok"></span>
 	                        </label>
-	                        <label for="age">I am 18 years or older, I’ve read and agree to the <a style="color: #1a5633;text-decoration: underline;" href="#">Official Rules</a> of the promotion.</label>
+	                        <label for="age">I am 18 years or older, I’ve read and agree to the <a class="rules_link" target="_blank" style="color: #1a5633;text-decoration: underline;" href="?page=official-rules">Official Rules</a> of the promotion.</label>
 	                    </div>
 	                </div>
 	                <div class="form-group" id="optin-group">
