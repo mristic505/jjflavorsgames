@@ -32,12 +32,12 @@ if(isset($_GET['play'])){
 }
 ?>
 
-<div class="main-wrapper clearfix <?=$class?>">
+<div class="main-wrapper hidden-pictures clearfix <?=$class?>">
     <div class="game-container">
         <!-- game start -->
         <div class="how-to-play-wrapper">
             <div class="how-to-play-container">
-                <img class="how-to-play-title" src="assets/game_start/game_title.png">
+                <img class="how-to-play-title" src="assets/hidden_pictures/game_start/game_title.png">
                 <h2>HOW TO PLAY</h2>
                 <p>Can you find the 6 fruits hiding in the picture? When you spot one, click it.</p>
                 <button class="start-game-button">PLAY</button>
@@ -59,14 +59,14 @@ if(isset($_GET['play'])){
             <img class="you-did-it-title" src="assets/hidden_pictures/game_end/you_are_a_super_finder.png">
             <h2 class="you-did-it-subtitle">You’ve discovered all of the hidden fruits.</h2>
             <div class="game-end-message-container">
-                <div class="fun-fruity-fact-title">Fun fruity fact</div>
+                <div class="fun-fruity-fact-title">Fun Fruity Fact</div>
                 <p><?=$message_box_message?></p>
             </div>
             <?=$message_box_image?>
             <div class="bottom-cta-container">
                     <a href="index.php" class="play-again cta">PLAY AGAIN <img src="assets/hidden_pictures/game_end/arrow.png"></a>
-                    <a class="spin cta" href="">SPIN <img src="assets/hidden_pictures/game_end/arrow.png"></a>
-                    <a href="" class="get-coupon-button">GET COUPON</a>
+                    <a class="cta" href="?page=spin">SPIN <img src="assets/hidden_pictures/game_end/arrow.png"></a>
+                    <a href="?page=coupon" class="get-coupon-button">GET COUPON</a>
             </div>
         </div>
         
