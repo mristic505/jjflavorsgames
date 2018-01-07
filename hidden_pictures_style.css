@@ -887,13 +887,13 @@ th {
 
 .game-end-wrapper .you-did-it-subtitle {
   color: #ffffff;
-  font-family: "CabritoNorExB";
+  font-family: "CabritoNorBol";
   font-size: 18px;
   margin-top: 3px;
 }
 
 .game-end-wrapper .you-did-it-subtitle span {
-  font-family: "CabritoNorExB";
+  font-family: "CabritoNorBol";
   font-size: 22px;
 }
 
