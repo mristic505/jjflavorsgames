@@ -37,6 +37,9 @@ if (strpos($url_string, 'page') !== false) {
     if ($page == 'prizes') {
 	include 'prizes.php';
     }
+    if ($page == 'laugh-factory') {
+        include 'laugh-factory.php';
+    }
         
 } else {
     include 'register.php';
