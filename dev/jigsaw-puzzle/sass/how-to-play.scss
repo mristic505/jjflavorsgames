@@ -1,0 +1,59 @@
+.how-to-play-wrapper{
+    // display: none;
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+    background-image: url('assets/jigsaw_puzzle/game_start_background.png');
+    background-size: cover;
+    z-index: 99999;
+    .how-to-play-container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        @media screen and (max-width: $puzzle-container-second-responsive-breakpoint) {
+            width: 80%;
+        }
+        .how-to-play-title{
+            @media screen and (max-width: $puzzle-container-second-responsive-breakpoint) {
+                width:80%;
+                // padding-top: 50px;
+
+            }
+        }
+        h2{
+            font-family: "CabritoNorExB";
+            font-size: 24px;
+            color: #1a5632;
+            margin-top: 0px;
+            margin-bottom: 16px;
+            @media screen and (max-width: $puzzle-container-second-responsive-breakpoint) {
+                font-size: 20px;
+                margin: 0px;
+            }
+        }
+        p{
+            font-family: "CabritoNorBol";
+            font-size: 18px;
+            color: #1a5632;
+            margin: 0;
+            
+            @media screen and (max-width: $puzzle-container-second-responsive-breakpoint) {
+                font-size: 15px;
+            }
+        }
+        .start-game-button{
+            font-family: "CabritoNorExB";
+            margin-top:20px;
+            padding: 15px 58px;
+            color: #ffffff;
+            background-color: #1a5632;
+            border: 0;
+            height: auto;
+            width: auto;
+        }
+    }
+}

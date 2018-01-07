@@ -23,6 +23,11 @@
   }
 }
 
+.hidden-pictures .start-game-button {
+  width: auto;
+  height: auto;
+}
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -796,6 +801,10 @@ th {
   padding-bottom: 110px;
 }
 
+.how-to-play-wrapper .how-to-play-container .how-to-play-title {
+  padding-bottom: 20px;
+}
+
 .how-to-play-wrapper .how-to-play-container h2 {
   font-family: "CabritoNorExB";
   font-size: 24px;
@@ -827,28 +836,36 @@ th {
 }
 
 @media screen and (max-width: 600px) {
-  .how-to-play-wrapper .how-to-play-title {
-    height: 110px;
+  .how-to-play-wrapper .how-to-play-container .how-to-play-title {
+    height: 104px;
     margin-top: 74px;
+    padding-bottom: 10px;
+  }
+  .how-to-play-wrapper .how-to-play-container .start-game-button {
+    padding: 10px 47px;
+    font-size: 18px;
+    margin-top: 15px;
   }
 }
 
 @media screen and (max-width: 470px) {
-  .how-to-play-wrapper .how-to-play-title {
+  .how-to-play-wrapper .how-to-play-container .how-to-play-title {
     height: 76px;
-    margin-top: 115px;
+    margin-top: 90px;
+    padding-bottom: 5px;
   }
   .how-to-play-wrapper .how-to-play-container h2 {
-    font-size: 17px;
+    font-size: 15px;
+    margin-bottom: 6px;
   }
   .how-to-play-wrapper .how-to-play-container p {
     font-size: 12px;
     display: inline-block;
-    width: 62%;
   }
   .how-to-play-wrapper .how-to-play-container .start-game-button {
     padding: 7px 17px;
     font-size: 14px;
+    margin-top: 10px;
   }
 }
 
@@ -870,9 +887,9 @@ th {
 
 .game-end-wrapper .you-did-it-subtitle {
   color: #ffffff;
-  font-family: "CabritoNorBol";
+  font-family: "CabritoNorExB";
   font-size: 18px;
-  margin-top: 10px;
+  margin-top: 3px;
 }
 
 .game-end-wrapper .you-did-it-subtitle span {

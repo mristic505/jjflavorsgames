@@ -1,11 +1,11 @@
-* {
-  box-sizing: border-box;
-}
-
 .clearfix::after {
   content: "";
   clear: both;
   display: table;
+}
+
+.jigsaw-puzzle img {
+  max-width: none;
 }
 
 .main-wrapper {
@@ -1006,6 +1006,8 @@
   color: #ffffff;
   background-color: #1a5632;
   border: 0;
+  height: auto;
+  width: auto;
 }
 
 .game-end-wrapper {
@@ -1099,26 +1101,28 @@
   }
 }
 
-.game-end-wrapper .bottom-cta-container .cta {
+.game-end-wrapper .bottom-cta-container .puzzle-cta {
   display: inline-block;
   padding-bottom: 20px;
+  padding-right: 10px;
 }
 
 @media screen and (max-width: 1200px) {
-  .game-end-wrapper .bottom-cta-container .cta {
+  .game-end-wrapper .bottom-cta-container .puzzle-cta {
     padding-bottom: 10px;
   }
 }
 
 @media screen and (max-width: 810px) {
-  .game-end-wrapper .bottom-cta-container .cta {
+  .game-end-wrapper .bottom-cta-container .puzzle-cta {
     padding-bottom: 5px;
     font-size: 11px;
   }
 }
 
-.game-end-wrapper .bottom-cta-container .cta img {
+.game-end-wrapper .bottom-cta-container .puzzle-cta img {
   padding-left: 5px;
+  margin-top: -3px;
 }
 
 .game-end-wrapper .bottom-cta-container .cta:first-child {
