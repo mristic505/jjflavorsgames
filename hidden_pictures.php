@@ -64,7 +64,7 @@ if(isset($_GET['play'])){
             </div>
             <?=$message_box_image?>
             <div class="bottom-cta-container">
-                    <a href="index.php" class="play-again cta">PLAY AGAIN <img src="assets/hidden_pictures/game_end/arrow.png"></a>
+                    <a href="" class="play-again cta">PLAY AGAIN <img src="assets/hidden_pictures/game_end/arrow.png"></a>
                     <a class="cta" href="?page=spin">SPIN <img src="assets/hidden_pictures/game_end/arrow.png"></a>
                     <a href="?page=coupon" class="get-coupon-button">GET COUPON</a>
             </div>
