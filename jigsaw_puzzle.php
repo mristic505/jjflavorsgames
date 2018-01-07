@@ -16,7 +16,7 @@
             $class = "tropical";
         }
     ?>
-    <div class="main-wrapper clearfix <?=$class?>">
+    <div class="main-wrapper clearfix <?=$class?> jigsaw-puzzle">
         <div class="puzzle-sidebar" id="puzzle-left-sidebar">&nbsp;</div>
         <div class="puzzle-container">
             <div class="how-to-play-wrapper">
@@ -75,9 +75,9 @@
                     }
                 ?>
         <div class="bottom-cta-container">
-                <a href="index.php" class="play-again cta">PLAY AGAIN <img src="assets/jigsaw_puzzle/arrow.png"></a>
-                <a class="spin cta" href="">SPIN <img src="assets/jigsaw_puzzle/arrow.png"></a>
-                <a href="" class="get-coupon-button">GET COUPON</a>
+                <a href="" class="play-again puzzle-cta">PLAY AGAIN <img src="assets/jigsaw_puzzle/arrow.png"></a>
+                <a class="puzzle-spin puzzle-cta" href="?page=spin">SPIN <img src="assets/jigsaw_puzzle/arrow.png"></a>
+                <a href="?page=coupon" class="get-coupon-button">GET COUPON</a>
         </div>
         </div>
             <div class="puzzle-background clearfix">
