@@ -4,6 +4,26 @@
 <script>
     jQuery(document).ready(function($){
 
+        // URL QUERY STRING
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+        var play = getParameterByName('play');
+        if (play == 'passion-dragonfruit') {
+            end_message = 'Dragon fruit grows on a cactus.';
+            end_fruit = 'passion_fruit';
+        }
+        if (play == 'fruit-punch') {
+            end_message = 'There is a tree called the Fruit Salad Tree that sprouts 3-7 different fruits in the same tree.';
+            end_fruit = 'fruit_punch';
+        }
+
         // SHUFFLE ARRAY FUNCTION
         function shuffle(array) {
             var currentIndex = array.length,
@@ -22,12 +42,10 @@
         }
 
         function end_action(end_message_holder, end_fruit_holder) {
-	        $('.memory_game_board').append($('<div class="completed_holder"> <img class="you_did_it" src="img/wow.png"> <div class="ctext">You’ve matched all of the numbers correctly.</div><div class="message_board"> <div class="holder"> <img class="fruit_fact_head" src="img/fruit_fact_head_'+end_fruit_holder+'.png"> <div class="fruit_fact_info">'+end_message_holder+'</div></div><div class="ghost"></div><img class="girl" src="img/boy.png"> <img class="fruit_fact" src="img/fruit_fact_'+end_fruit_holder+'.png"> </div><div class="end_ctas"><a class="play_again" href="">PLAY AGAIN <span class="glyphicon glyphicon-play" aria-hidden="true"></span></a><a class="spin_again" href="/flavordiscovery/">SPIN <span class="glyphicon glyphicon-play" aria-hidden="true"></span></a><br><a class="get_coupon_btn" href="#">GET COUPON</a></div></div>').hide().fadeIn(1000));
+	        $('.memory_game_board').append($('<div class="completed_holder"> <img class="you_did_it" src="img/wow.png"> <div class="ctext">You’ve matched all of the numbers correctly.</div><div class="message_board"> <div class="holder"> <img class="fruit_fact_head" src="img/fruit_fact_head_'+end_fruit_holder+'.png"> <div class="fruit_fact_info">'+end_message_holder+'</div></div><div class="ghost"></div><img class="girl mn_boy" src="img/boy.png"> <img class="fruit_fact fruit_fact-'+end_fruit_holder+'" src="img/fruit_fact_'+end_fruit_holder+'.png"> </div><div class="end_ctas"><a class="play_again" href="">PLAY AGAIN <span class="glyphicon glyphicon-play" aria-hidden="true"></span></a><a class="spin_again" href="?page=spin">SPIN <span class="glyphicon glyphicon-play" aria-hidden="true"></span></a><br><a class="get_coupon_btn" href="#">GET COUPON</a></div></div>').hide().fadeIn(1000));
 	    }
 
-	    end_message = 'Dragon fruit grows on a cactus.';
-	    end_fruit = 'passion_fruit';
-
+	    
         var optionsArr = [1, 2, 3, 4, 5, 6, 7, 8];
         optionsArr = shuffle(optionsArr);
         optionsArr = optionsArr.slice(0,4);  
@@ -37,7 +55,7 @@
         for (i = 0; i < optionsArr.length; i++) {
 
            $('.draggable_numbers').prepend('<div class="draggable_number_holder"><div id="draggable_number_'+optionsArr[i]+'" class="ui-widget-content"><p class="dn">'+optionsArr[i]+'</p></div></div>');                  
-           $('.numbers').append('<div class="number_holder"><div class="fruit_number fruit_number_'+optionsArr[i]+'"></div><div id="number_'+optionsArr[i]+'" class="ui-widget-header"><p style="color:transparent;" class="">NUMBER '+optionsArr[i]+'</p></div></div>');
+           $('.numbers').append('<div class="number_holder"><div class="fruit_number fruit_number_'+optionsArr[i]+'"></div><div id="number_'+optionsArr[i]+'" class="ui-widget-header"><p class="nhi" style="color:transparent;" class="">NUMBER '+optionsArr[i]+'</p></div></div>');
 
            function fireDroppable(number) {
              $('#number_' + number).droppable({

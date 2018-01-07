@@ -427,6 +427,9 @@ footer {
     border-radius: 0;
     border-width: 2px;
 }
+#spin_btn_1 {
+    padding: 11px 33px 18px;
+}
 
 .btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default,
 .btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover,
@@ -960,6 +963,25 @@ main {
     top: 10px;
     position: relative;
 }
+
+/************ MATCHING NUMBERS ***********/
+.mn_boy {
+    left: -26px;
+}
+.mathching_numbers_board .fruit_fact_info {
+    max-width: 200px;
+    margin: auto;
+}
+.mathching_numbers_board .ctext {
+    font-size: 18px;
+}
+.fruit_fact-fruit_punch {
+    top: 50px;
+}
+.nhi {
+    visibility: hidden;
+    opacity: 0;
+}
 /************ PRIZE CLAIM ***********/
 .form_holder {
     max-width: 698px;
@@ -1231,7 +1253,7 @@ main {
 }
 
 @media screen and (max-width: 1025px) {
-   .prc_holder .h1_title {
+    .prc_holder .h1_title {
         margin-bottom: 15px;
         font-size: 23px;
     } 
@@ -1377,7 +1399,13 @@ main {
     }  
     .mn_bottles  {
         top: 22px;
-    }      
+    } 
+    .mathching_numbers_board .ctext {
+        font-size: 10px;
+    }   
+    .mathching_numbers_board .you_did_it  {
+        max-width: 130px;
+    }
 }
 
 @media screen and (max-width: 470px) {
@@ -1458,6 +1486,9 @@ main {
     }
     .mn_bottles  {
         top: 3px;
+    }
+    .mathching_numbers_board .fruit_fact_info {
+        max-width: 130px;
     }
 }
 

@@ -274,6 +274,10 @@ jQuery(document).ready(function($) {
         event.preventDefault();
     });
 
+    $('.rules_link').click(function(){
+        window.location.href = '?page=official-rules';
+    });
+
     /********************** MEMORY MATCH ********************/
 
     function getParameterByName(name, url) {
