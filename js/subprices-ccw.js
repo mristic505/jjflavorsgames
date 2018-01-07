@@ -252,7 +252,9 @@ jQuery(document).ready(function($) {
                 if (data.errors.legal) {
                     $('#legal-group').addClass('has-error');
                 }       
-                console.log(data.errors);
+                $('html, body').animate({
+                    scrollTop: $(".has-error").offset().top
+                }, 500);
             }
             // if no errors
             else {
