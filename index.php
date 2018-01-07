@@ -41,7 +41,10 @@ if (strpos($url_string, 'page') !== false) {
 	    include 'faq.php';
     }
     if ($page == 'prizes') {
-	include 'prizes.php';
+	   include 'prizes.php';
+    }
+    if ($page == 'coupon') {
+       include 'coupon.php';
     }
         
 } else {

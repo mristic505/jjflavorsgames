@@ -1251,7 +1251,53 @@ main {
     margin-top: 0;
     font-size: 38px;
 }
+/**************** COUPON *****************/
 
+.coupon_holder {
+    max-width: 666px;
+    width: 95%;
+    margin:auto;
+}
+.coupon_btn {
+    max-width: 300px;
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    padding-right: 0;
+    padding-left: 0;
+    margin: auto;
+}
+.coupon_text {
+    font-size: 18px;
+}
+.coupon_disclaimer {
+    color: #1d5632;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 5px;
+}
+.coupon_text_holder {
+    max-width: 330px;
+    margin: auto;
+}
+.jj_products {
+    margin: auto;
+    width: auto;
+    max-width: 100%;
+}
+.coupon_btn {
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 769px) {
+    .jj_products {
+        position: relative;
+        bottom: 100px;
+    }
+    .coupon_text_holder {
+        float: right;
+    }    
+}
 @media screen and (max-width: 1025px) {
     .prc_holder .h1_title {
         margin-bottom: 15px;
@@ -1281,6 +1327,21 @@ main {
         padding-right: 0;
     } 
 }
+@media screen and (max-width: 768px) {
+    .coupon_btn {
+        max-width: 170px;
+        font-size: 18px;
+    }
+    .coupon_holder .h1_title {
+        font-size: 25px;
+        text-align: center !important;
+    }
+    .coupon_text {
+        font-size: 14px;
+        text-align: center !important;
+    }    
+}
+
 @media screen and (max-width: 767px) {
     .form-group .col-sm-6 {
         padding: 0;

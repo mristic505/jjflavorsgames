@@ -30,6 +30,9 @@ if (strpos($url_string, 'page') !== false) {
     if ($page == 'faq') {
         $page_title = 'FAQ';          
     }
+    if ($page == 'coupon') {
+        $page_title = 'Offer';          
+    }
         
 } else {
    $page_title = 'Register';
