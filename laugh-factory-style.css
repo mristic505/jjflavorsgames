@@ -47,7 +47,7 @@ html {
 }
 
 button {
-	font-family: "CabritoNorExB";
+  font-family: "CabritoNorBol";
 }
 
 * {box-sizing:border-box}
@@ -87,10 +87,11 @@ button {
 {
     font-size: 18px;
     position: relative;
-    top: 300px;
+    top: 312px;
     max-width: 224px;
     margin: 0 auto;
     color: #1a5632;
+    font-family: "CabritoNorBol";
 }
 
 #lastSlideText {
@@ -99,7 +100,9 @@ button {
     margin: 0 auto;
     position: relative;
     max-width: 244px;
-    top: 137px;	
+    line-height: 24px;
+    top: 137px;
+    font-family: "CabritoNorReg";
 }
 
 #jokesAgainBtn {
@@ -117,12 +120,12 @@ button {
     color: white;
     font-size: 20px;
     position: relative;
-    cursor: not-allowed;	
 }
 
 #slide3-BtnGroup {
-	position: relative;
-	top: 290px;
+    position: absolute;
+    top: 421px;
+    left: 150px;
 }
 
 
@@ -175,7 +178,7 @@ button {
     border: none;
     font-size: 17px;
     position: relative;
-    top: 315px;
+    top: 332px;
     left: 212px;
     cursor: pointer;
     letter-spacing: 0.6px;
@@ -187,19 +190,26 @@ button {
     margin: 0 auto;
     line-height: 31px;
     color: #1a5632;
-    max-width: 350px;
-    font-family: "CabritoNorExB", sans-serif;
+    max-width: 331px;
+    font-family: "CabritoNorBol", sans-serif;
 }
 
 .answerBtn {
-	cursor: pointer;
+    cursor: pointer;
     position: relative;
     top: 230px;
     color: #65a621;
     max-width: 200px;
-    margin: 0 auto;	
-    font-family: "CabritoNorExB", sans-serif;
+    font-size: 25px;
+    margin: 0 auto;
+    font-family: "CabritoNorBol", sans-serif;
 
+}
+
+#answerBtnArrow {
+    font-size: 13px;
+    position: relative;
+    top: -3px;
 }
 
 #getCoupBtn {
@@ -210,24 +220,26 @@ button {
     display: block;
     border: none;
     font-size: 18px;
-    cursor: not-allowed;
     margin: 20px auto;
 }
 
 #fruitFactTitle {
     font-family: "NexaRustScriptL0";
-    position: relative;
-    top: 180px;
+    position: absolute;
+    top: 226px;
     margin: 0 auto;
-    font-size: 36px;
+    font-size: 40px;
+    left: 170px;
 }
 
 #fruityFact {
-    position: relative;
-    top: 190px;
+    position: absolute;
+    top: 270px;
+    font-size: 19px;
     color: #1a5632;
-    max-width: 170px;
+    max-width: 195px;
     margin: 0 auto;
+    left: 196px;
 }
 /* Next & previous buttons */
 .prev, .next {
@@ -241,6 +253,7 @@ button {
     font-size: 43px;
     transition: 0.6s ease-in-out;
     border-radius: 0 3px 3px 0;
+    text-decoration: none !important;
 }
 
 /* Position the "next button" to the right */

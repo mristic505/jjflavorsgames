@@ -146,7 +146,7 @@ var count = 0;
 var play = getParameterByName('play');
 
 $(".prev, .next").click(function(){
-    $(".answerBtn").html("SEE ANSWER &#9654;");
+    $(".answerBtn").html("SEE ANSWER <span id='answerBtnArrow'>&#9654;</span>");
 });
 
 
