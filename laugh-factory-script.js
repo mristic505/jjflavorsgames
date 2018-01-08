@@ -1,3 +1,66 @@
+// FUNCTIONS
+
+//Query String CODE
+function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+
+function startJokes(bgImage, jokesList) {
+
+    $("#startJokesBtn").click(function(){
+        $(".mySlides").addClass(bgImage);
+        $(".joke").html(jokesList[0]);
+    });   
+}
+
+function nextJoke(color, fruitFact, bgImage, jokesList) {
+    $(".next").click(function(){
+        
+        if (count < (jokesList.length - 2) ) {
+
+            count += 2;
+            $(".joke").html(jokesList[count]);
+
+        }else {
+
+            currentSlide(3);
+            $("#fruitFactTitle").addClass(color);
+            $("#fruityFact").html(fruitFact);
+            $(".mySlides").addClass(bgImage);
+        }
+    });
+}
+
+function prevJoke(jokesList) {
+    $(".prev").click(function(){
+        if (count > 1) {
+            
+            count -= 2;
+            $(".joke").html(jokesList[count]);
+        }
+    });
+}
+
+function resetJokes(removeClass, jokesList) {
+    $("#jokesAgainBtn").click(function(){
+    
+        count = 0;
+        
+        $("#fruitFactTitle").removeClass();
+        $("#fruityFact").html();
+        $(".mySlides").removeClass(removeClass);
+        $(".joke").html(jokesList[count]);
+
+    });
+}
+
 // Jokes are on the even indexes starting at zero
 // Punchlines fall on the odd indexes
 
@@ -14,6 +77,8 @@ var orangeJokes = [
                     "What kind of fruit can fix your sink?", "A PLUM-ber"
 ]
 
+var orangeFruitFact = "Not all oranges are orange";
+
 var appleJokes = [
 
                     "What did the apple tree say to the hungry caterpillar?", "Leaf me alone.",
@@ -25,6 +90,8 @@ var appleJokes = [
                     "Why did the apple go to the doctor?", "It felt rotten to the core.",
                     "Why was the apple alone with the orange?", "Because the banana split."
 ]
+
+var appleFruitFact = "Apples float in water because they are 25% air.";
 
 var strawberryBananaJokes = [
 
@@ -39,10 +106,9 @@ var strawberryBananaJokes = [
 
 ]
 
-var jokesList = orangeJokes.concat(appleJokes,strawberryBananaJokes);
+var strawBanFruitFact = "A strawberry is not an actual berry, but a banana is.";
 
 // SLIDE SHOW CODE
-
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -72,59 +138,28 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-// var count = 0;
+// END OF SLIDE SHOW CODE
+
+
+
+var count = 0;
+var play = getParameterByName('play');
 
 $(".prev, .next").click(function(){
-    $(".answerBtn").html("SEE ANSWER &#9654;");
+    $(".answerBtn").html("SEE ANSWER <img id='answerBtnArrow' src='img/seeAnswerBtn.png'/>");
 });
-
-var count = 0; 
-
-//Query String CODE
-function getParameterByName(name, url) {
-        if (!url) url = window.location.href;
-        name = name.replace(/[\[\]]/g, "\\$&");
-        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-            results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return '';
-        return decodeURIComponent(results[2].replace(/\+/g, " "));
-    }
-
-var play = getParameterByName('play');
 
 
 // ORANGE SECTION
 if (play == 'orange') {
 
-    $("#startJokesBtn").click(function(){
+    startJokes("orangeBg", orangeJokes);
 
-        $(".mySlides").addClass("orangeBg");
-        $(".joke").html(orangeJokes[count]);
-    });
+    nextJoke("orange", orangeFruitFact, "orangeImg", orangeJokes);
 
-    $(".next").click(function(){
-    
-        if (count > orangeJokes.length) {
-            
-            currentSlide(3);
-            $("#fruitFactTitle").addClass("orange");
-            $("#fruityFact").html("Not all oranges are orange");
-            $(".mySlides").addClass("orangeImg");
+    prevJoke(orangeJokes);
 
-        }else {
-
-            $(".joke").html(orangeJokes[count]);
-            count += 2;
-        }
-
-    });
-    $("#jokesAgainBtn").click(function(){
-        count = 0;
-            $("#fruitFactTitle").removeClass("orange");
-            $("#fruityFact").html();
-            $(".mySlides").removeClass("orangeImg");
-    });
+    resetJokes("orangeImg", orangeJokes);
 
     $(".answerBtn").click(function() {
         
@@ -132,96 +167,31 @@ if (play == 'orange') {
     });
 }
 
-
 // APPLE SECTION
 if (play == 'apple') {
 
-    
+    startJokes("appleBg", appleJokes);
 
-    $("#startJokesBtn").click(function(){
+    nextJoke("green", appleFruitFact, "appleImg", appleJokes);
 
-        $(".mySlides").addClass("appleBg");
-        $(".joke").html(appleJokes[count]);
-        
-    });
-    $(".next").click(function(){
-        
-        if (count > appleJokes.length) {
-            
-            currentSlide(3);
-            $("#fruitFactTitle").addClass("green");
-            $("#fruityFact").html("Apples float in water because they are 25% air.");
-            $(".mySlides").addClass("appleImg");
+    prevJoke(appleJokes);
 
-        }
-    
-        $(".joke").html(appleJokes[count]);
-        
-        count += 2;
-
-    });
-    $(".prev").click(function(){
-        if (count < 2) {
-            //do nothing
-        }else {
-            count -= 2;
-            $(".joke").html(appleJokes[count]);
-        }
-    });
-    $("#jokesAgainBtn").click(function(){
-        
-        count = 0;
-        
-        $("#fruitFactTitle").removeClass("green");
-        $("#fruityFact").html();
-        $(".mySlides").removeClass("appleImg");
-        $(".joke").html(appleJokes[count]);
-
-    });
+    resetJokes("appleImg", appleJokes);
 
     $(".answerBtn").click(function() {
         
-        if (true) {}
         $(".answerBtn").html(appleJokes[count + 1]);
     });
 }
 
-
 // STRAWBERRY BANANA
 if (play == 'strawberryBanana') {
 
-        $("#startJokesBtn").click(function(){
+    startJokes("strawBanBg", strawberryBananaJokes);
 
-            $(".mySlides").addClass("strawBanBg");
-            $(".joke").html(strawberryBananaJokes[count]);
-            
-        });    
-        $(".next").click(function(){
-        
-        count += 2;
+    nextJoke("yellow", strawBanFruitFact, "strawBanImg", strawberryBananaJokes);
 
-        
-
-        if (count > strawberryBananaJokes.length) {
-            
-            currentSlide(3);
-            $("#fruitFactTitle").addClass("yellow");
-            $("#fruityFact").html("A strawberry is not an actual berry, but a banana is.");
-            $(".mySlides").addClass("strawBanImg");
-            $(".joke").html(strawberryBananaJokes[count]);
-
-        }else {
-
-            $(".joke").html(strawberryBananaJokes[count]);
-        }
-
-    });
-    $("#jokesAgainBtn").click(function(){
-        count = 0;
-            $("#fruitFactTitle").removeClass("yellow");
-            $("#fruityFact").html();
-            $(".mySlides").removeClass("strawBanImg");
-    });
+    resetJokes("strawBanImg", strawberryBananaJokes);
 
     $(".answerBtn").click(function() {
         
@@ -230,3 +200,5 @@ if (play == 'strawberryBanana') {
 
 
 }
+
+
