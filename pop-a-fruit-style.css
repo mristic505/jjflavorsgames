@@ -23,6 +23,10 @@
   }
 }
 
+.pop-a-fruit img {
+  max-width: none;
+}
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -242,7 +246,7 @@ th {
   height: 578px;
   border: 0px;
   padding: 21px;
-  background-image: url("assets/frame.png");
+  background-image: url("assets/pop-a-fruit/frame.png");
   background-size: contain;
   text-align: center;
 }
@@ -350,7 +354,7 @@ th {
 
 .game-container .section-1 {
   height: 156px;
-  background-image: url("assets/main_sections_backgrounds/1.png");
+  background-image: url("assets/pop-a-fruit/main_sections_backgrounds/1.png");
 }
 
 @media screen and (max-width: 600px) {
@@ -389,13 +393,13 @@ th {
 
 .game-container .section-2 {
   height: 175px;
-  background-image: url("assets/main_sections_backgrounds/2.png");
+  background-image: url("assets/pop-a-fruit/main_sections_backgrounds/2.png");
   margin-top: -21px;
 }
 
 .game-container .section-3 {
   height: 175px;
-  background-image: url("assets/main_sections_backgrounds/3.png");
+  background-image: url("assets/pop-a-fruit/main_sections_backgrounds/3.png");
   margin-top: -23px;
 }
 
@@ -419,7 +423,7 @@ th {
 
 .game-container .section-4 {
   height: 100px;
-  background-image: url("assets/main_sections_backgrounds/4.png");
+  background-image: url("assets/pop-a-fruit/main_sections_backgrounds/4.png");
   margin-top: -23px;
 }
 
@@ -514,27 +518,27 @@ th {
 }
 
 .fruit-container.apple {
-  background-image: url("assets/fruits/apple.png");
+  background-image: url("assets/pop-a-fruit/fruits/apple.png");
 }
 
 .fruit-container.watermelon {
-  background-image: url("assets/fruits/watermelon.png");
+  background-image: url("assets/pop-a-fruit/fruits/watermelon.png");
 }
 
 .fruit-container.grape {
-  background-image: url("assets/fruits/grape.png");
+  background-image: url("assets/pop-a-fruit/fruits/grape.png");
 }
 
 .fruit-container.apple.popped {
-  background-image: url("assets/fruits/apple_popped.png");
+  background-image: url("assets/pop-a-fruit/fruits/apple_popped.png");
 }
 
 .fruit-container.watermelon.popped {
-  background-image: url("assets/fruits/watermelon_popped.png");
+  background-image: url("assets/pop-a-fruit/fruits/watermelon_popped.png");
 }
 
 .fruit-container.grape.popped {
-  background-image: url("assets/fruits/grape_popped.png");
+  background-image: url("assets/pop-a-fruit/fruits/grape_popped.png");
 }
 
 .how-to-play-wrapper {
@@ -543,7 +547,7 @@ th {
   left: 18px;
   right: 18px;
   bottom: 18px;
-  background-image: url("assets/game_start/background.png");
+  background-image: url("assets/pop-a-fruit/game_start/background.png");
   background-size: cover;
   z-index: 99999;
 }
@@ -557,7 +561,11 @@ th {
   padding-bottom: 110px;
 }
 
-.how-to-play-wrapper .how-to-play-container h2 {
+.how-to-play-wrapper .how-to-play-container .how-to-play-title {
+  margin-top: 25px;
+}
+
+.how-to-play-wrapper .how-to-play-container .how-to-play-subtitle {
   font-family: "CabritoNorExB";
   font-size: 24px;
   color: #1a5632;
@@ -579,22 +587,34 @@ th {
   color: #ffffff;
   background-color: #1a5632;
   border: 0;
+  width: auto;
+  height: auto;
 }
 
 @media screen and (max-width: 600px) {
-  .how-to-play-wrapper .how-to-play-title {
+  .how-to-play-wrapper .how-to-play-container {
+    width: 100%;
+  }
+  .how-to-play-wrapper .how-to-play-container .how-to-play-title {
     height: 61px;
-    margin-top: 74px;
+    margin-top: 36px;
+  }
+  .how-to-play-wrapper .how-to-play-container .how-to-play-subtitle {
+    margin-bottom: 7px;
   }
 }
 
 @media screen and (max-width: 470px) {
-  .how-to-play-wrapper .how-to-play-title {
-    height: 50px;
-    margin-top: 115px;
+  .how-to-play-wrapper .how-to-play-container .how-to-play-title {
+    height: 43px;
+    margin-top: 73px;
+  }
+  .how-to-play-wrapper .how-to-play-container .how-to-play-subtitle {
+    margin-bottom: 2px;
+    font-size: 19px;
   }
   .how-to-play-wrapper .how-to-play-container p {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 
@@ -605,7 +625,7 @@ th {
   left: 18px;
   right: 18px;
   bottom: 18px;
-  background-image: url("assets/game_end/game_end_background.png");
+  background-image: url("assets/pop-a-fruit/game_end/game_end_background.png");
   background-size: cover;
   z-index: 999991;
 }

@@ -24,7 +24,7 @@
     }
     ?>
 
-    <div class="main-wrapper clearfix <?=$class?>">
+    <div class="main-wrapper pop-a-fruit clearfix <?=$class?>">
         <div class="game-container">
             <div class="puzzle-background clearfix">
                 <div id="game-counter">30</div>    
@@ -57,7 +57,55 @@
                 </div>
                 <div class="section-4 sections"></div>
             </div>
-            <?php include('game_start.php');?>
-            <?php include('game_end.php');?>
+            
+            <div class="how-to-play-wrapper">
+                <div class="how-to-play-container">
+                    <img class="how-to-play-title" src="assets/pop-a-fruit/game_start/game_title.png">
+                    <h2 class="how-to-play-subtitle">HOW TO PLAY</h2>
+                    <p>Click on the fruit before<br/> it disappears. How many can<br/>you pop in 30 seconds?</p>
+                    <button class="start-game-button">PLAY</button>
+                </div>
+            </div>
+            
+            <?php
+            if(isset($_GET['play'])){
+                if($_GET['play'] == 'apple_raspberry'){
+                    $game_title = "<img src='assets/pop-a-fruit/game_end/apple_raspberry_title.png'>";
+                    $message_box_image = " <img class='game-end-image' src='assets/pop-a-fruit/game_end/apple_raspberry_bg.png'>";
+                    $message_box_message = "Apples and raspberries are both members of the rose family.";
+                }elseif($_GET['play'] == 'straw_watermelon'){
+                    $game_title ="<img src='assets/pop-a-fruit/game_end/straw_watermelon_title.png'>";
+                    $message_box_image = " <img class='game-end-image' src='assets/pop-a-fruit/game_end/straw_watermelon_bg.png'>";
+                    $message_box_message = "Japanese farmers grow square watermelons because they’re easier to stack and store.";
+                }else{
+                    $game_title ="<img src='assets/pop-a-fruit/game_end/grape_title.png'>";
+                    $message_box_image = " <img class='game-end-image' src='assets/pop-a-fruit/game_end/grape_bg.png'>";
+                    $message_box_message = "The oldest grapevine in America is a 400-year-old Scuppernong vine in North Carolina.";
+                }
+            }else{
+                $game_title ="<img src='assets/pop-a-fruit/game_end/grape_title.png'>";
+                $message_box_image = " <img class='game-end-image' src='assets/pop-a-fruit/game_end/grape_bg.png'>";
+                $message_box_message = "The oldest grapevine in America is a 400-year-old Scuppernong vine in North Carolina.";
+            }
+
+            ?>      
+
+            <div class="game-end-wrapper">
+                <img class="you-did-it-title" src="assets/pop-a-fruit/game_end/great_job.png">
+                <h2 class="popped-fruits">You popped <span id="popped-fruits"></span> fruits. That’s super juicy!</h2>
+                <h2 class="failed-to-pop-fruits">You did not pop any fruits!</h2>
+                <div class="game-end-message-container">
+                    <?=$game_title?>
+                    <p><?=$message_box_message?></p>
+                </div>
+                <?=$message_box_image?>
+                <div class="bottom-cta-container">
+                        <a href="" class="play-again cta">PLAY AGAIN <img src="assets/pop-a-fruit/arrow.png"></a>
+                        <a class="cta" href="?page=spin">SPIN <img src="assets/pop-a-fruit/arrow.png"></a>
+                        <a href="?page=coupon" class="get-coupon-button">GET COUPON</a>
+                </div>
+            </div>
+                
+
         </div>   
     </div>

@@ -64,6 +64,10 @@ function remove_expired_positions(){
         }
     });
 }
+function remove_all_positions(){ 
+    $(".fruit-container").removeClass('show');
+    $(".fruit-container").removeClass('fruit-on-top');
+}
 $( document ).ready(function() {
     configure_responsive();
     $('#all-up').click(function(){
@@ -104,7 +108,7 @@ function game_start(){
     //main countdown
     function countdown() {
         update_positions_times(); 
-        if(timer !=0 ){
+        if(timer != 0 ){
             remove_expired_positions();
             timer--;
         }
@@ -116,6 +120,7 @@ function game_start(){
         if (parseInt(i.innerHTML)==0) {
         clearInterval(set_positions_interval);
         clearInterval(countdownInterval);
+        remove_all_positions();
         game_end();
         }
     }
@@ -126,8 +131,15 @@ function game_start(){
 
 
 function game_end(){
-    $("#popped-fruits").html(Math.ceil(fruits_popped/2));
-    $(".game-end-wrapper").show();
+    setTimeout(function(){
+        if(fruits_popped == 0){
+            $(".popped-fruits").hide();            
+        }else{
+            $(".failed-to-pop-fruits").hide();
+            $("#popped-fruits").html(Math.ceil(fruits_popped/2));
+        }
+        $(".game-end-wrapper").show();
+    }, 3000);
 }
 
 $( window ).resize(function() {
