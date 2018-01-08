@@ -581,7 +581,7 @@ main {
         position: absolute;
         overflow: hidden;
         width: 100%;
-        z-index: 99;
+        z-index: 999999;
     }  
     .navbar-default .navbar-collapse {
         background: #fff;

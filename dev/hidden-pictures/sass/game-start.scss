@@ -52,9 +52,15 @@
                 margin-top: 74px;
                 padding-bottom: 10px;
             }
+            .how-to-play-subtitle{
+                font-size: 14px;
+            }
+            p{
+                font-size: 13px;
+            }
             .start-game-button{
-                padding: 10px 47px;
-                font-size: 18px;
+                padding: 9px 32px;
+                font-size: 10px;
                 margin-top:15px;
             }
         }
@@ -66,19 +72,13 @@
                 margin-top: 90px;
                 padding-bottom: 5px;            
             }
-            h2{
-                font-size: 15px;
+            .how-to-play-subtitle{
+                font-size: 14px;
                 margin-bottom: 6px;
             }
             p{
-                font-size: 12px;
-                display: inline-block;
-                // width: 62%;
-            }
-            .start-game-button{
-                padding: 7px 17px;
-                font-size:14px;
-                margin-top:10px;
+                font-size: 11px;
+                padding: 0 3px;
             }
         }
     }

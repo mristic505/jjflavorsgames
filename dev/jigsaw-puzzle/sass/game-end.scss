@@ -20,7 +20,7 @@
         }
         
     }
-    h2{
+    .you-did-it-subtitle{
         color: #ffffff;
         font-family: "CabritoNorBol";
         font-size: 18px;
@@ -119,10 +119,12 @@
             margin-top: 3px;
             margin-left: auto;
             margin-right: auto;
+            padding: 0 4px;
             @media screen and (max-width: $puzzle-container-first-responsive-breakpoint) {
                 width: 78%;
                 font-size:12px;
                 margin-top: 0px;
+                padding: 0;
             }                
             @media screen and (max-width: $puzzle-container-second-responsive-breakpoint) {
                 font-size: 10px;

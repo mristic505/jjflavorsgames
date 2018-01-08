@@ -27,12 +27,9 @@
         bottom: 20px;
         left: 20px;
         right: 20px;
-        // @media screen and (max-width: $puzzle-container-first-responsive-breakpoint){
-        //     top: 16px;
-        //     bottom: 16px;
-        //     left: 16px;
-        //     right: 16px;       
-        // }
+        @media screen and (max-width: $puzzle-container-first-responsive-breakpoint){
+            background-position: center -2px;
+        }
         // @media screen and (max-width: $puzzle-container-second-responsive-breakpoint){
         //     top: 10px;
         //     bottom: 10px;
@@ -61,7 +58,7 @@
 // backgrounds
 .cranberry-apple{
     .puzzle-background{
-        background-image: url("assets/jigsaw_puzzle/uzzles/cranberry_apple/puzzle_background.png");
+        background-image: url("assets/jigsaw_puzzle/puzzles/cranberry_apple/puzzle_background.png");
     }
 }
 .peach-apple{

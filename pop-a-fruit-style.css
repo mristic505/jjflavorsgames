@@ -583,7 +583,7 @@ th {
 .how-to-play-wrapper .how-to-play-container .start-game-button {
   font-family: "CabritoNorExB";
   margin-top: 20px;
-  padding: 15px 59px;
+  padding: 15px 53px;
   color: #ffffff;
   background-color: #1a5632;
   border: 0;
@@ -600,7 +600,15 @@ th {
     margin-top: 36px;
   }
   .how-to-play-wrapper .how-to-play-container .how-to-play-subtitle {
+    font-size: 14px;
     margin-bottom: 7px;
+  }
+  .how-to-play-wrapper .how-to-play-container p {
+    font-size: 11px;
+  }
+  .how-to-play-wrapper .how-to-play-container .start-game-button {
+    font-size: 10px;
+    padding: 9px 32px;
   }
 }
 
@@ -611,10 +619,6 @@ th {
   }
   .how-to-play-wrapper .how-to-play-container .how-to-play-subtitle {
     margin-bottom: 2px;
-    font-size: 19px;
-  }
-  .how-to-play-wrapper .how-to-play-container p {
-    font-size: 12px;
   }
 }
 

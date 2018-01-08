@@ -31,7 +31,7 @@
             margin-top: 0px;
             margin-bottom: 16px;
             @media screen and (max-width: $puzzle-container-second-responsive-breakpoint) {
-                font-size: 20px;
+                font-size: 13px;
                 margin: 0px;
             }
         }
@@ -44,19 +44,22 @@
             @media screen and (max-width: $puzzle-container-second-responsive-breakpoint) {
                 font-size: 14px;
                 padding: 0 18px;
+                font-size: 12px;
            }
         }
         .start-game-button{
             font-family: "CabritoNorExB";
             margin-top:20px;
-            padding: 15px 58px;
+            padding: 10px 53px;
             color: #ffffff;
+            font-size: 18px;
             background-color: #1a5632;
             border: 0;
             height: auto;
             width: auto;
             @media screen and (max-width: $puzzle-container-second-responsive-breakpoint) {
-                padding: 11px 33px;
+                padding: 9px 32px;
+                font-size: 10px;
             }
         }
     }
