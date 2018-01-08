@@ -15,7 +15,7 @@
 
   <div class="mySlides slidefade">
     <h1 class="joke"></h1>
-    <h2 class="answerBtn">SEE ANSWER <span id="answerBtnArrow">&#9654;</span></h2>
+    <h2 class="answerBtn">SEE ANSWER <img id="answerBtnArrow" src="img/seeAnswerBtn.png"/></h2>
     <a class="prev"><img src="img/left-arrow.png"></a>
     <a class="next"><img src="img/right-arrow.png"></a>
   </div>
