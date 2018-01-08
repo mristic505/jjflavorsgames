@@ -46,6 +46,9 @@ if (strpos($url_string, 'page') !== false) {
     if ($page == 'coupon') {
        include 'coupon.php';
     }
+    if ($page == 'laugh-factory') {
+        include 'laugh-factory.php';
+    }
         
 } else {
     include 'register.php';
