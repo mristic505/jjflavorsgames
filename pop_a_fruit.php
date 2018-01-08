@@ -100,9 +100,9 @@
                 </div>
                 <?=$message_box_image?>
                 <div class="bottom-cta-container">
-                        <a href="index.php" class="play-again cta">PLAY AGAIN <img src="assets/pop-a-fruit/arrow.png"></a>
-                        <a class="cta" href="">SPIN <img src="assets/pop-a-fruit/arrow.png"></a>
-                        <a href="" class="get-coupon-button">GET COUPON</a>
+                        <a href="" class="play-again cta">PLAY AGAIN <img src="assets/pop-a-fruit/arrow.png"></a>
+                        <a class="cta" href="?page=spin">SPIN <img src="assets/pop-a-fruit/arrow.png"></a>
+                        <a href="?page=coupon" class="get-coupon-button">GET COUPON</a>
                 </div>
             </div>
                 

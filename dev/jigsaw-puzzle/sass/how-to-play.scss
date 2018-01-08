@@ -15,7 +15,7 @@
         transform: translate(-50%, -50%);
         
         @media screen and (max-width: $puzzle-container-second-responsive-breakpoint) {
-            width: 80%;
+            width: 62%;
         }
         .how-to-play-title{
             @media screen and (max-width: $puzzle-container-second-responsive-breakpoint) {
@@ -40,10 +40,11 @@
             font-size: 18px;
             color: #1a5632;
             margin: 0;
-            
+            padding: 0 20px;
             @media screen and (max-width: $puzzle-container-second-responsive-breakpoint) {
-                font-size: 15px;
-            }
+                font-size: 14px;
+                padding: 0 18px;
+           }
         }
         .start-game-button{
             font-family: "CabritoNorExB";
@@ -54,6 +55,9 @@
             border: 0;
             height: auto;
             width: auto;
+            @media screen and (max-width: $puzzle-container-second-responsive-breakpoint) {
+                padding: 11px 33px;
+            }
         }
     }
 }
