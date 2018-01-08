@@ -1,4 +1,4 @@
-<?php ?>
+<?php // ?>
 </main>
 <footer>
 	<p class="legal">
