@@ -915,7 +915,7 @@
 
 @media screen and (max-width: 1200px) {
   .puzzle-container .puzzle-background {
-    background-position: center -1px;
+    background-position: center -2px;
   }
 }
 
