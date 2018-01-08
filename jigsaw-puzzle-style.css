@@ -913,6 +913,12 @@
   background-repeat: no-repeat;
 }
 
+@media screen and (max-width: 1200px) {
+  .puzzle-container .puzzle-background {
+    background-position: center -1px;
+  }
+}
+
 .puzzle-container .puzzle-background > .puzzle-piece-container {
   float: left;
   position: relative;
@@ -929,7 +935,7 @@
 }
 
 .cranberry-apple .puzzle-background {
-  background-image: url("assets/jigsaw_puzzle/uzzles/cranberry_apple/puzzle_background.png");
+  background-image: url("assets/jigsaw_puzzle/puzzles/cranberry_apple/puzzle_background.png");
 }
 
 .peach-apple .puzzle-background {
@@ -981,7 +987,7 @@
 
 @media screen and (max-width: 810px) {
   .how-to-play-wrapper .how-to-play-container h2 {
-    font-size: 20px;
+    font-size: 13px;
     margin: 0px;
   }
 }
@@ -998,14 +1004,16 @@
   .how-to-play-wrapper .how-to-play-container p {
     font-size: 14px;
     padding: 0 18px;
+    font-size: 12px;
   }
 }
 
 .how-to-play-wrapper .how-to-play-container .start-game-button {
   font-family: "CabritoNorExB";
   margin-top: 20px;
-  padding: 15px 58px;
+  padding: 10px 53px;
   color: #ffffff;
+  font-size: 18px;
   background-color: #1a5632;
   border: 0;
   height: auto;
@@ -1014,7 +1022,8 @@
 
 @media screen and (max-width: 810px) {
   .how-to-play-wrapper .how-to-play-container .start-game-button {
-    padding: 11px 33px;
+    padding: 9px 32px;
+    font-size: 10px;
   }
 }
 
@@ -1048,7 +1057,7 @@
   }
 }
 
-.game-end-wrapper h2 {
+.game-end-wrapper .you-did-it-subtitle {
   color: #ffffff;
   font-family: "CabritoNorBol";
   font-size: 18px;
@@ -1056,13 +1065,13 @@
 }
 
 @media screen and (max-width: 810px) {
-  .game-end-wrapper h2 {
+  .game-end-wrapper .you-did-it-subtitle {
     font-size: 15px;
   }
 }
 
 @media screen and (max-width: 810px) {
-  .game-end-wrapper h2 {
+  .game-end-wrapper .you-did-it-subtitle {
     font-size: 13px;
     margin-top: 0;
     padding: 0 20px;
@@ -1181,6 +1190,7 @@
   margin-top: 3px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 4px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1188,6 +1198,7 @@
     width: 78%;
     font-size: 12px;
     margin-top: 0px;
+    padding: 0;
   }
 }
 

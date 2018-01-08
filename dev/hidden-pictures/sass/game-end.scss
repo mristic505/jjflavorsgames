@@ -70,7 +70,7 @@
         }
         @media screen and (max-width: 600px) {
             .fun-fruity-fact-title{
-                font-size: 30px;
+                font-size: 27px;
             }
             p{
                 font-size: 16px;
@@ -81,7 +81,7 @@
         }
         @media screen and (max-width: 470px) {
             .fun-fruity-fact-title{
-                font-size: 23px;
+                font-size: 21px;
             }
             p{
                 font-size: 11px;
@@ -154,6 +154,10 @@
         .bottom-cta-container .get-coupon-button{
             padding-top: 6px;
             padding-bottom: 6px;
+        }
+        
+        .game-end-image{
+            height: 100px;
         }
     }
   
