@@ -79,7 +79,7 @@ $( document ).ready(function() {
     })
     // $('.fruit-container').click(function(){
     // $('.fruit-container').mousedown(function(){
-    $('.fruit-container').on( "mousedown touchstart", function(){
+    $('.fruit-container').on( "mousedown touchstart", function(e){
         $(this).removeClass('fruit-on-top');     
         $(this).addClass("popped")
         .delay( 300 )
@@ -94,6 +94,7 @@ $( document ).ready(function() {
             next();
         });
         fruits_popped++;
+        e.preventDefault();
         // console.log("test2");
     })
 });
@@ -136,7 +137,11 @@ function game_end(){
             $(".popped-fruits").hide();            
         }else{
             $(".failed-to-pop-fruits").hide();
-            $("#popped-fruits").html(Math.ceil(fruits_popped/2));
+            // if($(window).width() < 601){
+                // $("#popped-fruits").html(Math.ceil(fruits_popped/2));
+            // }else{
+                $("#popped-fruits").html(fruits_popped);                
+            // }
         }
         $(".game-end-wrapper").show();
     }, 3000);
