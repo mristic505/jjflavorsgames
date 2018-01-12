@@ -9,6 +9,7 @@
 		<img src="img/jj-flavor-logo.png">
 	</div>
 	
+<div class="faq-body">
 	<h3>Who is eligible to play the Juicy Juice Flavor Discovery Instant Win Game?</h3>
 	<p>The Instant Win Game is open to all legal residents of the 50 United States (including D.C.) who are 18 years of age or older or the age of majority in their state of residence, whichever is greater.  Entrants must have internet access and a valid e-mail address to participate.</p>
 
@@ -32,5 +33,5 @@
 
 	<h3>If I win, how long will it take to get my prize?</h3>
 	<p>Please allow 4–6 weeks for delivery of prizes following winner verification. All prizes will be delivered by mail to the mailing address provided by the winner on the prize claim form.</p>
-
+</div>
 </div>
