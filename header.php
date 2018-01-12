@@ -46,6 +46,7 @@ if (strpos($url_string, 'page') !== false) {
 <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="js/jquery.fortune.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/subprices-ccw.js?ver=1.0.3"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>

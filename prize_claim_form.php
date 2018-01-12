@@ -49,7 +49,7 @@
 				<div id="state-group" class="form-group col-sm-6">
 					<label>State</label><br>
 					<select name="state">
-						<option class="placeholder" value="" disabled="" selected="" hidden="">State*</option>
+						<option class="placeholder" value="" disabled="" selected="" hidden="">Select</option>
 						<option value="AL">AL</option>
 						<option value="AK">AK</option>
 						<option value="AR">AR</option>	
@@ -110,9 +110,9 @@
 			</div>
 		</div>
 		<div class="form-group-holder clearfix">
-			<div id="" class="form-group col-sm-6">
-				<label>Phone <span>(optional)</span></label>
-				<input type="text" class="form-control-noboot" name="phone placeholder="">
+			<div id="phone-group" class="form-group col-sm-6">
+				<label>Phone</label>
+				<input type="text" class="form-control-noboot" name="phone" placeholder="">
 			</div>
 			<div id="contact_epsilon" class="form-group col-sm-6">
 				<label>If you have questions, please contact <a style="color: inherit;" href="mailto:MarketingServices@epsilon.com">MarketingServices@epsilon.com</a></label>				

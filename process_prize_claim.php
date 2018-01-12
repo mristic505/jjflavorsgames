@@ -23,6 +23,9 @@ else {
 if(empty($_POST['email_conf'])) {
 	$errors['email_conf'] = 'Please confirm your email address';
 }
+if(empty($_POST['phone'])) {
+	$errors['phone'] = 'Please enter your phone number';
+}
 else {
 	if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
         $errors['email_conf_invalid'] = 'Please enter a valid email address';
