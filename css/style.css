@@ -1357,6 +1357,20 @@ main {
         font-size: 14px;
         text-align: center !important;
     }    
+    .logo {
+    	max-width: 207px;
+    }
+
+    .girl-big {
+    	max-width: 120px;
+    }
+    .official-rules-text{
+    	padding: 0 10px;
+    }
+    .faq-body {
+    	padding: 0 10px;
+    	
+    }
 }
 
 @media screen and (max-width: 767px) {
