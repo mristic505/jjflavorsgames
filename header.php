@@ -42,6 +42,9 @@ if (strpos($url_string, 'page') !== false) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link type="text/css" rel="stylesheet" media="all" href="css/style.css?ver=1.0.1"></link>
+<!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="css/all-ie-only.css" />
+<![endif]-->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
