@@ -42,10 +42,10 @@
         }
 
         function end_action(end_message_holder, end_fruit_holder) {
-	        $('.memory_game_board').append($('<div class="completed_holder"> <img class="you_did_it" src="img/wow.png"> <div class="ctext">You’ve matched all of the numbers correctly.</div><div class="message_board"> <div class="holder"> <img class="fruit_fact_head" src="img/fruit_fact_head_'+end_fruit_holder+'.png"> <div class="fruit_fact_info">'+end_message_holder+'</div></div><div class="ghost"></div><img class="girl mn_boy" src="img/boy.png"> <img class="fruit_fact fruit_fact-'+end_fruit_holder+'" src="img/fruit_fact_'+end_fruit_holder+'.png"> </div><div class="end_ctas"><a class="play_again" href="">PLAY AGAIN <span class="glyphicon glyphicon-play" aria-hidden="true"></span></a><a class="spin_again" href="?page=spin">SPIN <span class="glyphicon glyphicon-play" aria-hidden="true"></span></a><br><a class="get_coupon_btn" href="#">GET COUPON</a></div></div>').hide().fadeIn(1000));
-	    }
+            $('.memory_game_board').append($('<div class="completed_holder"> <img class="you_did_it" src="img/wow.png"> <div class="ctext">You’ve matched all of the numbers correctly.</div><div class="message_board"> <div class="holder"> <img class="fruit_fact_head" src="img/fruit_fact_head_'+end_fruit_holder+'.png"> <div class="fruit_fact_info">'+end_message_holder+'</div></div><div class="ghost"></div><img class="girl mn_boy" src="img/boy.png"> <img class="fruit_fact fruit_fact-'+end_fruit_holder+'" src="img/fruit_fact_'+end_fruit_holder+'.png"> </div><div class="end_ctas"><a class="play_again" href="">PLAY AGAIN <span class="glyphicon glyphicon-play" aria-hidden="true"></span></a><a class="spin_again" href="?page=spin">SPIN <span class="glyphicon glyphicon-play" aria-hidden="true"></span></a><br><a class="get_coupon_btn" href="#">GET COUPON</a></div></div>').hide().fadeIn(1000));
+        }
 
-	    
+        
         var optionsArr = [1, 2, 3, 4, 5, 6, 7, 8];
         optionsArr = shuffle(optionsArr);
         optionsArr = optionsArr.slice(0,4);  
@@ -65,9 +65,9 @@
                      $(this).droppable('destroy');
                      solved++;
                      if (solved == 4) {
-                     	setTimeout(function() {
-		                    end_action(end_message, end_fruit);
-		                }, 800);  
+                        setTimeout(function() {
+                            end_action(end_message, end_fruit);
+                        }, 800);  
                      }
                  }
              });
@@ -82,8 +82,8 @@
     });
 </script>
 <div class="memory_game_board mathching_numbers_board">
-<div class="bg_holder">	
-	<div class="completed_holder">
+<div class="bg_holder"> 
+    <div class="completed_holder">
             <div class="how_to_play mathching_numbers_htp">
                 <div class="holder">
                     <img src="img/fruity_match_game_title.png">
@@ -96,7 +96,7 @@
                 <div class="ghost"></div>
             </div>            
     </div>
-	<div class="numbers clearfix"></div>
-	<div class="draggable_numbers clearfix"></div><img class="mn_bottles" src="img/mn_bottles.png">
-</div>	
+    <div class="numbers clearfix"></div>
+    <div style="position: relative;" class="clearfix lower_holder"><div class="draggable_numbers clearfix"></div><img class="mn_bottles" src="img/mn_bottles.png"></div>
+</div>  
 </div>

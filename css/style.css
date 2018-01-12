@@ -963,7 +963,43 @@ main {
     top: 10px;
     position: relative;
 }
-
+@media all and (-ms-high-contrast:none) {
+     .mn_bottles { 
+        right: 0;
+        top: auto; 
+        bottom: 0;
+        position: absolute;
+        } /* IE10 */
+     *::-ms-backdrop, .mn_bottles { 
+        right: 0;
+        top: auto;
+        bottom: 0;
+        position: absolute;
+        } /* IE11 */
+     .lower_holder {
+        width: 544px;
+        height: 261px;
+        top: 10px;
+     }
+     *::-ms-backdrop .lower_holder {
+        width: 544px;
+        height: 261px;
+        top: 10px;
+     }
+     .draggable_numbers {
+        width: 286px;
+        position: absolute;
+        top: auto;
+        bottom: 13px;
+     }
+     *::-ms-backdrop .draggable_numbers {
+        width: 286px;
+        position: absolute;
+        top: auto;
+        bottom: 0;
+     }
+     
+}
 /************ MATCHING NUMBERS ***********/
 .mn_boy {
     left: -26px;
@@ -1358,18 +1394,18 @@ main {
         text-align: center !important;
     }    
     .logo {
-    	max-width: 207px;
+        max-width: 207px;
     }
 
     .girl-big {
-    	max-width: 120px;
+        max-width: 120px;
     }
     .official-rules-text{
-    	padding: 0 10px;
+        padding: 0 10px;
     }
     .faq-body {
-    	padding: 0 10px;
-    	
+        padding: 0 10px;
+        
     }
 }
 
@@ -1491,7 +1527,7 @@ main {
     }  
     .mn_bottles  {
         top: 22px;
-    } 
+    }     
     .mathching_numbers_board .ctext {
         font-size: 10px;
     }   
@@ -1499,7 +1535,47 @@ main {
         max-width: 130px;
     }
 }
-
+@media (max-width: 600px) and (-ms-high-contrast:none) {
+     .mn_bottles { 
+        right: 0;
+        top: auto; 
+        bottom: -12px;
+        position: absolute;
+        width: 182px;
+        height: auto;
+        } /* IE10 */
+     *::-ms-backdrop, .mn_bottles { 
+        right: 0;
+        top: auto;
+        bottom: -12px;
+        position: absolute;
+        width: 182px;
+        height: auto;
+        } /* IE11 */
+     .lower_holder {
+        width: 406px;
+        height: 191px;
+        top: 10px;
+     }
+     *::-ms-backdrop .lower_holder {
+        width: 406px;
+        height: 191px;
+        top: 10px;
+     }
+     .draggable_numbers {
+        width: 213px;
+        position: absolute;
+        top: auto;
+        bottom: 0;
+     }
+     *::-ms-backdrop .draggable_numbers {
+        width: 213px;
+        position: absolute;
+        top: auto;
+        bottom: 0;
+     }
+     
+}
 @media screen and (max-width: 470px) {
     .memory_game_board {
         width: 352px;
@@ -1585,6 +1661,49 @@ main {
     .memory_game .how_to_play .instructions {
         max-width: 130px;
     }
+}
+@media (max-width: 475px) and (-ms-high-contrast:none) {
+     .mn_bottles { 
+        right: 0;
+        top: auto; 
+        bottom: 55px;
+        position: absolute;
+        width: 126px;
+        height: auto;
+        } /* IE10 */
+     *::-ms-backdrop, .mn_bottles { 
+        right: 0;
+        top: auto;
+        bottom: 55px;
+        position: absolute;
+        width: 126px;
+        height: auto;
+        } /* IE11 */
+     .lower_holder {
+        width: 280px;
+        height: 145px;
+        top: 10px;
+     }
+     *::-ms-backdrop .lower_holder {
+        width: 280px;
+        height: 145px;
+        top: 10px;
+     }
+     .draggable_numbers {
+        width: 147px;
+        height: 139px;
+        position: absolute;
+        top: auto;
+        bottom: 0;
+     }
+     *::-ms-backdrop .draggable_numbers {
+        width: 147px;
+        height: 139px;
+        position: absolute;
+        top: auto;
+        bottom: 0;
+     }
+     
 }
 
 @media screen and (max-width: 360px) {
