@@ -11,7 +11,7 @@
 	</div>
 
 	<h2 class="officialRulesTitle">Official Rules</h2>
-
+<div class="official-rules-text">
 	<p><strong>JUICY JUICE<sup>&reg;</sup> “FLAVOR DISCOVERY” INSTANT WIN GAME FULL OFFICIAL RULES</strong></p>
 
 	<p><strong>NO PURCHASE NECESSARY TO ENTER OR WIN. A PURCHASE WILL NOT INCREASE YOUR CHANCES OF WINNING. GAME SUBJECT TO ALL FEDERAL, STATE AND LOCAL LAWS AND REGULATIONS. VOID OUTSIDE THE U.S.A. AND WHERE PROHIBITED BY LAW.</strong></p>
@@ -47,5 +47,5 @@
 	<p><strong>15.	SPONSOR: </strong>Harvest Hill Beverage Company, 1 High Ridge Park, Stamford, CT, 06905. </p>
 
 	<p><strong>16.	ADMINISTRATOR: </strong>Epsilon Data Management, LLC, 10 Westport Rd., Wilton, CT 06897.</p>
-
+</div>
 </div>
