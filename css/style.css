@@ -1568,6 +1568,9 @@ main {
     .mathching_numbers_board .fruit_fact_info {
         max-width: 130px;
     }
+    .memory_game .how_to_play .instructions {
+        max-width: 130px;
+    }
 }
 
 @media screen and (max-width: 360px) {
@@ -1596,10 +1599,10 @@ main {
         margin-top: 10px;
     }
     .completed_holder {
-        top: 15px;
-        bottom: 15px;
-        left: 15px;
-        right: 15px;
+        top: 14px;
+        bottom: 14px;
+        left: 14px;
+        right: 14px;
     }
     .draggable_number_holder, 
     .dn, 

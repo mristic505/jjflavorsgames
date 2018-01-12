@@ -1,4 +1,4 @@
-<div class="memory_game_board">
+<div class="memory_game_board memory_game">
     <div class="completed_holder">
             <div class="how_to_play">
                 <div class="holder">
