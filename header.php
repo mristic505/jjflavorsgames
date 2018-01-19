@@ -16,7 +16,7 @@ if (strpos($url_string, 'page') !== false) {
         $page_title = 'Fruity Match';       
     }
     if ($page == 'pop-a-fruit') {
-                
+          $page_title = 'Pop a Fruit';       
     }
     if ($page == 'matching-numbers') {
 		$page_title = 'Matching Numbers';                   
@@ -36,6 +36,7 @@ if (strpos($url_string, 'page') !== false) {
         
 } else {
    $page_title = 'Register';
+   $page = 'register';
 }
 ?>	
 <title><?php echo $page_title; ?></title>
@@ -53,7 +54,7 @@ if (strpos($url_string, 'page') !== false) {
 <script src="js/subprices-ccw.js?ver=1.0.3"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
-<body class="">
+<body class="page-<?php echo $page; ?>">
 <header>
 	<!-- nav -->
 	<div class="nav-holder">

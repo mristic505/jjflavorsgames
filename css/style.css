@@ -97,6 +97,8 @@ body {
     vertical-align: middle;
     z-index: 9999;
     position: relative;
+    right: 4px;
+    bottom: 2px;
 }
 /*.inner_holder {
     position: relative;
@@ -365,6 +367,14 @@ footer {
     background-color: #65a621;
     padding: 24px 15px;
 }
+/*@media screen and (min-width: 768px) {
+    footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+}*/
 .legal {
     max-width: 796px;
     margin: auto;
@@ -489,8 +499,8 @@ label[for="age"] {
     height: 80px;
 }
 main {
-        padding-bottom: 50px;
-    }
+    padding-bottom: 50px;
+}
 .menu-logo {
         display: none;
     }
@@ -532,6 +542,9 @@ main {
         -o-transform: scale(0.85);
         transform: scale(0.85);
     }
+    #form_intro {
+        margin-top: 45px;
+    }
 }
 @media screen and (max-width: 823px) {
     .mobile {
@@ -539,7 +552,7 @@ main {
     }
     .desktop {
         display: none;
-    }
+    }    
 }
 @media screen and (max-width: 768px) {
     .nav div {
@@ -609,7 +622,7 @@ main {
     }
     .roulette_holder {
         display: block;
-    }
+    }    
 }
 @media screen and (max-width: 700px) {
     .container,
@@ -1206,7 +1219,7 @@ main {
     margin: 30px auto;
 }
 .mobile .heading {
-    margin-bottom: 25px;
+    margin-bottom: 5px;
 }
 /*********** Official Rules *************/
 .officialRulesTitle{
@@ -1226,6 +1239,9 @@ main {
 .flavorLogoImg {
     max-width: 207px;
     margin: 0 auto;
+}
+.page-official-rules {
+    background-size: auto 5000px;   
 }
 /*************** End of Official Rules  *******************/
 
@@ -1342,6 +1358,45 @@ main {
     margin-bottom: 10px;
 }
 
+/** STICK FOOTER TO THE BOTTOM HACK **/
+
+@media screen and (min-width: 769px) {
+
+    html {
+      height: 100%;
+      box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    body {
+      position: relative;
+      margin: 0;
+      padding-bottom: 6rem;
+      min-height: 100%;
+    }
+
+    footer {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      text-align: center;
+    }
+
+    main {
+        padding-bottom: 0;
+        margin-bottom: 100px;
+    }
+
+}
+
+/*************************************/
+
 @media screen and (min-width: 769px) {
     .jj_products {
         position: relative;
@@ -1406,6 +1461,12 @@ main {
     .faq-body {
         padding: 0 10px;
         
+    }
+    .roulette_holder {
+        margin-top: 0;
+    }
+    .prizesContainer p {
+        padding: 0 15px;
     }
 }
 
@@ -1629,8 +1690,14 @@ main {
     }
     .heading {
         max-width: none;
-        font-size: 25px;
+        font-size: 23px;
         line-height: 30px;
+    }
+    .intro_lead_small {
+        margin-top: 15px;
+    }
+    .intro_lead {
+        margin-bottom: 15px;
     }
     .numbers, .draggable_numbers {
         padding: 5px 0px 2px;
@@ -1660,6 +1727,9 @@ main {
     }
     .memory_game .how_to_play .instructions {
         max-width: 130px;
+    }
+    .prc_holder .h1_title {
+        margin-bottom: 8px;
     }
 }
 @media (max-width: 475px) and (-ms-high-contrast:none) {
@@ -1750,4 +1820,40 @@ main {
     }
 }
 
+@media (max-width:  769px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+}
 

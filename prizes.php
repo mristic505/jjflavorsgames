@@ -11,5 +11,5 @@
 	<h2>We're awarding<br>a juicy prize every day!</h2>
 	<p>YOU COULD WIN A</p>
 	<img class="prepaidCard" src="img/prepaid-card.png">
-	<p>Perfect for filling your shopping cart with items<br>that help your kids discover a world of flavor—especially<br>the 16 great-tasting flavors of Juicy Juice!</p>
+	<p>Perfect for filling your shopping cart with items that help your kids discover a world of flavor—especially the 16 great-tasting flavors of Juicy Juice!</p>
 </div>
