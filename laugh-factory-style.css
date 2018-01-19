@@ -345,7 +345,7 @@ button {
 	.joke {
 	    font-size: 20px;
 	    padding-bottom: 10px;
-	    max-width: 181px;
+	    max-width: 210px;
 	}
 	.slide2TextContainer {
 	    top: 144px;
@@ -389,3 +389,84 @@ button {
 	    font-size: 15px;
 	}
 }
+
+@media screen and (max-width: 400px){
+
+	.slideshow-container {
+	    width: 300px;
+	    height: 300px;
+	}
+	.mySlides {
+	    height: 300px;
+	    width: 300px;
+	}
+	.slide1TextContainer {
+	    top: 157px;
+	}
+	#introParagraph {
+	    padding-bottom: 15px;
+	}
+
+.slide2TextContainer {
+    top: 114px;
+}
+
+.joke {
+    font-size: 14px;
+    padding-bottom: 10px;
+    max-width: 190px;
+}
+
+.answerBtn {
+    max-width: 150px;
+    font-size: 12px;
+    margin: 0 auto;
+}
+
+.prev img, .next img {
+    max-width: 75%;     max-width: 75%;
+}
+.prev {
+    left: 11px; 
+}
+
+.next {
+    right: 11px;
+
+}
+.slide3TextContainer {
+    position: relative;
+    top: 70px;
+}
+#lastSlideText {
+    font-size: 12px;
+    max-width: 164px;
+    padding-bottom: 13px;
+    line-height: normal;
+}
+#fruitFactTitle {
+    padding-bottom: 3px;
+    font-size: 20px;
+}
+
+#fruityFact {
+    font-size: 11px;
+    max-width: 118px;
+}
+#slide3-BtnGroup {
+    top: 209px;
+    left: 58px;
+    font-size: 11px;
+}
+#getCoupBtn {
+    height: 24px;
+    width: 95px;
+    font-size: 10px;
+    margin: 10px auto;
+}
+
+
+
+}
+
+
