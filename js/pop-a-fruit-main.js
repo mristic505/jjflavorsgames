@@ -25,7 +25,7 @@ function position_available(){
 function generate_random_available_position(){
     var position_found = false;
     while(!position_found){
-        rand = Math.floor(Math.random() * 6);
+        rand = Math.floor(Math.random() * 7);
         if(active_positions[rand] == 0){
             position_found = true;
             return rand;
@@ -134,8 +134,10 @@ function game_start(){
 function game_end(){
     setTimeout(function(){
         if(fruits_popped == 0){
+            $(".you-did-it-title").hide();            
             $(".popped-fruits").hide();            
         }else{
+            $(".failed-to-pop-fruits-title").hide();
             $(".failed-to-pop-fruits").hide();
             // if($(window).width() < 601){
                 // $("#popped-fruits").html(Math.ceil(fruits_popped/2));
