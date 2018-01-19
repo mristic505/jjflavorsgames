@@ -92,8 +92,9 @@
 
             <div class="game-end-wrapper">
                 <img class="you-did-it-title" src="assets/pop-a-fruit/game_end/great_job.png">
+                <img class="failed-to-pop-fruits-title" src="assets/pop-a-fruit/game_end/oops.png">
                 <h2 class="popped-fruits">You popped <span id="popped-fruits"></span> fruits. That’s super juicy!</h2>
-                <h2 class="failed-to-pop-fruits">You did not pop any fruits!</h2>
+                <h2 class="failed-to-pop-fruits">You popped <span>0</span> fruits.</h2>
                 <div class="game-end-message-container">
                     <?=$game_title?>
                     <p><?=$message_box_message?></p>

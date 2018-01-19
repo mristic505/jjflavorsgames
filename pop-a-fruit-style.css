@@ -634,7 +634,7 @@ th {
   z-index: 999991;
 }
 
-.game-end-wrapper .you-did-it-title {
+.game-end-wrapper .you-did-it-title, .game-end-wrapper .failed-to-pop-fruits-title {
   margin-top: 43px;
 }
 
@@ -723,7 +723,7 @@ th {
 }
 
 @media screen and (max-width: 600px) {
-  .game-end-wrapper .you-did-it-title {
+  .game-end-wrapper .you-did-it-title, .game-end-wrapper .failed-to-pop-fruits-title {
     margin-top: 5px;
   }
   .game-end-wrapper h2 {
@@ -748,7 +748,7 @@ th {
 }
 
 @media screen and (max-width: 470px) {
-  .game-end-wrapper .you-did-it-title {
+  .game-end-wrapper .you-did-it-title, .game-end-wrapper .failed-to-pop-fruits-title {
     margin-top: 5px;
     height: 30px;
   }
@@ -756,5 +756,8 @@ th {
     margin-top: 0px;
     font-size: 11px;
     line-height: 11px;
+  }
+  .game-end-wrapper h2 span {
+    font-size: 13px;
   }
 }

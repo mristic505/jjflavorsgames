@@ -8,7 +8,7 @@
     background-image: url('assets/pop-a-fruit/game_end/game_end_background.png');
     background-size: cover;
     z-index: 999991;
-    .you-did-it-title{
+    .you-did-it-title,.failed-to-pop-fruits-title{
         margin-top: 43px;
     }
     h2{
@@ -84,7 +84,7 @@
     }
 
     @media screen and (max-width: 600px) {
-        .you-did-it-title{
+        .you-did-it-title,.failed-to-pop-fruits-title{
             margin-top: 5px;
         }
         h2{
@@ -111,7 +111,7 @@
         }
     }
     @media screen and (max-width: 470px) {
-        .you-did-it-title{
+        .you-did-it-title,.failed-to-pop-fruits-title{
             margin-top: 5px;
             height: 30px;
         }
@@ -119,6 +119,9 @@
             margin-top: 0px;
             font-size: 11px;
             line-height: 11px;
+            span{
+                font-size: 13px;
+            }
         }
     }        
 }
