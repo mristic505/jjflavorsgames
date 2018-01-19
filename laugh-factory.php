@@ -1,6 +1,6 @@
 
     <link rel="stylesheet" type="text/css" href="laugh-factory-style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=0.6">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=0.6"> -->
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <body>
@@ -9,21 +9,27 @@
 
   <!-- Full-width images with number and caption text -->
   <div class="mySlides slidefade slide1">
-    <h1 id="introParagraph">Experience lots of laughs as you click through<br>this fruity fun.</h1>
-    <button id="startJokesBtn" onclick="plusSlides(1)">GET STARTED</button>
+    <div class="slide1TextContainer">
+	<h1 id="introParagraph">Experience lots of laughs as you click through<br>this fruity fun.</h1>
+    	<button id="startJokesBtn" onclick="plusSlides(1)">GET STARTED</button>
+    </div>
   </div>
 
   <div class="mySlides slidefade">
-    <h1 class="joke"></h1>
-    <h2 class="answerBtn">SEE ANSWER <img id="answerBtnArrow" src="img/seeAnswerBtn.png"/></h2>
+    <div class="slide2TextContainer">
+	    <h1 class="joke"></h1>
+	    <h2 class="answerBtn">SEE ANSWER <img id="answerBtnArrow" src="img/seeAnswerBtn.png"/></h2>
+    </div>
     <a class="prev"><img src="img/left-arrow.png"></a>
     <a class="next"><img src="img/right-arrow.png"></a>
   </div>
 
   <div class="mySlides slidefade slide3">
-    <h1 id="lastSlideText">Share these jokes with your friends and family</h1>
+    <div class="slide3TextContainer">
+<h1 id="lastSlideText">Share these jokes with your friends and family</h1>
     <h2 id="fruitFactTitle">Fun Fruity Fact</h2>
     <p id="fruityFact"></p>
+</div>
     <div id="slide3-BtnGroup">
       <button id="jokesAgainBtn" onclick="plusSlides(-1)">SEE JOKES AGAIN<img class="rightArrow" src="img/rightArrow.png"></button>
       <button id="spinBtn" onclick="location.href='?page=spin'; ">SPIN<img class="rightArrow" src="img/rightArrow.png"></button>
