@@ -1659,9 +1659,10 @@ main {
     }
     .fruit_fact_info {
         font-size: 11px;
+        line-height: 14px;
     }
     .fruit_fact_head {
-        margin-bottom: 5px;
+        margin-bottom: 0;
     }   
     .you_did_it {
         margin-top: 15px;
@@ -1806,10 +1807,10 @@ main {
         margin-top: 10px;
     }
     .completed_holder {
-        top: 14px;
-        bottom: 14px;
-        left: 14px;
-        right: 14px;
+        top: 13px;
+        bottom: 13px;
+        left: 13px;
+        right: 13px;
     }
     .draggable_number_holder, 
     .dn, 
