@@ -379,9 +379,26 @@ footer {
     max-width: 796px;
     margin: auto;
     font-size: 10px;
+    line-height: 12px;
     color: #fff;
     text-align: center;
     font-family: 'Helvetica Neue';
+}
+.ll1 a {
+    padding: 0 14px;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fff;
+    padding-bottom: 10px;
+}
+@media screen and (min-width: 353px) {
+    .ll1 a:first-child {
+        border-right: 1px solid #fff;
+        padding-bottom: 0px;
+    }
+}
+.ll1 {
+    margin-bottom: 12px;
 }
 .desktop {
     display: block;
@@ -769,6 +786,7 @@ main {
     color: #fff;
     text-align: center;
     margin-bottom: 15px;
+    font-size: 18px;
 }
 .message_board {
     position: relative;
@@ -1529,9 +1547,10 @@ main {
     .ctext {
 
     }
-    .legal {
+    .legal, .ll1 {
         font-size: 13px;
-    }
+        line-height: 16px;
+    }    
     .play_again, .spin_again, .get_coupon_btn {
         font-size: 12px;
     }
