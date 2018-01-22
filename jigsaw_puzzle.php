@@ -30,7 +30,7 @@
         
         <div class="game-end-wrapper">
             <img class="you-did-it-title" src="assets/jigsaw_puzzle/game_end/you_did_it.png">
-            <h2 class="you-did-it-subtitle">You've completed 100% of the juicy jigsaw</h2>
+            <h2 class="you-did-it-subtitle">You've completed 100% of the juicy jigsaw.</h2>
             <div class="game-end-message-container">
                 <?php
                     if(isset($_GET['play'])){
