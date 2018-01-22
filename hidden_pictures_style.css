@@ -10,7 +10,6 @@
 
 .main-wrapper {
   position: relative;
-  padding-top: 40px;
   width: 100%;
   max-width: 1155px;
   margin-left: auto;
@@ -964,7 +963,7 @@ th {
 
 @media screen and (max-width: 470px) {
   .game-end-wrapper .game-end-message-container .fun-fruity-fact-title {
-    font-size: 21px;
+    font-size: 18px;
   }
   .game-end-wrapper .game-end-message-container p {
     font-size: 11px;
@@ -973,55 +972,11 @@ th {
   }
 }
 
-.game-end-wrapper .bottom-cta-container {
-  font-family: 'CabritoNorBol';
+.game-end-wrapper .end_ctas {
   position: absolute;
-  bottom: 0;
   left: 0;
   right: 0;
-}
-
-.game-end-wrapper .bottom-cta-container a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.game-end-wrapper .bottom-cta-container a:visited, .game-end-wrapper .bottom-cta-container a:hover, .game-end-wrapper .bottom-cta-container a:active {
-  color: #ffffff;
-}
-
-.game-end-wrapper .bottom-cta-container .get-coupon-button {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 162px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: #1a5632;
-  margin-bottom: 61px;
-}
-
-.game-end-wrapper .bottom-cta-container .cta {
-  display: inline-block;
-  padding-bottom: 20px;
-}
-
-.game-end-wrapper .bottom-cta-container .cta img {
-  padding-left: 5px;
-}
-
-.game-end-wrapper .bottom-cta-container .cta:first-child {
-  padding-right: 20px;
-}
-
-.game-end-wrapper .bottom-cta-container .cta-arrow {
-  width: 0;
-  height: 0;
-  width: 0;
-  height: 0;
-  border-top: 60px solid transparent;
-  border-bottom: 60px solid transparent;
-  border-left: 60px solid green;
+  bottom: 37px;
 }
 
 .game-end-wrapper .game-end-image {
@@ -1049,6 +1004,11 @@ th {
   }
   .game-end-wrapper .game-end-image {
     height: 100px;
+  }
+  .game-end-wrapper .end_ctas {
+    top: auto;
+    bottom: 7px;
+    margin-top: 10px;
   }
 }
 

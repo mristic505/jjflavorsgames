@@ -81,7 +81,7 @@
         }
         @media screen and (max-width: 470px) {
             .fun-fruity-fact-title{
-                font-size: 21px;
+                font-size: 18px;
             }
             p{
                 font-size: 11px;
@@ -90,49 +90,57 @@
             }
         }
     }
-    .bottom-cta-container{
-        font-family: 'CabritoNorBol';
+
+    
+    .end_ctas{
         position: absolute;
-        bottom: 0;
         left: 0;
         right: 0;
-        a{
-            text-decoration: none;
-            color:#ffffff;
-            &:visited,&:hover,&:active{
-                color:#ffffff;
-            }
-        }
-        .get-coupon-button{
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 162px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            background-color: #1a5632;
-            margin-bottom: 61px;
-        }
-        .cta{
-            display:inline-block;
-            padding-bottom: 20px;
-            img{
-                padding-left: 5px;
-            }
-        }
-        .cta:first-child{
-            padding-right: 20px;
-        }
-        .cta-arrow{
-            width: 0; 
-            height: 0; 
-            width: 0; 
-            height: 0; 
-            border-top: 60px solid transparent;
-            border-bottom: 60px solid transparent;
-            border-left: 60px solid green;
-          }
+        bottom: 37px;
     }
+    // .bottom-cta-container{
+    //     font-family: 'CabritoNorBol';
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 0;
+    //     right: 0;
+    //     a{
+    //         text-decoration: none;
+    //         color:#ffffff;
+    //         &:visited,&:hover,&:active{
+    //             color:#ffffff;
+    //         }
+    //     }
+    //     .get-coupon-button{
+    //         display: block;
+    //         margin-left: auto;
+    //         margin-right: auto;
+    //         width: 162px;
+    //         padding-top: 10px;
+    //         padding-bottom: 10px;
+    //         background-color: #1a5632;
+    //         margin-bottom: 61px;
+    //     }
+    //     .cta{
+    //         display:inline-block;
+    //         padding-bottom: 20px;
+    //         img{
+    //             padding-left: 5px;
+    //         }
+    //     }
+    //     .cta:first-child{
+    //         padding-right: 20px;
+    //     }
+    //     .cta-arrow{
+    //         width: 0; 
+    //         height: 0; 
+    //         width: 0; 
+    //         height: 0; 
+    //         border-top: 60px solid transparent;
+    //         border-bottom: 60px solid transparent;
+    //         border-left: 60px solid green;
+    //       }
+    // }
     .game-end-image{
         position: absolute;
         top: 28%;
@@ -158,6 +166,12 @@
         
         .game-end-image{
             height: 100px;
+        }
+        
+        .end_ctas{
+            top: auto;
+            bottom: 7px;
+            margin-top: 10px;
         }
     }
   
