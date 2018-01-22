@@ -382,6 +382,8 @@ jQuery(document).ready(function($) {
             }
         } 
     });
+
+    // UNCOMMENT THIS TO FORCE END STATE
     // end_action(end_message, end_fruit);
 
     $('.start-game-button').click(function(){
@@ -395,11 +397,14 @@ jQuery(document).ready(function($) {
     // MASK INPUT
     $("#phone-group input").mask("(999) 999-9999");
     $("#zip-group input").mask("99999");
-    
 
-    // // Footer on bottom hack
-    // if($('body').hasClass('page-coupon') || $('body').hasClass('page-prizes')) {
-    //     $('html').css('height', '100%');
-    // }
+    //Stick footer to the bottom
+    $(window).on('load resize', function () {
+        var footer_height = $('footer').outerHeight();
+        if($(window).width > 768) {        
+            $('main').css('padding-bottom', 50 + footer_height +'px');
+        }
+    });
+    
 
 });
