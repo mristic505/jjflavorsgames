@@ -397,4 +397,9 @@ jQuery(document).ready(function($) {
     $("#zip-group input").mask("99999");
     
 
+    // // Footer on bottom hack
+    // if($('body').hasClass('page-coupon') || $('body').hasClass('page-prizes')) {
+    //     $('html').css('height', '100%');
+    // }
+
 });
