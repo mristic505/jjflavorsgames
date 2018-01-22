@@ -399,12 +399,12 @@ jQuery(document).ready(function($) {
     $("#zip-group input").mask("99999");
 
     //Stick footer to the bottom
-    $(window).on('load resize', function () {
-        var footer_height = $('footer').outerHeight();
-        if($(window).width > 768) {        
-            $('main').css('padding-bottom', 50 + footer_height +'px');
-        }
-    });
+    // $(window).on('load resize', function () {
+    //     var footer_height = $('footer').outerHeight();
+    //     if($(window).width() > 768) {        
+    //         $('main').css('padding-bottom', 50 + footer_height +'px');
+    //     }
+    // });
     
 
 });
