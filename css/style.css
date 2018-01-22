@@ -71,6 +71,7 @@ body {
     background-color: #c8df97;
     background-size: cover;
     font-family: 'CabritoNorExB';
+    overflow: hidden;
 }
 .logo {
     margin: auto;
