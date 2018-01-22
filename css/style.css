@@ -367,17 +367,18 @@ footer {
     background-color: #65a621;
     padding: 24px 15px;
 }
-/*@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
     footer {
         position: absolute;
         bottom: 0;
         width: 100%;
     }
     body {
-
+        position: relative;
+        min-height: 100vh;
     }
 
-}*/
+}
 .legal {
     max-width: 796px;
     margin: auto;
