@@ -169,6 +169,7 @@
         .section-4{
             height: 83px;
         }
+        
     }
     @media screen and (max-width: 470px) {
         width: 315px;
@@ -189,6 +190,9 @@
             left: calc(50% - 22px);
             padding: 0px 7px;
             font-size: 18px;
+        }
+        #game-counter{
+            top: 9%;
         }
     }
 }
