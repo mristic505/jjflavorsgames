@@ -323,14 +323,15 @@ button {
 	    height: 400px;
 	}
 	#startJokesBtn {
-	    height: 33px;
-	    width: 130px;
-	    font-size: 13px;
+	    height: 30px;
+	    width: 106px;
+	    font-size: 11px;	  
 	}
 	#introParagraph {
-	    font-size: 13px;
-	    max-width: 174px;
-	    padding-bottom: 25px;
+	    font-size: 14px;
+	    max-width: 178px;
+	    padding-bottom: 15px;
+
 	}
 	.slide1TextContainer {
 	    top: 216px;
@@ -405,6 +406,14 @@ button {
 	}
 	#introParagraph {
 	    padding-bottom: 15px;
+	    font-size: 11px;
+	    max-width: 147px;
+
+	}
+	#startJokesBtn {
+	    height: 26px;
+	    width: 92px;
+	    font-size: 9px;
 	}
 
 .slide2TextContainer {
