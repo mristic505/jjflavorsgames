@@ -118,9 +118,8 @@ button {
 }
 
 #slide3-BtnGroup {
-    position: absolute;
-    top: 421px;
-    left: 150px;
+    position: relative;
+    top: 191px;
     font-size: 20px;
 }
 
@@ -379,8 +378,7 @@ button {
 	    max-width: 118px;
 	}
 	#slide3-BtnGroup {
-	    top: 281px;
-	    left: 100px;
+	    top: 137px;
 	    font-size: 13px;
 	}
 
@@ -388,7 +386,10 @@ button {
 	    height: 35px;
 	    width: 145px;
 	    font-size: 15px;
+	    margin: 15px auto;
 	}
+
+	
 }
 
 @media screen and (max-width: 400px){
@@ -448,9 +449,9 @@ button {
     top: 70px;
 }
 #lastSlideText {
-    font-size: 12px;
+    font-size: 10px;
     max-width: 164px;
-    padding-bottom: 13px;
+    padding-bottom: 21px;
     line-height: normal;
 }
 #fruitFactTitle {
@@ -463,9 +464,8 @@ button {
     max-width: 118px;
 }
 #slide3-BtnGroup {
-    top: 209px;
-    left: 58px;
-    font-size: 11px;
+    top: 100px;
+    font-size: 10px;
 }
 #getCoupBtn {
     height: 24px;
