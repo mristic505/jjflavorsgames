@@ -74,11 +74,12 @@
                         echo " <img class='game-end-image' src='assets/jigsaw_puzzle/game_end/pineapple_bg.png'>";
                     }
                 ?>
-        <div class="bottom-cta-container">
-                <a href="" class="play-again puzzle-cta">PLAY AGAIN <img src="assets/jigsaw_puzzle/arrow.png"></a>
-                <a class="puzzle-spin puzzle-cta" href="?page=spin">SPIN <img src="assets/jigsaw_puzzle/arrow.png"></a>
-                <a href="?page=coupon" class="get-coupon-button">GET COUPON</a>
-        </div>
+            <!-- <div class="bottom-cta-container">
+                    <a href="" class="play-again puzzle-cta">PLAY AGAIN <img src="assets/jigsaw_puzzle/arrow.png"></a>
+                    <a class="puzzle-spin puzzle-cta" href="?page=spin">SPIN <img src="assets/jigsaw_puzzle/arrow.png"></a>
+                    <a href="?page=coupon" class="get-coupon-button">GET COUPON</a>
+            </div> -->
+            <div class="end_ctas"><a class="play_again" href="">PLAY AGAIN <span class="glyphicon glyphicon-play" aria-hidden="true"></span></a><a class="spin_again" href="?page=spin">SPIN <span class="glyphicon glyphicon-play" aria-hidden="true"></span></a><br><a class="get_coupon_btn" href="#">GET COUPON</a></div>
         </div>
             <div class="puzzle-background clearfix">
 

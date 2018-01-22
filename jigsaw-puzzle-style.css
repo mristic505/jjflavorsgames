@@ -10,6 +10,7 @@
 
 .main-wrapper {
   position: relative;
+  padding-top: 40px;
   width: 100%;
   max-width: 1155px;
   margin-left: auto;
@@ -19,15 +20,12 @@
 @media screen and (max-width: 1200px) {
   .main-wrapper {
     width: 830px;
-    padding-left: 10px;
   }
-  
 }
 
 @media screen and (max-width: 810px) {
   .main-wrapper {
     width: 595px;
-    padding-left: 0px;
   }
 }
 
@@ -1086,13 +1084,8 @@
   bottom: 0;
   left: 0;
   right: 0;
-  font-size: 18px;
 }
-@media screen and (max-width: 1200px){
-  font-size: 12px;
 
-
-}
 .game-end-wrapper .bottom-cta-container a {
   text-decoration: none;
   color: #ffffff;
@@ -1119,44 +1112,22 @@
   }
 }
 
+@media screen and (max-width: 810px) {
+  .game-end-wrapper .bottom-cta-container .get-coupon-button {
+    margin-bottom: 5px;
+  }
+}
+
 .game-end-wrapper .bottom-cta-container .puzzle-cta {
   display: inline-block;
   padding-bottom: 20px;
   padding-right: 10px;
 }
-.puzzle-cta {
-    padding-left: 13px;
-}
 
 @media screen and (max-width: 1200px) {
   .game-end-wrapper .bottom-cta-container .puzzle-cta {
-    padding-bottom: 19px;
+    padding-bottom: 10px;
   }
-  .game-end-wrapper .bottom-cta-container {
-    bottom: 25px;
-    font-size: 13px; 
-
-  }
-
-.game-end-wrapper .you-did-it-title {
-    margin-top: 35px;
-}
-.game-end-wrapper .bottom-cta-container .get-coupon-button {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 35px;
-    width: 115px;
-    height: 35px;
-    background-color: #1a5632;
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
-
-.game-end-wrapper .you-did-it-subtitle { 
-    font-size: 12px;
-
-}
 }
 
 @media screen and (max-width: 810px) {
@@ -1191,7 +1162,7 @@
   left: 50%;
   -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
-  width: 37%;
+  width: 49%;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1214,7 +1185,7 @@
 
 .game-end-wrapper .game-end-message-container p {
   font-family: 'CabritoNorExB';
-  font-size: 16px;
+  font-size: 18px;
   color: #1a5632;
   margin-top: 3px;
   margin-left: auto;
@@ -1233,30 +1204,20 @@
 
 @media screen and (max-width: 810px) {
   .game-end-wrapper .game-end-message-container p {
-    font-size: 9px;
+    font-size: 10px;
   }
 }
 
 .game-end-wrapper .game-end-image {
-    position: absolute;
-    top: 25%;
-    right: 5%;
+  position: absolute;
+  top: 24%;
+  right: 0%;
 }
-
-}
-
-
 
 @media screen and (max-width: 1200px) {
   .game-end-wrapper .game-end-image {
     width: 26%;
   }
-
-.game-end-wrapper .game-end-image {
-    position: absolute;
-    top: 22%;
-    right: 6%;
-}
 }
 
 @media screen and (max-width: 810px) {
@@ -1269,54 +1230,4 @@
   .tropical .game-end-wrapper .game-end-message-container img {
     width: 79%;
   }
-
-  .game-end-wrapper .you-did-it-title {
-    margin-top: 25px;
 }
-
-.game-end-wrapper .you-did-it-subtitle {
-    font-size: 10px;
-    margin-top: 5px;
-    padding: 0 20px;
-}
-.game-end-wrapper .bottom-cta-container {
-    bottom: 13px;
-    font-size: 10px;
-}
-.game-end-wrapper .bottom-cta-container .puzzle-cta {
-    padding-bottom: 17px;
-    font-size: 11px;
-}
-.game-end-wrapper .game-end-image {
-    position: absolute;
-    top: 26%;
-    right: 7%;
-}
-
-.game-end-wrapper .game-end-message-container p {
-    width: 81%;
-}
-.game-end-wrapper .game-end-message-container {
-    top: 51%;
-
-}
-
-.game-end-wrapper .game-end-message-container img {
-    width: 83%;
-}
-}
-
-@media screen and (max-width: 810px) {
-  .game-end-wrapper .bottom-cta-container .get-coupon-button {
-       margin-bottom: 5px;
-    line-height: 25px;
-    width: 95px;
-    height: 25px; 
-  }
-}
-
-
-
-
-
-
