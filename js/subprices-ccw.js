@@ -317,7 +317,7 @@ jQuery(document).ready(function($) {
     }
 
     function end_action(end_message_holder, end_fruit_holder) {
-        $('.memory_game_board').append($('<div class="completed_holder"> <img class="you_did_it" src="img/you_did_it.png"> <div class="ctext">You’ve completed the Memory Match Game.</div><div class="message_board"> <div class="holder"> <img class="fruit_fact_head" src="img/fruit_fact_head_'+end_fruit_holder+'.png"> <div class="fruit_fact_info">'+end_message_holder+'</div></div><div class="ghost"></div><img class="girl" src="img/girl.png"> <img class="fruit_fact" src="img/fruit_fact_'+end_fruit_holder+'.png"> </div><div class="end_ctas"><a class="play_again" href="javascript:void(0);" onClick="window.location.reload()">PLAY AGAIN <span class="glyphicon glyphicon-play" aria-hidden="true"></span></a><a class="spin_again" href="/flavordiscovery/">SPIN <span class="glyphicon glyphicon-play" aria-hidden="true"></span></a><br><a class="get_coupon_btn" href="#">GET COUPON</a></div></div>').hide().fadeIn(1000));
+        $('.memory_game_board').append($('<div class="completed_holder"> <img class="you_did_it" src="img/you_did_it.png"> <div class="ctext">You’ve completed the Memory Match Game.</div><div class="message_board"> <div class="holder"> <img class="fruit_fact_head" src="img/fruit_fact_head_'+end_fruit_holder+'.png"> <div class="fruit_fact_info">'+end_message_holder+'</div></div><div class="ghost"></div><img class="girl" src="img/girl.png"> <img class="fruit_fact" src="img/fruit_fact_'+end_fruit_holder+'.png"> </div><div class="end_ctas"><a class="play_again" href="javascript:void(0);" onClick="window.location.reload()">PLAY AGAIN <span class="glyphicon glyphicon-play" aria-hidden="true"></span></a><a class="spin_again" href="/flavordiscovery/">SPIN <span class="glyphicon glyphicon-play" aria-hidden="true"></span></a><br><a class="get_coupon_btn" href="?page=coupon">GET COUPON</a></div></div>').hide().fadeIn(1000));
     }    
 
     $.fn.shuffle = function() {
@@ -399,12 +399,12 @@ jQuery(document).ready(function($) {
     $("#zip-group input").mask("99999");
 
     //Stick footer to the bottom
-    // $(window).on('load resize', function () {
-    //     var footer_height = $('footer').outerHeight();
-    //     if($(window).width() > 768) {        
-    //         $('main').css('padding-bottom', 50 + footer_height +'px');
-    //     }
-    // });
+    $(window).on('load resize', function () {
+        var footer_height = $('footer').outerHeight();
+        if($(window).width() > 768) {        
+            $('main').css('padding-bottom', 50 + footer_height +'px');
+        }
+    });
     
 
 });
