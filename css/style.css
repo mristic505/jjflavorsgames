@@ -988,7 +988,7 @@ main {
 }
 .mathching_numbers_htp {
     background: url(../img/fruit_match_bg.png);
-    background-size: 100% 100%;
+    background-size: cover;
 }
 .draggable_numbers, 
 .mn_bottles {

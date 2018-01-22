@@ -21,6 +21,9 @@ if (strpos($url_string, 'page') !== false) {
     if ($page == 'matching-numbers') {
 		$page_title = 'Matching Numbers';                   
     }
+    if ($page == 'laugh-factory') {
+		$page_title = 'Laugh Factory';                   
+    }
     if ($page == 'prize-claim-form') {
         $page_title = 'Prize Claim Form';          
     }
@@ -32,6 +35,9 @@ if (strpos($url_string, 'page') !== false) {
     }
     if ($page == 'coupon') {
         $page_title = 'Offer';          
+    }
+    if ($page == 'prizes') {
+        $page_title = 'Prizes';          
     }
         
 } else {
