@@ -14,7 +14,7 @@
 	<p>The Instant Win Game is open to all legal residents of the 50 United States (including D.C.) who are 18 years of age or older or the age of majority in their state of residence, whichever is greater.  Entrants must have internet access and a valid e-mail address to participate.</p>
 
 	<h3>How do I play?</h3>
-	<p>Visit <a href="#">www.juicyjuice.com/flavordiscovery</a> beginning at 5:00 p.m. ET on February 5, 2018, through 11:59:59 p.m. ET on April 30, 2018 (the “Game Period”), and follow the on-screen instructions to spin the Game wheel to see if you are a potential winner. <a href="#">Data rates may apply to Game play on a mobile device.</a></p>
+	<p>Visit <a href="http://juicyjuice.com/flavordiscovery">www.juicyjuice.com/flavordiscovery</a> beginning at 5:00 p.m. ET on February 5, 2018, through 11:59:59 p.m. ET on April 30, 2018 (the “Game Period”), and follow the on-screen instructions to spin the Game wheel to see if you are a potential winner. <u>Data rates may apply to Game play on a mobile device.</u></p>
 
 	<h3>If I land on the “winner” space, am I a winner?</h3>
 	<p>Players who land on the “winner” space are potential winners until eligibility and compliance with the Official Rules have been verified.</p>

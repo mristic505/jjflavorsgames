@@ -16,7 +16,7 @@ if (strpos($url_string, 'page') !== false) {
         $page_title = 'Fruity Match';       
     }
     if ($page == 'pop-a-fruit') {
-                
+          $page_title = 'Pop a Fruit';       
     }
     if ($page == 'matching-numbers') {
 		$page_title = 'Matching Numbers';                   
@@ -36,9 +36,11 @@ if (strpos($url_string, 'page') !== false) {
         
 } else {
    $page_title = 'Register';
+   $page = 'register';
 }
 ?>	
 <title><?php echo $page_title; ?></title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link type="text/css" rel="stylesheet" media="all" href="css/style.css?ver=1.0.1"></link>
@@ -53,7 +55,7 @@ if (strpos($url_string, 'page') !== false) {
 <script src="js/subprices-ccw.js?ver=1.0.3"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
-<body class="">
+<body class="page-<?php echo $page; ?>">
 <header>
 	<!-- nav -->
 	<div class="nav-holder">

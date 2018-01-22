@@ -97,6 +97,8 @@ body {
     vertical-align: middle;
     z-index: 9999;
     position: relative;
+    right: 4px;
+    bottom: 2px;
 }
 /*.inner_holder {
     position: relative;
@@ -365,13 +367,51 @@ footer {
     background-color: #65a621;
     padding: 24px 15px;
 }
+/*@media screen and (min-width: 768px) {
+    footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+    body {
+
+    }
+
+}*/
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
+}
 .legal {
     max-width: 796px;
     margin: auto;
     font-size: 10px;
+    line-height: 12px;
     color: #fff;
     text-align: center;
     font-family: 'Helvetica Neue';
+}
+.ll1 a {
+    padding: 0 14px;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fff;
+    padding-bottom: 10px;
+}
+@media screen and (min-width: 353px) {
+    .ll1 a:first-child {
+        border-right: 1px solid #fff;
+        padding-bottom: 0px;
+    }
+}
+.ll1 {
+    margin-bottom: 12px;
 }
 .desktop {
     display: block;
@@ -489,8 +529,8 @@ label[for="age"] {
     height: 80px;
 }
 main {
-        padding-bottom: 50px;
-    }
+    padding-bottom: 50px;
+}
 .menu-logo {
         display: none;
     }
@@ -532,6 +572,9 @@ main {
         -o-transform: scale(0.85);
         transform: scale(0.85);
     }
+    #form_intro {
+        margin-top: 45px;
+    }
 }
 @media screen and (max-width: 823px) {
     .mobile {
@@ -539,7 +582,7 @@ main {
     }
     .desktop {
         display: none;
-    }
+    }    
 }
 @media screen and (max-width: 768px) {
     .nav div {
@@ -609,7 +652,7 @@ main {
     }
     .roulette_holder {
         display: block;
-    }
+    }    
 }
 @media screen and (max-width: 700px) {
     .container,
@@ -756,6 +799,7 @@ main {
     color: #fff;
     text-align: center;
     margin-bottom: 15px;
+    font-size: 18px;
 }
 .message_board {
     position: relative;
@@ -1206,7 +1250,7 @@ main {
     margin: 30px auto;
 }
 .mobile .heading {
-    margin-bottom: 25px;
+    margin-bottom: 5px;
 }
 /*********** Official Rules *************/
 .officialRulesTitle{
@@ -1226,6 +1270,9 @@ main {
 .flavorLogoImg {
     max-width: 207px;
     margin: 0 auto;
+}
+.page-official-rules {
+    background-size: auto 5000px;   
 }
 /*************** End of Official Rules  *******************/
 
@@ -1342,6 +1389,16 @@ main {
     margin-bottom: 10px;
 }
 
+/** STICK FOOTER TO THE BOTTOM HACK **/
+
+@media screen and (min-width: 769px) {
+
+
+
+}
+
+/*************************************/
+
 @media screen and (min-width: 769px) {
     .jj_products {
         position: relative;
@@ -1407,6 +1464,12 @@ main {
         padding: 0 10px;
         
     }
+    .roulette_holder {
+        margin-top: 0;
+    }
+    .prizesContainer p {
+        padding: 0 15px;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -1468,9 +1531,10 @@ main {
     .ctext {
 
     }
-    .legal {
+    .legal, .ll1 {
         font-size: 13px;
-    }
+        line-height: 16px;
+    }    
     .play_again, .spin_again, .get_coupon_btn {
         font-size: 12px;
     }
@@ -1500,10 +1564,14 @@ main {
     }
     .how_to_play h3 {
         font-size: 14px;
+        margin-bottom: 3px;
     }
     .how_to_play .instructions {
         font-size: 11px;
         max-width: 180px;
+    }
+    .page-matching-numbers .how_to_play .instructions {
+        max-width: 140px;
     }
     .how_to_play img {
         height: 85px;
@@ -1594,9 +1662,10 @@ main {
     }
     .fruit_fact_info {
         font-size: 11px;
+        line-height: 14px;
     }
     .fruit_fact_head {
-        margin-bottom: 5px;
+        margin-bottom: 0;
     }   
     .you_did_it {
         margin-top: 15px;
@@ -1629,8 +1698,14 @@ main {
     }
     .heading {
         max-width: none;
-        font-size: 25px;
+        font-size: 23px;
         line-height: 30px;
+    }
+    .intro_lead_small {
+        margin-top: 15px;
+    }
+    .intro_lead {
+        margin-bottom: 15px;
     }
     .numbers, .draggable_numbers {
         padding: 5px 0px 2px;
@@ -1660,6 +1735,9 @@ main {
     }
     .memory_game .how_to_play .instructions {
         max-width: 130px;
+    }
+    .prc_holder .h1_title {
+        margin-bottom: 8px;
     }
 }
 @media (max-width: 475px) and (-ms-high-contrast:none) {
@@ -1732,10 +1810,10 @@ main {
         margin-top: 10px;
     }
     .completed_holder {
-        top: 14px;
-        bottom: 14px;
-        left: 14px;
-        right: 14px;
+        top: 13px;
+        bottom: 13px;
+        left: 13px;
+        right: 13px;
     }
     .draggable_number_holder, 
     .dn, 
@@ -1750,4 +1828,40 @@ main {
     }
 }
 
+@media (max-width:  769px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+}
 
