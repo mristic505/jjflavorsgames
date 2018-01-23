@@ -383,16 +383,11 @@ button {
 	}
 
 	#getCoupBtn {
-<<<<<<< HEAD
-	    height: 30px;
-        width: 124px;
-        font-size: 12px;
-=======
 	    height: 35px;
 	    width: 145px;
 	    font-size: 15px;
 	    margin: 15px auto;
->>>>>>> 6f949dfc045dd777f1c5b820a90ac5fafe3b0464
+
 	}
 
 	
