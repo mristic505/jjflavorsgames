@@ -78,6 +78,10 @@
   }
 }
 
+.puzzle-bottom-bar.game-started {
+  height: 440px;
+}
+
 @media screen and (min-width: 1050px) {
   .puzzle-bottom-bar {
     display: none;
@@ -969,6 +973,12 @@
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .how-to-play-wrapper .how-to-play-container .how-to-play-title {
+    width: 220px;
+  }
+}
+
 @media screen and (max-width: 810px) {
   .how-to-play-wrapper .how-to-play-container .how-to-play-title {
     width: 80%;
@@ -983,26 +993,31 @@
   margin-bottom: 16px;
 }
 
+@media screen and (max-width: 1200px) {
+  .how-to-play-wrapper .how-to-play-container h2 {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 3px;
+  }
+}
+
 @media screen and (max-width: 810px) {
   .how-to-play-wrapper .how-to-play-container h2 {
-    font-size: 13px;
-    margin: 0px;
+    margin-top: 10px;
   }
 }
 
 .how-to-play-wrapper .how-to-play-container p {
-  font-family: "CabritoNorBol";
+  font-family: "CabritoNorExB";
   font-size: 18px;
   color: #1a5632;
   margin: 0;
   padding: 0 20px;
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 1200px) {
   .how-to-play-wrapper .how-to-play-container p {
-    font-size: 14px;
-    padding: 0 18px;
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 
@@ -1018,14 +1033,15 @@
   width: auto;
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 1200px) {
   .how-to-play-wrapper .how-to-play-container .start-game-button {
-    padding: 9px 32px;
     font-size: 10px;
+    padding: 8.2px 31.4px;
   }
 }
 
 .game-end-wrapper {
+  display: none;
   position: absolute;
   top: 18px;
   left: 18px;
