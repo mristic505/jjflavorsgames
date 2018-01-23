@@ -73,6 +73,7 @@ function move_pieces_at_game_start(){
 }
 //move pieces to appropriate sidebars
 function animate_piece_movement_to_sidebar(current_piece, sidebar, loop_num){
+    $('.puzzle-bottom-bar').addClass('game-started');    
     current_piece_original = current_piece;
     current_piece =".puzzle-container "+current_piece
     if(sidebar == "left"){
@@ -197,6 +198,7 @@ function hide_solved_pieces(piece_number){
 }
 function check_if_puzzle_completed(){
     if(solved_pieces.indexOf(0) == -1){
+        $('.puzzle-bottom-bar').removeClass('game-started');        
         $(".puzzle-bottom-bar").hide();
         $(".game-end-wrapper").show();
     }

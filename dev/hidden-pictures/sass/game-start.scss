@@ -25,7 +25,7 @@
             margin-bottom: 16px;
         }
         p{
-            font-family: "CabritoNorBol";
+            font-family: "CabritoNorExB";
             font-size: 18px;
             color: #1a5632;
             margin: 0;
@@ -33,7 +33,7 @@
         .start-game-button{
             font-family: "CabritoNorExB";
             margin-top:20px;
-            padding: 15px 59px;
+            padding: 9.7px 52.53px;
             color: #ffffff;
             background-color: #1a5632;
             border: 0;
@@ -50,13 +50,17 @@
             .how-to-play-title{
                 height: 104px;
                 margin-top: 74px;
-                padding-bottom: 10px;
+                padding-bottom: 0px;
             }
             .how-to-play-subtitle{
                 font-size: 14px;
+                margin-top: 20px;
+                margin-bottom: 0px;
             }
             p{
-                font-size: 13px;
+                padding-left: 25px;
+                padding-right: 25px;
+                font-size: 11px;
             }
             .start-game-button{
                 padding: 9px 32px;
@@ -70,15 +74,18 @@
             .how-to-play-title{
                 height: 76px;
                 margin-top: 90px;
-                padding-bottom: 5px;            
+                // padding-bottom: 5px;            
             }
             .how-to-play-subtitle{
-                font-size: 14px;
-                margin-bottom: 6px;
+                // font-size: 14px;
+                // margin-bottom: 6px;
             }
             p{
-                font-size: 11px;
-                padding: 0 3px;
+                
+                padding-left: 15px;
+                padding-right: 15px;
+                // font-size: 11px;
+                // padding: 0 3px;
             }
         }
     }
