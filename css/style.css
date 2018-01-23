@@ -72,6 +72,7 @@ body {
     background-size: cover;
     font-family: 'CabritoNorExB';
     min-height: 100vh;
+    position: relative;
 }
 .logo {
     margin: auto;
