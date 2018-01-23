@@ -19,7 +19,7 @@
     url('fonts/CabritoNorReg.ttf') format('truetype'),
     url('fonts/CabritoNorReg.svg#CabritoNorReg') format('svg');
 }
-
+g
 @font-face {
     font-family: 'CabritoNorBol';
     src: url('fonts/CabritoNorBol.eot');
@@ -385,10 +385,16 @@ button {
 	}
 
 	#getCoupBtn {
+<<<<<<< HEAD
+	    height: 30px;
+        width: 124px;
+        font-size: 12px;
+=======
 	    height: 35px;
 	    width: 145px;
 	    font-size: 15px;
 	    margin: 15px auto;
+>>>>>>> 6f949dfc045dd777f1c5b820a90ac5fafe3b0464
 	}
 
 	
@@ -472,8 +478,8 @@ button {
     font-size: 10px;
 }
 #getCoupBtn {
-    height: 24px;
-    width: 95px;
+    height: 30px;
+    width: 110px;
     font-size: 10px;
     margin: 10px auto;
 }
