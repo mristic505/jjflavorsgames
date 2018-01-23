@@ -467,6 +467,9 @@ th {
     padding: 0px 7px;
     font-size: 18px;
   }
+  .responsive.game-container #game-counter {
+    top: 9%;
+  }
 }
 
 .fruit-container {
@@ -569,11 +572,11 @@ th {
   font-size: 24px;
   color: #1a5632;
   margin-top: 0px;
-  margin-bottom: 16px;
+  margin-bottom: 7px;
 }
 
 .how-to-play-wrapper .how-to-play-container p {
-  font-family: "CabritoNorBol";
+  font-family: "CabritoNorExB";
   font-size: 18px;
   color: #1a5632;
   margin: 0;
@@ -582,7 +585,7 @@ th {
 .how-to-play-wrapper .how-to-play-container .start-game-button {
   font-family: "CabritoNorExB";
   margin-top: 20px;
-  padding: 15px 53px;
+  padding: 10px 53px;
   color: #ffffff;
   background-color: #1a5632;
   border: 0;
@@ -646,7 +649,13 @@ th {
 
 .game-end-wrapper h2 span {
   font-family: "CabritoNorExB";
-  font-size: 22px;
+}
+
+.game-end-wrapper .end_ctas {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 37px;
 }
 
 .game-end-wrapper .bottom-cta-container {
@@ -670,9 +679,9 @@ th {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 162px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  width: 165px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   background-color: #1a5632;
   margin-bottom: 61px;
 }
@@ -708,7 +717,7 @@ th {
       transform: translate(-50%, -50%);
 }
 
-.game-end-wrapper .game-end-message-container p {
+.game-end-wrapper .game-end-message-container .fruit-fact-info {
   font-family: 'CabritoNorExB';
   font-size: 18px;
   color: #1a5632;
@@ -723,23 +732,18 @@ th {
 
 @media screen and (max-width: 600px) {
   .game-end-wrapper .you-did-it-title, .game-end-wrapper .failed-to-pop-fruits-title {
-    margin-top: 5px;
+    margin-top: 15px;
   }
   .game-end-wrapper h2 {
-    margin: 0;
+    font-size: 13px;
   }
   .game-end-wrapper .game-end-message-container img {
-    height: 21px;
+    height: 30px;
   }
-  .game-end-wrapper .game-end-message-container p {
-    font-size: 10px;
+  .game-end-wrapper .game-end-message-container .fruit-fact-info {
+    font-size: 14px;
     margin: 0px;
-  }
-  .game-end-wrapper .bottom-cta-container .get-coupon-button {
-    margin-bottom: 6px;
-  }
-  .game-end-wrapper .bottom-cta-container .cta {
-    padding-bottom: 5px;
+    padding: 8px;
   }
   .game-end-wrapper .game-end-image {
     height: 130px;
@@ -748,15 +752,26 @@ th {
 
 @media screen and (max-width: 470px) {
   .game-end-wrapper .you-did-it-title, .game-end-wrapper .failed-to-pop-fruits-title {
-    margin-top: 5px;
+    margin-top: 15px;
     height: 30px;
   }
   .game-end-wrapper h2 {
-    margin-top: 0px;
-    font-size: 11px;
-    line-height: 11px;
+    margin-top: 2px;
+    font-size: 10px;
   }
-  .game-end-wrapper h2 span {
-    font-size: 13px;
+  .game-end-wrapper .game-end-message-container img {
+    height: 20px;
+  }
+  .game-end-wrapper .game-end-message-container .fruit-fact-info {
+    font-size: 10px;
+    padding: 0 10px 0 9px;
+  }
+  .game-end-wrapper .game-end-image {
+    height: 100px;
+  }
+  .game-end-wrapper .end_ctas {
+    top: auto;
+    bottom: 7px;
+    margin-top: 10px;
   }
 }

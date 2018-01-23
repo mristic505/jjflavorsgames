@@ -30,18 +30,20 @@
 }
 
 
- .puzzle-bottom-bar{
+.puzzle-bottom-bar{
     position: relative;
     display: none;
     clear: both;
     width: 75%;
     margin-left: auto;
     margin-right: auto;
-    height: 500px;
     @media screen and (max-width: $sidebar-responsive-breakpoint) {
         display: block;
     }        
- }
+}
+.puzzle-bottom-bar.game-started{
+    height: 440px;
+}
 //rough responsive
 // @media screen and (max-width: 1200px) {
 //     #puzzle-left-sidebar,#puzzle-right-sidebar{

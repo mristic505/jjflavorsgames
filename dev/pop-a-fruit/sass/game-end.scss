@@ -18,9 +18,19 @@
         margin-top: 10px;
         span{
             font-family: "CabritoNorExB";
-            font-size: 22px;
+            // font-size: 22px;
         }
     }
+
+    .end_ctas{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 37px;
+    }
+
+
+    
 
     .bottom-cta-container{
         font-family: 'CabritoNorBol';
@@ -39,9 +49,9 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
-            width: 162px;
-            padding-top: 10px;
-            padding-bottom: 10px;
+            width: 165px;
+            padding-top: 12px;
+            padding-bottom: 12px;
             background-color: #1a5632;
             margin-bottom: 61px;
         }
@@ -70,7 +80,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        p{
+        .fruit-fact-info{
             font-family: 'CabritoNorExB';
             font-size: 18px;
             color:#1a5632;
@@ -85,26 +95,21 @@
 
     @media screen and (max-width: 600px) {
         .you-did-it-title,.failed-to-pop-fruits-title{
-            margin-top: 5px;
+            margin-top: 15px;
         }
         h2{
-            margin: 0;
+            // margin: 0;
+            font-size:13px;
         }
         .game-end-message-container{
             img{
-                height: 21px;
+                height: 30px;
             }
-            p{
-                font-size: 10px;
+            .fruit-fact-info{
+                font-size: 14px;
                 margin: 0px;
+                padding: 8px;
             }
-        }
-        .bottom-cta-container .get-coupon-button{
-            margin-bottom: 6px;
-        }
-        
-        .bottom-cta-container .cta{
-            padding-bottom: 5px;
         }
         .game-end-image{
             height: 130px;
@@ -112,16 +117,34 @@
     }
     @media screen and (max-width: 470px) {
         .you-did-it-title,.failed-to-pop-fruits-title{
-            margin-top: 5px;
+            margin-top: 15px;
             height: 30px;
         }
         h2{
-            margin-top: 0px;
-            font-size: 11px;
-            line-height: 11px;
+            margin-top: 2px;
+            font-size: 10px;
+            // line-height: 11px;
             span{
-                font-size: 13px;
+                // font-size: 13px;
             }
+        }
+        
+        .game-end-message-container{
+            img{
+                height: 20px;
+            }
+            .fruit-fact-info{
+                font-size: 10px;
+                padding: 0 10px 0 9px;
+            }
+        }
+        .game-end-image{
+            height: 100px;
+        }
+        .end_ctas{
+            top: auto;
+            bottom: 7px;
+            margin-top: 10px;
         }
     }        
 }

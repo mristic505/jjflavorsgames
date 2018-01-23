@@ -18,6 +18,9 @@
             width: 62%;
         }
         .how-to-play-title{
+            @media screen and (max-width: $puzzle-container-first-responsive-breakpoint) {
+                width: 220px;
+            }
             @media screen and (max-width: $puzzle-container-second-responsive-breakpoint) {
                 width:80%;
                 // padding-top: 50px;
@@ -30,21 +33,30 @@
             color: #1a5632;
             margin-top: 0px;
             margin-bottom: 16px;
+            @media screen and (max-width: $puzzle-container-first-responsive-breakpoint) {
+                font-size: 14px;
+                margin-top: 20px;
+                margin-bottom: 3px;
+            }
             @media screen and (max-width: $puzzle-container-second-responsive-breakpoint) {
-                font-size: 13px;
-                margin: 0px;
+                // font-size: 13px;
+                // margin: 0px;
+                margin-top: 10px;
             }
         }
         p{
-            font-family: "CabritoNorBol";
+            font-family: "CabritoNorExB";
             font-size: 18px;
             color: #1a5632;
             margin: 0;
             padding: 0 20px;
+            @media screen and (max-width: $puzzle-container-first-responsive-breakpoint) {
+                font-size: 11px;
+            }
             @media screen and (max-width: $puzzle-container-second-responsive-breakpoint) {
-                font-size: 14px;
-                padding: 0 18px;
-                font-size: 12px;
+                // font-size: 14px;
+                // padding: 0 18px;
+                // font-size: 12px;
            }
         }
         .start-game-button{
@@ -57,9 +69,13 @@
             border: 0;
             height: auto;
             width: auto;
-            @media screen and (max-width: $puzzle-container-second-responsive-breakpoint) {
-                padding: 9px 32px;
+            @media screen and (max-width: $puzzle-container-first-responsive-breakpoint) {
                 font-size: 10px;
+                padding: 8.2px 31.4px;
+            }
+            @media screen and (max-width: $puzzle-container-second-responsive-breakpoint) {
+                // padding: 9px 32px;
+                // font-size: 10px;
             }
         }
     }

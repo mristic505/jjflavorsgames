@@ -19,7 +19,7 @@
     url('fonts/CabritoNorReg.ttf') format('truetype'),
     url('fonts/CabritoNorReg.svg#CabritoNorReg') format('svg');
 }
-
+g
 @font-face {
     font-family: 'CabritoNorBol';
     src: url('fonts/CabritoNorBol.eot');
@@ -234,6 +234,7 @@ button {
     color: #1a5632;
     max-width: 195px;
     margin: 0 auto;
+    height: 81px;
 }
 /* Next & previous buttons */
 .prev, .next {
@@ -376,6 +377,7 @@ button {
 	#fruityFact {
 	    font-size: 12px;
 	    max-width: 118px;
+	    height: 51px;
 	}
 	#slide3-BtnGroup {
 	    top: 137px;
@@ -383,10 +385,16 @@ button {
 	}
 
 	#getCoupBtn {
+<<<<<<< HEAD
+	    height: 30px;
+        width: 124px;
+        font-size: 12px;
+=======
 	    height: 35px;
 	    width: 145px;
 	    font-size: 15px;
 	    margin: 15px auto;
+>>>>>>> 6f949dfc045dd777f1c5b820a90ac5fafe3b0464
 	}
 
 	
@@ -462,14 +470,16 @@ button {
 #fruityFact {
     font-size: 11px;
     max-width: 118px;
+    height: 45px;
+
 }
 #slide3-BtnGroup {
     top: 100px;
     font-size: 10px;
 }
 #getCoupBtn {
-    height: 24px;
-    width: 95px;
+    height: 30px;
+    width: 110px;
     font-size: 10px;
     margin: 10px auto;
 }

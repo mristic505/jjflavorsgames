@@ -9,8 +9,8 @@ if (strpos($url_string, 'page') !== false) {
     if ($page == 'spin') {  
         $page_title = 'Spin the Wheel';                  
     }
-    if ($page == 'test') {
-                 
+    if ($page == 'hidden-pictures') {
+         $page_title = 'Hidden Pictures';        
     }
     if ($page == 'memory-match') {
         $page_title = 'Fruity Match';       
@@ -20,6 +20,9 @@ if (strpos($url_string, 'page') !== false) {
     }
     if ($page == 'matching-numbers') {
 		$page_title = 'Matching Numbers';                   
+    }
+    if ($page == 'laugh-factory') {
+		$page_title = 'Laugh Factory';                   
     }
     if ($page == 'prize-claim-form') {
         $page_title = 'Prize Claim Form';          
@@ -32,6 +35,9 @@ if (strpos($url_string, 'page') !== false) {
     }
     if ($page == 'coupon') {
         $page_title = 'Offer';          
+    }
+    if ($page == 'prizes') {
+        $page_title = 'Prizes';          
     }
         
 } else {

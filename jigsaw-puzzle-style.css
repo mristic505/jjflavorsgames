@@ -19,15 +19,12 @@
 @media screen and (max-width: 1200px) {
   .main-wrapper {
     width: 830px;
-    padding-left: 10px;
   }
-  
 }
 
 @media screen and (max-width: 810px) {
   .main-wrapper {
     width: 595px;
-    padding-left: 0px;
   }
 }
 
@@ -73,13 +70,16 @@
   width: 75%;
   margin-left: auto;
   margin-right: auto;
-  height: 500px;
 }
 
 @media screen and (max-width: 600px) {
   .puzzle-bottom-bar {
     display: block;
   }
+}
+
+.puzzle-bottom-bar.game-started {
+  height: 440px;
 }
 
 @media screen and (min-width: 1050px) {
@@ -973,6 +973,12 @@
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .how-to-play-wrapper .how-to-play-container .how-to-play-title {
+    width: 220px;
+  }
+}
+
 @media screen and (max-width: 810px) {
   .how-to-play-wrapper .how-to-play-container .how-to-play-title {
     width: 80%;
@@ -987,26 +993,31 @@
   margin-bottom: 16px;
 }
 
+@media screen and (max-width: 1200px) {
+  .how-to-play-wrapper .how-to-play-container h2 {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 3px;
+  }
+}
+
 @media screen and (max-width: 810px) {
   .how-to-play-wrapper .how-to-play-container h2 {
-    font-size: 13px;
-    margin: 0px;
+    margin-top: 10px;
   }
 }
 
 .how-to-play-wrapper .how-to-play-container p {
-  font-family: "CabritoNorBol";
+  font-family: "CabritoNorExB";
   font-size: 18px;
   color: #1a5632;
   margin: 0;
   padding: 0 20px;
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 1200px) {
   .how-to-play-wrapper .how-to-play-container p {
-    font-size: 14px;
-    padding: 0 18px;
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 
@@ -1022,10 +1033,10 @@
   width: auto;
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 1200px) {
   .how-to-play-wrapper .how-to-play-container .start-game-button {
-    padding: 9px 32px;
     font-size: 10px;
+    padding: 8.2px 31.4px;
   }
 }
 
@@ -1047,7 +1058,8 @@
 
 @media screen and (max-width: 1200px) {
   .game-end-wrapper .you-did-it-title {
-    margin-top: 12px;
+    margin-top: 35px;
+    margin-bottom: 5px;
     width: 50%;
   }
 }
@@ -1066,123 +1078,50 @@
   margin-top: 10px;
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 1200px) {
   .game-end-wrapper .you-did-it-subtitle {
-    font-size: 15px;
+    font-size: 10px;
+    margin: 0;
   }
 }
 
 @media screen and (max-width: 810px) {
   .game-end-wrapper .you-did-it-subtitle {
-    font-size: 13px;
+    font-size: 10px;
     margin-top: 0;
     padding: 0 20px;
   }
 }
 
-.game-end-wrapper .bottom-cta-container {
-  font-family: 'CabritoNorBol';
+.game-end-wrapper .end_ctas {
   position: absolute;
-  bottom: 0;
   left: 0;
   right: 0;
-  font-size: 18px;
-}
-@media screen and (max-width: 1200px){
-  font-size: 12px;
-
-
-}
-.game-end-wrapper .bottom-cta-container a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.game-end-wrapper .bottom-cta-container a:visited, .game-end-wrapper .bottom-cta-container a:hover, .game-end-wrapper .bottom-cta-container a:active {
-  color: #ffffff;
-}
-
-.game-end-wrapper .bottom-cta-container .get-coupon-button {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 162px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: #1a5632;
-  margin-bottom: 61px;
+  bottom: 37px;
 }
 
 @media screen and (max-width: 1200px) {
-  .game-end-wrapper .bottom-cta-container .get-coupon-button {
-    margin-bottom: 24px;
-  }
-}
-
-.game-end-wrapper .bottom-cta-container .puzzle-cta {
-  display: inline-block;
-  padding-bottom: 20px;
-  padding-right: 10px;
-}
-.puzzle-cta {
-    padding-left: 13px;
-}
-
-@media screen and (max-width: 1200px) {
-  .game-end-wrapper .bottom-cta-container .puzzle-cta {
-    padding-bottom: 19px;
-  }
-  .game-end-wrapper .bottom-cta-container {
-    bottom: 25px;
-    font-size: 13px; 
-
-  }
-
-.game-end-wrapper .you-did-it-title {
-    margin-top: 35px;
-}
-.game-end-wrapper .bottom-cta-container .get-coupon-button {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 35px;
-    width: 115px;
-    height: 35px;
-    background-color: #1a5632;
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
-
-.game-end-wrapper .you-did-it-subtitle { 
+  .game-end-wrapper .end_ctas .play_again, .game-end-wrapper .end_ctas .spin_again, .game-end-wrapper .end_ctas .get_coupon_btn {
     font-size: 12px;
-
-}
+  }
+  .game-end-wrapper .end_ctas .get_coupon_btn {
+    line-height: 30px;
+    height: 30px;
+  }
 }
 
 @media screen and (max-width: 810px) {
-  .game-end-wrapper .bottom-cta-container .puzzle-cta {
-    padding-bottom: 5px;
-    font-size: 11px;
+  .game-end-wrapper .end_ctas {
+    top: auto;
+    bottom: 14px;
   }
-}
-
-.game-end-wrapper .bottom-cta-container .puzzle-cta img {
-  padding-left: 5px;
-  margin-top: -3px;
-}
-
-.game-end-wrapper .bottom-cta-container .cta:first-child {
-  padding-right: 20px;
-}
-
-.game-end-wrapper .bottom-cta-container .cta-arrow {
-  width: 0;
-  height: 0;
-  width: 0;
-  height: 0;
-  border-top: 60px solid transparent;
-  border-bottom: 60px solid transparent;
-  border-left: 60px solid green;
+  .game-end-wrapper .end_ctas .play_again, .game-end-wrapper .end_ctas .spin_again, .game-end-wrapper .end_ctas .get_coupon_btn {
+    font-size: 10px;
+  }
+  .game-end-wrapper .end_ctas .get_coupon_btn {
+    font-size: 10px;
+    margin-top: 15px;
+  }
 }
 
 .game-end-wrapper .game-end-message-container {
@@ -1191,7 +1130,7 @@
   left: 50%;
   -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
-  width: 37%;
+  width: 49%;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1214,7 +1153,7 @@
 
 .game-end-wrapper .game-end-message-container p {
   font-family: 'CabritoNorExB';
-  font-size: 16px;
+  font-size: 18px;
   color: #1a5632;
   margin-top: 3px;
   margin-left: auto;
@@ -1228,35 +1167,26 @@
     font-size: 12px;
     margin-top: 0px;
     padding: 0;
+    line-height: 12px;
   }
 }
 
 @media screen and (max-width: 810px) {
   .game-end-wrapper .game-end-message-container p {
-    font-size: 9px;
+    font-size: 10px;
   }
 }
 
 .game-end-wrapper .game-end-image {
-    position: absolute;
-    top: 25%;
-    right: 5%;
+  position: absolute;
+  top: 24%;
+  right: 0%;
 }
-
-}
-
-
 
 @media screen and (max-width: 1200px) {
   .game-end-wrapper .game-end-image {
     width: 26%;
   }
-
-.game-end-wrapper .game-end-image {
-    position: absolute;
-    top: 22%;
-    right: 6%;
-}
 }
 
 @media screen and (max-width: 810px) {
@@ -1269,54 +1199,4 @@
   .tropical .game-end-wrapper .game-end-message-container img {
     width: 79%;
   }
-
-  .game-end-wrapper .you-did-it-title {
-    margin-top: 25px;
 }
-
-.game-end-wrapper .you-did-it-subtitle {
-    font-size: 10px;
-    margin-top: 5px;
-    padding: 0 20px;
-}
-.game-end-wrapper .bottom-cta-container {
-    bottom: 13px;
-    font-size: 10px;
-}
-.game-end-wrapper .bottom-cta-container .puzzle-cta {
-    padding-bottom: 17px;
-    font-size: 11px;
-}
-.game-end-wrapper .game-end-image {
-    position: absolute;
-    top: 26%;
-    right: 7%;
-}
-
-.game-end-wrapper .game-end-message-container p {
-    width: 81%;
-}
-.game-end-wrapper .game-end-message-container {
-    top: 51%;
-
-}
-
-.game-end-wrapper .game-end-message-container img {
-    width: 83%;
-}
-}
-
-@media screen and (max-width: 810px) {
-  .game-end-wrapper .bottom-cta-container .get-coupon-button {
-       margin-bottom: 5px;
-    line-height: 25px;
-    width: 95px;
-    height: 25px; 
-  }
-}
-
-
-
-
-
-

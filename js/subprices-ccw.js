@@ -5,87 +5,105 @@ jQuery(document).ready(function($) {
         prices: [{
                 name: 'Fruit <br>Punch',
                 bg: '#df2626',
-                slug: 'fruit_punch'
+                slug: 'fruit_punch',
+                url: '?page=matching-numbers&play=fruit-punch'
             },
             {
                 name: 'Strawberry <br>Watermelon',
                 bg: '#f27e5a',
-                slug: 'str_melon'
+                slug: 'str_melon',
+                url: '?page=pop-a-fruit&play=straw_watermelon'
             },
             {
                 name: 'Kiwi <br>Strawberry',
                 bg: '#f97799',
-                slug: 'kiwi_str'
+                slug: 'kiwi_str',
+                url: '?page=memory-match&play=kiwi-strawberry'
             },
             {
                 name: 'Apple <br>Raspberry',
                 bg: '#d31a68',
-                slug: 'apple_ras'
+                slug: 'apple_ras',
+                url: '?page=pop-a-fruit&play=apple_raspberry'
             },
             {
                 name: 'Cherry',
                 bg: '#b92654',
-                slug: 'cherry'
+                slug: 'cherry',
+                url: 'cherry',
+                url: '?page=memory-match&play=cherry'
             },
             {
                 name: 'Cranberry <br>Apple',
                 bg: '#892433',
-                slug: 'cran_apple'
+                slug: 'cran_apple',
+                url: '?page=jigsaw-puzzle&play=cranberry'
             },
             {
                 name: 'Passion <br>Dragonfruit',
                 bg: '#9c2164',
-                slug: 'pdrfr'
+                slug: 'pdrfr',
+                url: '?page=matching-numbers&play=passion-dragonfruit'
             },
             {
                 name: 'Grape',
                 bg: '#94398b',
-                slug: 'grape'
+                slug: 'grape',
+                url: '?page=memory-match&play=grape'
             },
             {
                 name: 'Berry',
                 bg: '#477bbd',
-                slug: 'berry'
+                slug: 'berry',
+                url: '?page=hidden-pictures&play=berry'
             },
             {
                 name: 'Grand Prize',
                 bg: '#fff',
-                slug: 'hurricane_white'
+                slug: 'hurricane_white',
+                url: ''
             },
             {
                 name: 'Tropical',
                 bg: '#138995',
-                slug: 'tropical'
+                slug: 'tropical',
+                url: '?page=jigsaw-puzzle&play=tropical'
             },
             {
                 name: 'Apple',
                 bg: '#65a521',
-                slug: 'apple'
+                slug: 'apple',
+                url: '?page=laugh-factory&play=apple'
             },
             {
                 name: 'White <br>Grape',
                 bg: '#9ca943',
-                slug: 'w_grape'
+                slug: 'w_grape',
+                url: '?page=memory-match&play=grape'
             },
             {
                 name: 'Strawberry <br>Banana',
                 bg: '#fec53d',
-                slug: 'str_ban'
+                slug: 'str_ban',
+                url: '?page=laugh-factory&play=strawberryBanana'
             },
             {
                 name: 'Orange <br>Tangerine',
                 bg: '#f18a23',
-                slug: 'or_tang'
+                slug: 'or_tang',
+                url: '?page=laugh-factory&play=orange'
             },
             {
                 name: 'Peach <br>Apple',
                 bg: '#f27e5a',
-                slug: 'p_apple'
+                slug: 'p_apple',
+                url: ''
             },
             {
                 name: 'Mango',
                 bg: '#e5541b',
-                slug: 'mango'
+                slug: 'mango',
+                url: '?page=hidden-pictures&play=mango'
             }
         ],
         duration: 3500,
@@ -100,7 +118,7 @@ jQuery(document).ready(function($) {
         $('.spin').off('click');
         $('.spinner span').hide();
         //var price = Math.floor((Math.random() * 8));
-        $r.spin(9).done(function(price) {
+        $r.spin().done(function(price) {
             if (price.name == "Grand Prize") {
                    window.location.href = '?page=spin&play=pcf';                             
             } else {
@@ -119,6 +137,9 @@ jQuery(document).ready(function($) {
                         setTimeout(function() {
                             $('.prize_info span').html('<img src="img/bottles/' + price.slug + '.png">').fadeIn();
                         }, 2500);
+                        setTimeout(function() {
+                            window.location.href = price.url; 
+                        }, 3500);
                     });
                    
             }
@@ -189,7 +210,7 @@ jQuery(document).ready(function($) {
                 $('#safety').submit();
             }
         });
-
+        false;
         event.preventDefault();
     });
 
@@ -275,7 +296,7 @@ jQuery(document).ready(function($) {
 
             }
         });
-
+        false;
         event.preventDefault();
     });
 
@@ -317,7 +338,7 @@ jQuery(document).ready(function($) {
     }
 
     function end_action(end_message_holder, end_fruit_holder) {
-        $('.memory_game_board').append($('<div class="completed_holder"> <img class="you_did_it" src="img/you_did_it.png"> <div class="ctext">You’ve completed the Memory Match Game.</div><div class="message_board"> <div class="holder"> <img class="fruit_fact_head" src="img/fruit_fact_head_'+end_fruit_holder+'.png"> <div class="fruit_fact_info">'+end_message_holder+'</div></div><div class="ghost"></div><img class="girl" src="img/girl.png"> <img class="fruit_fact" src="img/fruit_fact_'+end_fruit_holder+'.png"> </div><div class="end_ctas"><a class="play_again" href="javascript:void(0);" onClick="window.location.reload()">PLAY AGAIN <span class="glyphicon glyphicon-play" aria-hidden="true"></span></a><a class="spin_again" href="/flavordiscovery/">SPIN <span class="glyphicon glyphicon-play" aria-hidden="true"></span></a><br><a class="get_coupon_btn" href="#">GET COUPON</a></div></div>').hide().fadeIn(1000));
+        $('.memory_game_board').append($('<div class="completed_holder"> <img class="you_did_it" src="img/you_did_it.png"> <div class="ctext">You’ve completed the Memory Match Game.</div><div class="message_board"> <div class="holder"> <img class="fruit_fact_head" src="img/fruit_fact_head_'+end_fruit_holder+'.png"> <div class="fruit_fact_info">'+end_message_holder+'</div></div><div class="ghost"></div><img class="girl" src="img/girl.png"> <img class="fruit_fact" src="img/fruit_fact_'+end_fruit_holder+'.png"> </div><div class="end_ctas"><a class="play_again" href="javascript:void(0);" onClick="window.location.reload()">PLAY AGAIN <span class="glyphicon glyphicon-play" aria-hidden="true"></span></a><a class="spin_again" href="/flavordiscovery/">SPIN <span class="glyphicon glyphicon-play" aria-hidden="true"></span></a><br><a class="get_coupon_btn" href="?page=coupon">GET COUPON</a></div></div>').hide().fadeIn(1000));
     }    
 
     $.fn.shuffle = function() {
@@ -399,12 +420,12 @@ jQuery(document).ready(function($) {
     $("#zip-group input").mask("99999");
 
     //Stick footer to the bottom
-    // $(window).on('load resize', function () {
-    //     var footer_height = $('footer').outerHeight();
-    //     if($(window).width() > 768) {        
-    //         $('main').css('padding-bottom', 50 + footer_height +'px');
-    //     }
-    // });
+    $(window).on('load resize', function () {
+        var footer_height = $('footer').outerHeight();
+        if($(window).width() > 768) {        
+            $('main').css('padding-bottom', 50 + footer_height +'px');
+        }
+    });
     
 
 });
