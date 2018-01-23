@@ -234,6 +234,7 @@ button {
     color: #1a5632;
     max-width: 195px;
     margin: 0 auto;
+    height: 81px;
 }
 /* Next & previous buttons */
 .prev, .next {
@@ -376,6 +377,7 @@ button {
 	#fruityFact {
 	    font-size: 12px;
 	    max-width: 118px;
+	    height: 51px;
 	}
 	#slide3-BtnGroup {
 	    top: 137px;
@@ -462,6 +464,8 @@ button {
 #fruityFact {
     font-size: 11px;
     max-width: 118px;
+    height: 45px;
+
 }
 #slide3-BtnGroup {
     top: 100px;
