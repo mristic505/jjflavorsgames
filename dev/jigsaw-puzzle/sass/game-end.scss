@@ -1,5 +1,5 @@
 .game-end-wrapper{
-    display: none;
+    // display: none;
     position: absolute;
     top: 18px;
     left: 18px;
@@ -153,10 +153,11 @@
                 font-size:12px;
                 margin-top: 0px;
                 padding: 0;
-                line-height: 12px;
+                line-height: normal;
             }                
             @media screen and (max-width: $puzzle-container-second-responsive-breakpoint) {
                 font-size: 10px;
+                line-height: 12px;                
             }
         }
     }
