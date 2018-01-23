@@ -53,6 +53,7 @@
             }
         }
         @media screen and (max-width: $puzzle-container-second-responsive-breakpoint) {
+            top: auto;
             bottom: 14px;
             .play_again, .spin_again, .get_coupon_btn {
                 font-size: 10px;
@@ -152,6 +153,7 @@
                 font-size:12px;
                 margin-top: 0px;
                 padding: 0;
+                line-height: 12px;
             }                
             @media screen and (max-width: $puzzle-container-second-responsive-breakpoint) {
                 font-size: 10px;
