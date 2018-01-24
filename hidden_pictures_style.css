@@ -970,7 +970,24 @@ th {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 37px;
+  bottom: 54px;
+}
+
+@media screen and (max-width: 600px) {
+  .game-end-wrapper .end_ctas {
+    bottom: 39px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .game-end-wrapper .end_ctas {
+    top: auto;
+    bottom: 15px;
+    margin-top: 10px;
+  }
+  .game-end-wrapper .end_ctas .play_again {
+    padding-left: 30px;
+  }
 }
 
 .game-end-wrapper .game-end-image {
@@ -998,11 +1015,6 @@ th {
   }
   .game-end-wrapper .game-end-image {
     height: 100px;
-  }
-  .game-end-wrapper .end_ctas {
-    top: auto;
-    bottom: 7px;
-    margin-top: 10px;
   }
 }
 
