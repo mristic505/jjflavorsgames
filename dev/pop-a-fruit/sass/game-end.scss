@@ -26,7 +26,19 @@
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 37px;
+        bottom: 60px;
+        
+        @media screen and (max-width: 600px) {
+            bottom: 41px;
+        }
+        @media screen and (max-width: 470px) {
+            top: auto;
+            bottom: 15px;
+            margin-top: 10px;
+            .play_again{
+                padding-left: 30px;
+            }
+        }
     }
 
 
@@ -140,11 +152,6 @@
         }
         .game-end-image{
             height: 100px;
-        }
-        .end_ctas{
-            top: auto;
-            bottom: 7px;
-            margin-top: 10px;
         }
     }        
 }
