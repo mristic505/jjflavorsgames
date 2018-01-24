@@ -1871,4 +1871,10 @@ main {
         display:block !important;
     }
 }
-
+main {
+    opacity: 0;
+    transition-duration: 1s;
+    transition-delay: 1s;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-delay: 1s;
+}
