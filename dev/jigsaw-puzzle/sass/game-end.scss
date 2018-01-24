@@ -1,5 +1,5 @@
 .game-end-wrapper{
-    // display: none;
+    display: none;
     position: absolute;
     top: 18px;
     left: 18px;
@@ -42,8 +42,9 @@
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 37px;
+        bottom: 60px;
         @media screen and (max-width: $puzzle-container-first-responsive-breakpoint) {
+            bottom: 41px;
             .play_again, .spin_again, .get_coupon_btn {
                 font-size: 12px;
             }   
