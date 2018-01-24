@@ -126,7 +126,7 @@ jQuery(document).ready(function($) {
                     .html(function() {
                         setTimeout(function() {
                             
-                            $('.wheel_logo').fadeOut(600); 
+                            $('.wheel_logo').fadeOut(300); 
                         }, 0);
                         setTimeout(function() {
                             $('.prize_info span').html('<span>'+price.name+'</span>').fadeIn();
@@ -426,6 +426,9 @@ jQuery(document).ready(function($) {
             $('main').css('padding-bottom', 50 + footer_height +'px');
         }
     });
+
+    // Fade In MAIN
+    $('main').css('opacity',1);
     
 
 });
