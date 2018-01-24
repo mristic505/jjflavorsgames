@@ -2,48 +2,7 @@
 <html>
 <head>
 <?php
-if (strpos($url_string, 'page') !== false) {
-    
-    $page = $_GET['page'];
 
-    if ($page == 'spin') {  
-        $page_title = 'Spin the Wheel';                  
-    }
-    if ($page == 'hidden-pictures') {
-         $page_title = 'Hidden Pictures';        
-    }
-    if ($page == 'memory-match') {
-        $page_title = 'Fruity Match';       
-    }
-    if ($page == 'pop-a-fruit') {
-          $page_title = 'Pop a Fruit';       
-    }
-    if ($page == 'matching-numbers') {
-		$page_title = 'Matching Numbers';                   
-    }
-    if ($page == 'laugh-factory') {
-		$page_title = 'Laugh Factory';                   
-    }
-    if ($page == 'prize-claim-form') {
-        $page_title = 'Prize Claim Form';          
-    }
-    if ($page == 'official-rules') {
-        $page_title = 'Official Rules';          
-    }
-    if ($page == 'faq') {
-        $page_title = 'FAQ';          
-    }
-    if ($page == 'coupon') {
-        $page_title = 'Offer';          
-    }
-    if ($page == 'prizes') {
-        $page_title = 'Prizes';          
-    }
-        
-} else {
-   $page_title = 'Register';
-   $page = 'register';
-}
 ?>	
 <title><?php echo $page_title; ?></title>
 <meta charset="UTF-8">

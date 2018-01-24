@@ -47,3 +47,63 @@ function return_to_hp() {
 }
 
 $url_string = $_SERVER['QUERY_STRING'];
+
+// Routing 
+if (strpos($url_string, 'page') !== false) {
+    
+    $page = $_GET['page'];
+
+    if ($page == 'spin') {  
+        $page_title = 'Spin the Wheel';  
+        $inlcude = 'spin.php';               
+    }
+    if ($page == 'hidden-pictures') {
+         $page_title = 'Hidden Pictures'; 
+         $inlcude = 'hidden_pictures.php';       
+    }
+    if ($page == 'memory-match') {
+        $page_title = 'Fruity Match';    
+        $inlcude = 'memory-match.php';    
+    }
+    if ($page == 'pop-a-fruit') {
+          $page_title = 'Pop a Fruit';  
+          $inlcude = 'pop_a_fruit.php';     
+    }
+    if ($page == 'matching-numbers') {
+        $page_title = 'Matching Numbers';        
+        $inlcude = 'matching_numbers.php';           
+    }
+    if ($page == 'laugh-factory') {
+        $page_title = 'Laugh Factory';                   
+        $inlcude = 'laugh-factory.php';
+    }
+    if ($page == 'prize-claim-form') {
+        $page_title = 'Prize Claim Form';          
+        $inlcude = 'prize_claim_form.php';
+    }
+    if ($page == 'official-rules') {
+        $page_title = 'Official Rules';          
+        $inlcude = 'official_rules.php';
+    }
+    if ($page == 'faq') {
+        $page_title = 'FAQ';          
+        $inlcude = 'faq.php';
+    }
+    if ($page == 'coupon') {
+        $page_title = 'Offer';          
+        $inlcude = 'coupon.php';
+    }
+    if ($page == 'prizes') {
+        $page_title = 'Prizes';          
+        $inlcude = 'prizes.php';
+    }
+    if ($page == 'jigsaw-puzzle') {
+        $page_title = 'Jigsaw Puzzle';          
+        $inlcude = 'jigsaw_puzzle.php';
+    }
+        
+} else {
+   $page_title = 'Register';
+   $page = 'register';
+   $inlcude = 'register.php';
+}
