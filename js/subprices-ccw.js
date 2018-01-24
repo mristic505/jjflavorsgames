@@ -432,6 +432,9 @@ jQuery(document).ready(function($) {
             }, 100);
         }
     });
+
+    //if NP
+    // $('body').addClass('p1').removeClass('p0');
     
 
 });

@@ -136,8 +136,15 @@ img {
     width: 592px;
     height: 592px;
     left: 0;
-    top: 0;
-    background-image: url('../img/wheel-3.png');        
+    top: 0;        
+}
+
+.p1 .roulette {
+    background-image: url('../img/wheel-3.png');  
+}
+
+.p0 .roulette {
+    background-image: url('../img/wheel-no-awards.png');  
 }
 
 .ghost {

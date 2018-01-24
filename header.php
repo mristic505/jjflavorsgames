@@ -20,7 +20,7 @@
 <script src="js/subprices-ccw.js?ver=1.0.3"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
-<body class="page-<?php echo $page; ?>">
+<body class="page-<?php echo $page; ?> p0">
 <header>
 	<!-- nav -->
 	<div class="nav-holder">
