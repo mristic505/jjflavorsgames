@@ -79,7 +79,7 @@ jQuery(document).ready(function($) {
                 name: 'White <br>Grape',
                 bg: '#9ca943',
                 slug: 'w_grape',
-                url: ''
+                url: '?page=memory-match&play=grape'
             },
             {
                 name: 'Strawberry <br>Banana',
@@ -103,7 +103,7 @@ jQuery(document).ready(function($) {
                 name: 'Mango',
                 bg: '#e5541b',
                 slug: 'mango',
-                url: '?page=hidden-pictures&play='
+                url: '?page=hidden-pictures&play=mango'
             }
         ],
         duration: 3500,
