@@ -1097,10 +1097,13 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 37px;
+  bottom: 60px;
 }
 
 @media screen and (max-width: 1200px) {
+  .game-end-wrapper .end_ctas {
+    bottom: 41px;
+  }
   .game-end-wrapper .end_ctas .play_again, .game-end-wrapper .end_ctas .spin_again, .game-end-wrapper .end_ctas .get_coupon_btn {
     font-size: 12px;
   }
@@ -1167,13 +1170,14 @@
     font-size: 12px;
     margin-top: 0px;
     padding: 0;
-    line-height: 12px;
+    line-height: normal;
   }
 }
 
 @media screen and (max-width: 810px) {
   .game-end-wrapper .game-end-message-container p {
     font-size: 10px;
+    line-height: 12px;
   }
 }
 

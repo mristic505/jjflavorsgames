@@ -42,8 +42,9 @@
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 37px;
+        bottom: 60px;
         @media screen and (max-width: $puzzle-container-first-responsive-breakpoint) {
+            bottom: 41px;
             .play_again, .spin_again, .get_coupon_btn {
                 font-size: 12px;
             }   
@@ -153,10 +154,11 @@
                 font-size:12px;
                 margin-top: 0px;
                 padding: 0;
-                line-height: 12px;
+                line-height: normal;
             }                
             @media screen and (max-width: $puzzle-container-second-responsive-breakpoint) {
                 font-size: 10px;
+                line-height: 12px;                
             }
         }
     }
