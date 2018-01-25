@@ -431,6 +431,12 @@ jQuery(document).ready(function($) {
                     $('main').css('opacity',1);
             }, 100);
         }
+        else {
+            setTimeout(function() {
+                     // Fade In MAIN
+                    $('main').css('opacity',1);
+            }, 100);
+        }
     });
 
     //if NP
