@@ -49,7 +49,7 @@ jQuery(document).ready(function($) {
                 name: 'Grape',
                 bg: '#94398b',
                 slug: 'grape',
-                url: '?page=memory-match&play=grape'
+                url: '?page=pop-a-fruit&play=grape'
             },
             {
                 name: 'Berry',
@@ -97,7 +97,7 @@ jQuery(document).ready(function($) {
                 name: 'Peach <br>Apple',
                 bg: '#f27e5a',
                 slug: 'p_apple',
-                url: ''
+                url: '?page=jigsaw-puzzle&play=peach'
             },
             {
                 name: 'Mango',
@@ -205,7 +205,7 @@ jQuery(document).ready(function($) {
             else {
                 console.log(data.safety_string);
                 // $('#register').append('<div class="alert alert-success">' + data.message + '</div>');
-                var form = '<form id="safety" action="?page=spin" method="POST"><input type="hidden" name="dsid" id="dsid" value="' + data.safety_string + '"></form>';
+                var form = '<form id="safety" action="?page=spin" method="POST"><input type="hidden" name="dsid" id="dsid" value="' + data.email + '"></form>';
                 $('body').append(form);
                 $('#safety').submit();
             }

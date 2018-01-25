@@ -1,4 +1,7 @@
 <?php ?>
+<?php 
+
+?>
 <style type="text/css">
 	.small_logo {
 		display: none;
@@ -48,6 +51,7 @@
 	                <div class="form-group" id="recaptcha">
 	                    <div class="g-recaptcha" data-sitekey="6LelSDQUAAAAAAptQhqPrh1bsrzV0TYgLkLHC966"></div>
 	                </div>
+	                <input type="hidden" value="<?php echo session_id(); ?>" name="sid" >
 	                <input type="submit" value="Submit">
 	            </form>
 	            <div class="ghost"></div>

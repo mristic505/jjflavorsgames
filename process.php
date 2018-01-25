@@ -47,6 +47,7 @@ else {
         $data['success'] = true;
 		$data['message'] = 	'success';
 		$data['safety_string'] = $safety_string;
+		$data['email'] = $email;
 		// Insert into database
 		DB::insert('flavors_games_registered_users', array(
 		  'email' => $email,
