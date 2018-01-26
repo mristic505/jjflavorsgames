@@ -117,6 +117,25 @@ jQuery(document).ready(function($) {
     var clickHandler = function() {
         $('.spin').off('click');
         $('.spinner span').hide();
+        // Update number of plays
+        $.ajax({
+            type: 'POST',
+            url: '.php',
+            data: {
+                session_id : $('#session_id_footer').val()
+            },
+            dataType: 'json',
+            encode: true
+        }).done(function(data) {
+            console.log(data);
+            // if errors exist
+            if (!data.success) {
+            }
+            // if no errors
+            else {
+
+            }
+        });
         //var price = Math.floor((Math.random() * 8));
         $r.spin().done(function(price) {
             if (price.name == "Grand Prize") {
@@ -154,18 +173,8 @@ jQuery(document).ready(function($) {
     };
     
 
-    $('.spin').on('click', clickHandler);
 
-    // if($('.spin_holder').hasClass('registered')) {
-    //     $("#roulette").swipe( {
-    //         swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-    //           // $("#test").text("You swiped " + direction + " with " + fingerCount + " fingers");
-    //           document.getElementById('spin_btn_1').click();
-    //         },
-    //         threshold:0,
-    //         fingers:'all'
-    //     });
-    // }
+    $('.spin').on('click', clickHandler);
 
 
     // END OF SPINNER CONFIG ====================================
@@ -196,6 +205,9 @@ jQuery(document).ready(function($) {
                 }
                 if (data.errors.age) {
                     $('#age-group').addClass('has-error');
+                }
+                if (data.errors.recaptcha) {
+                    $('#recaptcha').addClass('has-error');
                 }
                 if (data.errors.recaptcha) {
                     $('#recaptcha').addClass('has-error');
@@ -426,21 +438,15 @@ jQuery(document).ready(function($) {
             setTimeout(function() {
                      $('main').css('padding-bottom', 50 + footer_height +'px');
             }, 0);
-            setTimeout(function() {
-                     // Fade In MAIN
-                    $('main').css('opacity',1);
-            }, 100);
-        }
-        else {
-            setTimeout(function() {
-                     // Fade In MAIN
-                    $('main').css('opacity',1);
-            }, 100);
         }
     });
 
+    // Fade In MAIN
+    setTimeout(function() {         
+        $('main').css('opacity',1);
+    }, 100);
+
     //if NP
     // $('body').addClass('p1').removeClass('p0');
-    
 
 });
