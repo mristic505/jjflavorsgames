@@ -116,42 +116,4 @@ if (strpos($url_string, 'page') !== false) {
 /********************************************/
 /***************** SESSIONS *****************/
 /********************************************/
-
-// Terminate session after 60 minutes ===========================
-if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 3600)) {
-    // last request was more than 60 minutes ago
-    session_unset();     // unset $_SESSION variable for the run-time 
-    session_destroy();   // destroy session data in storage
-    header("Location: ?page=register");
-    exit;
-}
-$_SESSION['LAST_ACTIVITY'] = time(); // update last activity time stamp    
-
-// Start Session
-session_start();
-
-// If on register page unset seesion and start a new one ===========================
-if (strpos($url_string, 'page') !== false) {
-    if ($page == 'register') { 
-        session_unset();
-        session_regenerate_id(true); 
-    } 
-    if ($page == 'spin') {  
-        $_SESSION['uemail'] = $_POST['dsid'];
-        if (empty($_SESSION['uemail'])) {
-            header("Location: ?page=register");
-        }
-    }   
-}
-
-
-// IF no query strings in the URL ===========================
-if(empty($_GET)) {
-        header("Location: ?page=register");
-        exit;
-}
-// IF query string exists in the URL ===========================
-else {  
-
-}
-// echo session_id();    
+  
