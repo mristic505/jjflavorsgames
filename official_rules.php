@@ -1,6 +1,6 @@
 
 <style type="text/css">
-	.logo {
+	.small_logo {
 		display: none;
 	}
 </style>

@@ -17,7 +17,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="js/jquery.fortune.min.js"></script>
 <script src="js/jquery.maskedinput.min.js"></script>
-<script src="js/subprices-ccw.js?ver=1.0.3"></script>
+<script src="js/subprices-ccw.js?ver=1.0.4"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body class="page-<?php echo $page; ?> p0">

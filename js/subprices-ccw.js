@@ -114,11 +114,15 @@ jQuery(document).ready(function($) {
 
     var $r = $('.roulette').fortune(options);
 
+    // Get random prize
+    prizes = [0, 1, 2, 3, 4, 5, 6 ,7, 8, 10, 11, 12, 13, 14, 15, 16];
+    var land_on = prizes[Math.floor(Math.random() * prizes.length)];
+
     var clickHandler = function() {
         $('.spin').off('click');
         $('.spinner span').hide();
-        //var price = Math.floor((Math.random() * 8));
-        $r.spin().done(function(price) {
+
+        $r.spin(land_on).done(function(price) {
             if (price.name == "Grand Prize") {
                    window.location.href = '?page=spin&play=pcf';                             
             } else {
@@ -338,7 +342,7 @@ jQuery(document).ready(function($) {
     }
 
     function end_action(end_message_holder, end_fruit_holder) {
-        $('.memory_game_board').append($('<div class="completed_holder"> <img class="you_did_it" src="img/you_did_it.png"> <div class="ctext">You’ve completed the Memory Match Game.</div><div class="message_board"> <div class="holder"> <img class="fruit_fact_head" src="img/fruit_fact_head_'+end_fruit_holder+'.png"> <div class="fruit_fact_info">'+end_message_holder+'</div></div><div class="ghost"></div><img class="girl" src="img/girl.png"> <img class="fruit_fact" src="img/fruit_fact_'+end_fruit_holder+'.png"> </div><div class="end_ctas"><a class="play_again" href="javascript:void(0);" onClick="window.location.reload()">PLAY AGAIN <span class="glyphicon glyphicon-play" aria-hidden="true"></span></a><a class="spin_again" href="/flavordiscovery/">SPIN <span class="glyphicon glyphicon-play" aria-hidden="true"></span></a><br><a class="get_coupon_btn" href="?page=coupon">GET COUPON</a></div></div>').hide().fadeIn(1000));
+        $('.memory_game_board').append($('<div class="completed_holder"> <img class="you_did_it" src="img/you_did_it.png"> <div class="ctext">You’ve completed the Memory Match Game.</div><div class="message_board"> <div class="holder"> <img class="fruit_fact_head" src="img/fruit_fact_head_'+end_fruit_holder+'.png"> <div class="fruit_fact_info">'+end_message_holder+'</div></div><div class="ghost"></div><img class="girl" src="img/girl.png"> <img class="fruit_fact" src="img/fruit_fact_'+end_fruit_holder+'.png"> </div><div class="end_ctas"><a class="play_again" href="javascript:void(0);" onClick="window.location.reload()">PLAY AGAIN <span class="glyphicon glyphicon-play" aria-hidden="true"></span></a><a class="spin_again" href="?page=spin">SPIN <span class="glyphicon glyphicon-play" aria-hidden="true"></span></a><br><a class="get_coupon_btn" href="?page=coupon">GET COUPON</a></div></div>').hide().fadeIn(1000));
     }    
 
     $.fn.shuffle = function() {
@@ -422,7 +426,7 @@ jQuery(document).ready(function($) {
     //Stick footer to the bottom
     $(window).on('load resize', function () {
         var footer_height = $('footer').outerHeight();
-        if($(window).width() > 768) {                    
+        if($(window).width() > 767) {                    
             setTimeout(function() {
                      $('main').css('padding-bottom', 50 + footer_height +'px');
             }, 0);

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 @font-face {
     font-family: 'CabritoNorExB';
     src: url('../fonts/CabritoNorExB.eot');
@@ -1351,7 +1352,7 @@ main {
     color: #1a5632;
     font-size: 14px;
     line-height: 18px;
-    font-family: 'GothamMediumRegular';
+    font-family: 'Montserrat', sans-serif;
     margin-bottom: 15px;
 }
 .prc_holder {
