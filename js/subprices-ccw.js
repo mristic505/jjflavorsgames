@@ -114,13 +114,21 @@ jQuery(document).ready(function($) {
 
     var $r = $('.roulette').fortune(options);
 
+    if ($('body').hasClass('p0')){
+        prizes = [0, 1, 2, 3, 4, 5, 6 ,7, 8, 10, 11, 12, 13, 14, 15, 16];
+        var land_on = prizes[Math.floor(Math.random() * prizes.length)];
+    }
+    if ($('body').hasClass('p1')){
+        var land_on = 9;
+    }
+
     var clickHandler = function() {
         $('.spin').off('click');
         $('.spinner span').hide();
         // Update number of plays
         $.ajax({
             type: 'POST',
-            url: '.php',
+            url: 'process_nop.php',
             data: {
                 session_id : $('#session_id_footer').val()
             },
@@ -128,16 +136,9 @@ jQuery(document).ready(function($) {
             encode: true
         }).done(function(data) {
             console.log(data);
-            // if errors exist
-            if (!data.success) {
-            }
-            // if no errors
-            else {
-
-            }
         });
         //var price = Math.floor((Math.random() * 8));
-        $r.spin().done(function(price) {
+        $r.spin(land_on).done(function(price) {
             if (price.name == "Grand Prize") {
                    window.location.href = '?page=spin&play=pcf';                             
             } else {
@@ -172,7 +173,6 @@ jQuery(document).ready(function($) {
         });
     };
     
-
 
     $('.spin').on('click', clickHandler);
 
@@ -222,7 +222,6 @@ jQuery(document).ready(function($) {
                 $('#safety').submit();
             }
         });
-        false;
         event.preventDefault();
     });
 
@@ -308,7 +307,6 @@ jQuery(document).ready(function($) {
 
             }
         });
-        false;
         event.preventDefault();
     });
 
@@ -368,7 +366,7 @@ jQuery(document).ready(function($) {
             $(this).replaceWith($(shuffled[i]));
         });
         return $(shuffled);
-    }
+    };
 
     $('.clickme').shuffle();
 
@@ -396,19 +394,13 @@ jQuery(document).ready(function($) {
                         $(this).removeClass('clickme').removeClass('selected').delay(2000).addClass('solved');
                     });
                 }
-                // else {
-                //     $('.clickme').removeClass('selected')
-                //     setTimeout(function() {
-                //         $('.clickme').stop().flip(false);
-                //     }, 600); 
-                // }
                 selected_values = [];
             } 
             if(i>2) {
                 $('.clickme').not(this).removeClass('selected').stop().flip(false);
                 i = 1;                
             } 
-            if($('.clickme').length == 0) {
+            if($('.clickme').length === 0) {
                 setTimeout(function() {
                     end_action(end_message, end_fruit);
                 }, 1500);                
@@ -441,12 +433,10 @@ jQuery(document).ready(function($) {
         }
     });
 
-    // Fade In MAIN
+    // Fade In MAIN div
     setTimeout(function() {         
         $('main').css('opacity',1);
     }, 100);
 
-    //if NP
-    // $('body').addClass('p1').removeClass('p0');
 
 });

@@ -3,6 +3,8 @@
 include 'db.php';
 
 $base_url_slug = '/';
+$body_class = 'p0';
+date_default_timezone_set('America/New_York');
 
 function decrypt_email($email_to_decrypt)
 {
@@ -128,24 +130,26 @@ if (strpos($url_string, 'page') !== false) {
         'pop-a-fruit',
         'laugh-factory',
         'memory-match',
-        'matching-numbers'
+        'matching-numbers',
+        'prize-claim-form'
     );
     // If on one of restricted pages ======================================
     foreach ($restricted_pages as $restricted_page) {
         if ($page == $restricted_page) {  
             // Look for session ID in the DB ==============================         
             $result = DB::query("SELECT * FROM flavors_games_registered_users WHERE session_id=%s", session_id());
-            if (empty($result)) { // If session ID not found ==============
-                header("Location: ?page=register");
+            if (empty($result)) { 
+                header("Location: ?page=register"); // If session ID not found redirect to registration page ==============
             } else { 
                 $times_played = $result[0]['times_played'];
-                // echo 'times_played: ' . $times_played;
-                if($restricted_page == 'spin') {
+                if($restricted_page == 'spin') { 
+                    // if on spin page and already played 10 times redirect to registration page ===============
                     if ($times_played == 10) header("Location: ?page=register");
                 } else {                    
                     if ($times_played < 11) {
-                        
+
                     } else {
+                        // if on any other restricted page and already played 10 times redirect to registration page ===============
                         header("Location: ?page=register");
                     }
                 }                    
@@ -159,8 +163,72 @@ if (empty($_GET)) {
     header("Location: ?page=register");
     exit;
 }
-// IF query string exists in the URL ===========================
-else {
+
+/********************************************/
+/*************** PRIZE HANDLING *************/
+/********************************************/
+if (strpos($url_string, 'page') !== false) {
+
+    $page = $_GET['page'];
     
+    if ($page == 'spin' OR $page == 'prize-claim-form') {
+        $current_date = date("m-d-Y");
+        $current_time = time();
+        $prize_availability = true;
+        $result_2 = DB::query("SELECT * FROM flavors_games_awards WHERE prize_date=%s", $current_date);
+        $already_won = $result_2[0]['already_won'];
+        $prize_time = strtotime($result_2[0]['prize_time']);
+        $prize_id = $result_2[0]['id'];
+        $uemail = $result[0]['email'];
+    }
+    // PRIZE HANDLING on the Spin page
+    if ($page == 'spin') {
+        /**************************************************/
+        /**** DETERMINE IF PRIZE AVAILABLE FOR THE DAY ****/
+        /**************************************************/
+        // If no prize exists in DB or prize already won
+        if(empty($result_2) || $already_won > 0) {
+            $prize_availability = false;        
+        }
+        // if prize exists in DB and not previously won today
+        else {
+            /*******************************************/
+            /**** DETERMINE IF IT IS TIME FOR PRIZE ****/
+            /*******************************************/
+            // If current time is after the prize time =========
+            if ($current_time > $prize_time) {
+
+                $result_3 = DB::query("SELECT email FROM flavors_games_winners WHERE email=%s", $uemail);
+                if (!empty($result_3)) $prize_availability = true; 
+                else $prize_availability = false;              
+            // If current time is before the prize time ========
+            } else {
+                // ==========
+                $prize_availability = false;
+            }
+        }
+
+        if (!$prize_availability) {
+            $body_class = "p0";
+        }
+        if ($prize_availability) {
+            // mark prize as won ===========
+            DB::update('flavors_games_awards', array('already_won' => 1, 'won_by' => $uemail), "prize_date=%s", $current_date);
+            $body_class = "p1";
+        } 
+    }
+    // PRIZE HANDLING on the Prize Claim page
+    if ($page == 'prize-claim-form') {
+        if(!empty($result_2)) {
+            if ($uemail == $result_2[0]['won_by']) {
+            }
+            else {
+                header("Location: ?page=spin");
+            }
+            
+        } else {
+            header("Location: ?page=spin");
+            exit;
+        }
+    }    
 }
-// echo '<br>' . session_id();

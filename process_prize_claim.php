@@ -68,5 +68,17 @@ else {
 	$data['success'] = true;
 	$data['message'] = 'it works';
 
+	DB::insert('flavors_games_winners', array(
+	  'first_name' => $_POST['last_name'],
+	  'last_name' => $_POST['last_name'],
+	  'email' => $_POST['email'],
+	  'address_1' => $_POST['address_1'],
+	  'address_2' => $_POST['address_2'],
+	  'city' => $_POST['city'],
+	  'state' => $_POST['state'],
+	  'zip' => $_POST['zip'],
+	  'phone' => $_POST['phone']	  
+	));
+
 }
 echo json_encode($data);
