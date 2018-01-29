@@ -6,6 +6,7 @@ $data = array();
 
 $email = $_POST['email'];
 $recaptcha = $_POST['g-recaptcha-response'];
+$session_id = $_POST['sid'];
 // $age = $_POST['age'];
 
 // Random string generator
@@ -29,6 +30,9 @@ if(empty($_POST['age'])) {
 if(empty($recaptcha)) {
 	$errors['recaptcha'] = 'empty_recaptcha';
 }
+if(empty($session_id)) {
+	$errors['session_id'] = '';
+}
 // if errors exist ======================
 if(!empty($errors)) {
 	$data['errors'] = $errors;
@@ -37,7 +41,7 @@ if(!empty($errors)) {
 // if no errors exist ===================
 else {
 
-	// VALIDATE CAPTCHA ================
+	// VALIDATE CAPTCHA =================
     $secret         = '6LelSDQUAAAAAOJfN7q0Xnnyjtd92iya7B8wLDjI';
     //get verify response data
     $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secret . '&response=' . $recaptcha);
@@ -47,16 +51,15 @@ else {
         $data['success'] = true;
 		$data['message'] = 	'success';
 		$data['safety_string'] = $safety_string;
-		$data['email'] = $email;
 		// Insert into database
 		DB::insert('flavors_games_registered_users', array(
 		  'email' => $email,
-		  'safety_string' => $safety_string
+		  'safety_string' => $safety_string,
+		  'session_id' => $session_id
 		));
 	}
 	else { // If recpatcha response not verified
 		$data['message'] = 'robot_verification_failed';
 	}
-
 }
 echo json_encode($data);
