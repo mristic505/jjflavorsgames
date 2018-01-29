@@ -42,7 +42,7 @@
 
 	<p><strong>13.	WINNERS LIST: </strong>For a list of winners, send a self-addressed, stamped envelope by April 30, 2018 to: Juicy Juice Flavor Discovery Game–WL, P.O. Box 7430, Wilton CT 06897-7430</p>
 
-	<p><strong>14.	PRIVACY: </strong>By playing the Game, each participant agrees to Sponsor’s use of participant’s personal information as described in the Sponsor’s Privacy Policy, located at http://juicyjuice.com/privacy </p>
+	<p><strong>14.	PRIVACY: </strong>By playing the Game, each participant agrees to Sponsor’s use of participant’s personal information as described in the Sponsor’s Privacy Policy, located at <a target="_blank" href="http://juicyjuice.com/privacy">http://juicyjuice.com/privacy </a></p>
 
 	<p><strong>15.	SPONSOR: </strong>Harvest Hill Beverage Company, 1 High Ridge Park, Stamford, CT, 06905. </p>
 
