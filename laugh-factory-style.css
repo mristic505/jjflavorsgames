@@ -119,8 +119,9 @@ button {
 
 #slide3-BtnGroup {
     position: relative;
-    top: 191px;
-    font-size: 20px;
+    top: 191px;    
+    font-family: 'CabritoNorExB';   
+    font-size: 18px;
 }
 
 
