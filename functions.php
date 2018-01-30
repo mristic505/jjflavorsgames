@@ -179,6 +179,7 @@ if (strpos($url_string, 'page') !== false) {
         $already_won = $result_2[0]['already_won'];
         $prize_time = strtotime($result_2[0]['prize_time']);
         $prize_id = $result_2[0]['id'];
+        // print_r($result_2);
         $uemail = $result[0]['email'];
     }
     // PRIZE HANDLING on the Spin page
