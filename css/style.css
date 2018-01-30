@@ -1754,6 +1754,10 @@ main {
     .prc_holder .h1_title {
         margin-bottom: 8px;
     }
+    #register input[type="submit"] {
+        font-size: 10px;
+        padding: 7px 25px;
+    }
 }
 @media (max-width: 475px) and (-ms-high-contrast:none) {
      .mn_bottles { 

@@ -199,8 +199,9 @@ if (strpos($url_string, 'page') !== false) {
             if ($current_time > $prize_time) {
 
                 $result_3 = DB::query("SELECT email FROM flavors_games_winners WHERE email=%s", $uemail);
-                if (!empty($result_3)) $prize_availability = true; 
-                else $prize_availability = false;              
+                if (empty($result_3)) $prize_availability = true; 
+                else $prize_availability = false;  
+                // $prize_availability = true;             
             // If current time is before the prize time ========
             } else {
                 // ==========
@@ -221,11 +222,8 @@ if (strpos($url_string, 'page') !== false) {
     if ($page == 'prize-claim-form') {
         if(!empty($result_2)) {
             if ($uemail == $result_2[0]['won_by']) {
-            }
-            else {
                 header("Location: ?page=spin");
-            }
-            
+            }            
         } else {
             header("Location: ?page=spin");
             exit;

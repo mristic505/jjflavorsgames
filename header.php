@@ -42,7 +42,7 @@
 			      <nav class="nav">
 					<div>
 						<ul>
-							<li><a href="<?php echo strtok($_SERVER["REQUEST_URI"],'?'); ?>">HOME</a></li>
+							<li><a href="<?php echo strtok($_SERVER["REQUEST_URI"],'?').'?page=spin'; ?>">HOME</a></li>
 							<li><a href="?page=prizes">PRIZES</a></li>
 							<li><a href="?page=official-rules">RULES</a></li>
 							<li><a href="?page=faq">FAQS</a></li>
