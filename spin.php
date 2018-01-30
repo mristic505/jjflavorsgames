@@ -18,12 +18,18 @@
 			<div class="intro_lead">Enjoy flavor-filled fun with games, puzzles and activities your kids will love.</div>
 			<div class="intro_lead">Plus, you could win a juicy prize!</div>
 			<button  id="spin_btn_1" class="spin"><span style="font-size: 50%;">CLICK TO</span><br>SPIN</button>
+			<?php if (!$prize_availability) : ?>
+				<div class="parn">Today’s prize has already been awarded. You can still enjoy playing Flavor Discovery games now and come back tomorrow for a chance to win.</div>
+			<?php endif; ?>
 			<div class="intro_lead_small"><a target="_blank" style="color: #1a5632;" href="http://juicyjuice.com/products/juicy-juice-fruit-juice">Explore more about our 16 fun flavors here <span style="font-size: 12px;" class="glyphicon glyphicon-play" aria-hidden="true"></span></a></div>
 		</div>
 	</div>
 	<?php include('wheel.php'); ?>
 	<div class="mobile">
 		<button  id="spin_btn_1" class="spin"><span style="font-size: 50%;">CLICK TO</span><br>SPIN</button>
+		<?php if (!$prize_availability) : ?>
+				<div class="parn">Today’s prize has already been awarded. You can still enjoy playing Flavor Discovery games now and come back tomorrow for a chance to win.</div>
+		<?php endif; ?>
 		<h2 class="heading">Take a Spin with Your Kids</h2>		
 		<div class="intro_lead">Enjoy flavor-filled fun with games, puzzles and activities your kids will love.<br>PLUS, you could win a juicy prize!</div>		
 		<div class="intro_lead_small"><a target="_blank" style="color: #1a5632;" href="http://juicyjuice.com/products/juicy-juice-fruit-juice">Explore more about our 16 fun flavors here <span style="font-size: 12px;" class="glyphicon glyphicon-play" aria-hidden="true"></span></a></div>

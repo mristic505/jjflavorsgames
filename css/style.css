@@ -527,6 +527,14 @@ label[for="age"] {
     height: auto;
 
 }
+.parn {
+    font-size: 10px;
+    line-height: 14px;
+    color: #1a5632;
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;    
+    font-weight: 600;
+}
 .help-block {
     font-family: "HelveticaNeueMed";
 }
@@ -1354,6 +1362,7 @@ main {
     line-height: 18px;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 15px;
+    font-weight: 600;
 }
 .prc_holder {
     display: inline-block;
