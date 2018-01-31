@@ -175,11 +175,11 @@ if (strpos($url_string, 'page') !== false) {
         $current_date = date("m-d-Y");
         $current_time = time();
         $prize_availability = true;
+        $daily_prize_availability = 'A';
         $result_2 = DB::query("SELECT * FROM flavors_games_awards WHERE prize_date=%s", $current_date);
         $already_won = $result_2[0]['already_won'];
         $prize_time = strtotime($result_2[0]['prize_time']);
         $prize_id = $result_2[0]['id'];
-        // print_r($result_2);
         $uemail = $result[0]['email'];
     }
     // PRIZE HANDLING on the Spin page
@@ -189,7 +189,8 @@ if (strpos($url_string, 'page') !== false) {
         /**************************************************/
         // If no prize exists in DB or prize already won
         if(empty($result_2) || $already_won > 0) {
-            $prize_availability = false;        
+            $prize_availability = false;  
+            if($already_won > 0) $daily_prize_availability = 'NA';                
         }
         // if prize exists in DB and not previously won today
         else {
@@ -198,23 +199,25 @@ if (strpos($url_string, 'page') !== false) {
             /*******************************************/
             // If current time is after the prize time =========
             if ($current_time > $prize_time) {
-
+                // Check if the same person won in the past ======
                 $result_3 = DB::query("SELECT email FROM flavors_games_winners WHERE email=%s", $uemail);
+                // If person already won in the past, make prize not available =======
                 if (empty($result_3)) $prize_availability = true; 
+                // If person has never won, make the prize available =======
                 else $prize_availability = false;  
                 // $prize_availability = true;             
             // If current time is before the prize time ========
             } else {
                 // ==========
-                $prize_availability = false;
-            }
+                $prize_availability = false;                                               
+            }            
         }
 
         if (!$prize_availability) {
             $body_class = "p0";
         }
         if ($prize_availability) {
-            // mark prize as won ===========
+            // mark prize as won in DB ===========
             DB::update('flavors_games_awards', array('already_won' => 1, 'won_by' => $uemail), "prize_date=%s", $current_date);
             $body_class = "p1";
         } 
@@ -222,9 +225,10 @@ if (strpos($url_string, 'page') !== false) {
     // PRIZE HANDLING on the Prize Claim page
     if ($page == 'prize-claim-form') {
         if(!empty($result_2)) {
-            if ($uemail == $result_2[0]['won_by']) {
-                header("Location: ?page=spin");
-            }            
+            // Check if the same person won in the past ======
+            $result_3 = DB::query("SELECT email FROM flavors_games_winners WHERE email=%s", $uemail);
+            // If person already won in the past, redirect =======  
+            if (!empty($result_3)) header("Location: ?page=spin");          
         } else {
             header("Location: ?page=spin");
             exit;
