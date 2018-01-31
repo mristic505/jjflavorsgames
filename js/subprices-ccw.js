@@ -412,6 +412,7 @@ jQuery(document).ready(function($) {
 
     // UNCOMMENT THIS TO FORCE END STATE
     // end_action(end_message, end_fruit);
+    // test
 
     $('.start-game-button').click(function(){
         $('.completed_holder').fadeOut(function(){
