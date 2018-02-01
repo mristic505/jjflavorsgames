@@ -387,7 +387,7 @@ jQuery(document).ready(function($) {
             $(this)
                 .stop()
                 .flip(true)
-                .addClass('selected');                 
+                .addClass('selected flipped');                 
             selected_values.push($(this).attr('data-value'));
             console.log(selected_values);
             if(i==2) {
@@ -396,10 +396,19 @@ jQuery(document).ready(function($) {
                         $(this).removeClass('clickme').removeClass('selected').delay(2000).addClass('solved');
                     });
                 }
+                if (selected_values[1] != selected_values[0]) {
+                    $('.selected').each(function() {  
+                        $(this).removeClass('selected');                      
+                        setTimeout(function() {
+                            $('.flipped').each(function(){$(this).removeClass('flipped').stop().flip(false)}); 
+                        }, 1000);  
+                        
+                    });
+                }
                 selected_values = [];
             } 
             if(i>2) {
-                $('.clickme').not(this).removeClass('selected').stop().flip(false);
+                // $('.clickme').not(this).removeClass('selected').stop().flip(false);
                 i = 1;                
             } 
             if($('.clickme').length === 0) {
