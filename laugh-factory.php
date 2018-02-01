@@ -33,7 +33,7 @@
     <div id="slide3-BtnGroup">
       <button id="jokesAgainBtn" onclick="plusSlides(-1)">SEE JOKES AGAIN<img class="rightArrow" src="img/rightArrow.png"></button>
       <button id="spinBtn" onclick="location.href='?page=spin'; ">SPIN<img class="rightArrow" src="img/rightArrow.png"></button>
-      <button id="getCoupBtn" onclick="location.href='?page=coupon';">GET COUPON</button>
+      <button id="getCoupBtn" onclick=" window.open('?page=coupon', '_blank')">GET COUPON</button>
     </div>  
   </div>
   
