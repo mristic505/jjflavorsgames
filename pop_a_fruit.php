@@ -108,7 +108,7 @@
                 <div class="end_ctas">
                     <a class="play_again" href="">PLAY AGAIN <span class="glyphicon glyphicon-play" aria-hidden="true"></span></a>
                     <a class="spin_again" href="?page=spin">SPIN <span class="glyphicon glyphicon-play" aria-hidden="true"></span></a><br>
-                    <a class="get_coupon_btn" href="?page=coupon">GET COUPON</a></div>
+                    <a class="get_coupon_btn" target="_blank" href="?page=coupon">GET COUPON</a></div>
             </div>
                 
 
