@@ -370,7 +370,7 @@ jQuery(document).ready(function($) {
         return $(shuffled);
     };
 
-    $('.clickme').shuffle();
+    // $('.clickme').shuffle();
 
     $(".clickme").flip({
         axis: 'x',
@@ -383,39 +383,39 @@ jQuery(document).ready(function($) {
 
         // If not clicked on the same card
         if (!$(this).hasClass('selected')) {
+            var numItems = $('.selected').length;            
             i++;
-            $(this)
-                .stop()
-                .flip(true)
-                .addClass('selected flipped');                 
-            selected_values.push($(this).attr('data-value'));
-            console.log(selected_values);
-            if(i==2) {
-                if (selected_values[1] == selected_values[0]) {
-                    $('.selected').each(function() {
-                        $(this).removeClass('clickme').removeClass('selected').delay(2000).addClass('solved');
-                    });
+            if(i < 3) {
+                $(this)
+                    .stop()
+                    .flip(true)
+                    .addClass('selected');                 
+                selected_values.push($(this).attr('data-value'));
+                if(i == 2) {                    
+                    setTimeout(function() {
+                        if (selected_values[1] != selected_values[0]) {
+                            $('.selected').each(function() {                        
+                                $(this).removeClass('selected').stop().flip(false);
+                                i = 0; 
+                                selected_values = [];
+                            });    
+                        }
+                        if (selected_values[1] == selected_values[0]) {
+                            $('.selected').each(function() { 
+                                $(this).removeClass('clickme').removeClass('selected').addClass('solved');
+                                i = 0;
+                                selected_values = [];
+                            }); 
+                            if($('.clickme').length === 2) {
+                                setTimeout(function() {
+                                    end_action(end_message, end_fruit);
+                                }, 3000);                
+                            }
+                        }                        
+                    }, 700); 
+
                 }
-                if (selected_values[1] != selected_values[0]) {
-                    $('.selected').each(function() {  
-                        $(this).removeClass('selected');                      
-                        setTimeout(function() {
-                            $('.flipped').each(function(){$(this).removeClass('flipped').stop().flip(false)}); 
-                        }, 1000);  
-                        
-                    });
-                }
-                selected_values = [];
-            } 
-            if(i>2) {
-                // $('.clickme').not(this).removeClass('selected').stop().flip(false);
-                i = 1;                
-            } 
-            if($('.clickme').length === 0) {
-                setTimeout(function() {
-                    end_action(end_message, end_fruit);
-                }, 1500);                
-            }
+            }                      
         } 
     });
 
