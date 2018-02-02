@@ -1,9 +1,7 @@
+<?php ?>
 <!DOCTYPE html>
 <html>
-<head>
-<?php
-
-?>	
+<head>	
 <title><?php echo $page_title; ?></title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,6 +16,22 @@
 <script src="js/jquery.fortune.min.js"></script>
 <script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/subprices-ccw.js?ver=1.0.4"></script>
+<!--
+Start of DoubleClick Floodlight Tag: Please do not remove
+Activity name of this tag: Flavor Discover Game
+URL of the webpage where the tag is expected to be placed: http://www.juicyjuice.com/flavordiscovery
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+Creation Date: 01/31/2018
+-->
+<script type="text/javascript">
+var axel = Math.random() + "";
+var a = axel * 10000000000000;
+document.write('<iframe src="https://8096545.fls.doubleclick.net/activityi;src=8096545;type=flavo0;cat=flavo0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+</script>
+<noscript>
+<iframe src="https://8096545.fls.doubleclick.net/activityi;src=8096545;type=flavo0;cat=flavo0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+</noscript>
+<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body class="page-<?php echo $page.' '.$body_class; ?>">

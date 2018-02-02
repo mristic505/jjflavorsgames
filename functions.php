@@ -5,6 +5,8 @@ include 'db.php';
 $base_url_slug = '/';
 $body_class = 'p0';
 date_default_timezone_set('America/New_York');
+$current_date = date("m-d-Y");
+$current_time = time();
 
 function decrypt_email($email_to_decrypt)
 {
@@ -171,9 +173,7 @@ if (strpos($url_string, 'page') !== false) {
 
     $page = $_GET['page'];
     
-    if ($page == 'spin' OR $page == 'prize-claim-form') {
-        $current_date = date("m-d-Y");
-        $current_time = time();
+    if ($page == 'spin' OR $page == 'prize-claim-form') {        
         $prize_availability = true;
         $daily_prize_availability = 'A';
         $result_2 = DB::query("SELECT * FROM flavors_games_awards WHERE prize_date=%s", $current_date);
