@@ -1292,8 +1292,14 @@ main {
     max-width: 207px;
     margin: 0 auto;
 }
+
 .page-official-rules {
-    background-size: auto 5000px;   
+    background-size: auto 10000px;   
+}
+@media screen and (min-width: 600px) {
+    .page-official-rules {
+        background-size: auto 5000px;   
+    }
 }
 /*************** End of Official Rules  *******************/
 
@@ -1624,6 +1630,9 @@ main {
     .mathching_numbers_board .you_did_it  {
         max-width: 130px;
     }
+    .jj_products {
+        max-width: 200px;
+     }
 }
 @media (max-width: 600px) and (-ms-high-contrast:none) {
      .mn_bottles { 
@@ -1664,6 +1673,8 @@ main {
         top: auto;
         bottom: 0;
      }
+
+
      
 }
 @media screen and (max-width: 470px) {
