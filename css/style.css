@@ -1718,10 +1718,10 @@ main {
         top: -9px;
     }
     .completed_holder {
-        top: 17px;
-        bottom: 17px;
-        left: 17px;
-        right: 17px;
+        top: 15px;
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
     }
     .ctext {
         font-size: 10px;

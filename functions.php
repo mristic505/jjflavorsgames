@@ -224,14 +224,17 @@ if (strpos($url_string, 'page') !== false) {
     }
     // PRIZE HANDLING on the Prize Claim page
     if ($page == 'prize-claim-form') {
-        if(!empty($result_2)) {
-            // Check if the same person won in the past ======
-            $result_3 = DB::query("SELECT email FROM flavors_games_winners WHERE email=%s", $uemail);
-            // If person already won in the past, redirect =======  
-            if (!empty($result_3)) header("Location: ?page=spin");          
-        } else {
+        // if prize won today by the same user
+        if($uemail == $result_2[0]['won_by'] && !empty($result_2)) {
+            // check if user already filled out prize claim form
+            $result_4 = DB::query("SELECT email FROM flavors_games_winners WHERE email=%s", $uemail);
+            // If user is already filled out prize claim form redirect to spin page
+            if (!empty($result_4)) {
+                header("Location: ?page=spin");
+            }            
+        }
+        else {
             header("Location: ?page=spin");
-            exit;
         }
     }    
 }

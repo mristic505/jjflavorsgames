@@ -23,11 +23,11 @@
 		<div class="form-group-holder email-group-holder clearfix">
 			<div id="email-group" class="form-group col-sm-6">
 				<label>Email Address</label><br>
-				<input value="<?php echo $uemail; ?>" readonly type="email" class="form-control-noboot" name="email" placeholder="">
+				<input value="<?php echo $result[0]['email']; ?>" readonly type="email" class="form-control-noboot" name="email" placeholder="">
 			</div>
 			<div id="email-conf-group" class="form-group col-sm-6">
 				<label>Confirm Email Address</label><br>
-				<input value="<?php echo $uemail; ?>" readonly type="email" class="form-control-noboot" name="email_conf" placeholder="">
+				<input value="<?php echo $result[0]['email']; ?>" readonly type="email" class="form-control-noboot" name="email_conf" placeholder="">
 			</div>
 		</div>
 		<div class="form-group-holder clearfix">
