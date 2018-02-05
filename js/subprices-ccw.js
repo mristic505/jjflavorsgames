@@ -126,21 +126,21 @@ jQuery(document).ready(function($) {
 
     var clickHandler = function() {
         $('.spin').off('click');
-        $('.spinner span').hide();
-        // Update number of plays
-        $.ajax({
-            type: 'POST',
-            url: 'process_nop.php',
-            data: {
-                session_id : $('#session_id_footer').val()
-            },
-            dataType: 'json',
-            encode: true
-        }).done(function(data) {
-            console.log(data);
-        });
+        $('.spinner span').hide();           
         //var price = Math.floor((Math.random() * 8));
         $r.spin(land_on).done(function(price) {
+            // Update number of plays
+            $.ajax({
+                type: 'POST',
+                url: 'process_nop.php',
+                data: {
+                    session_id : $('#session_id_footer').val()
+                },
+                dataType: 'json',
+                encode: true
+            }).done(function(data) {
+                // console.log(data);
+            });
             if (price.name == "Grand Prize") {
                    window.location.href = '?page=spin&play=pcf';                             
             } else {
@@ -198,7 +198,7 @@ jQuery(document).ready(function($) {
             dataType: 'json',
             encode: true
         }).done(function(data) {
-            console.log(data);
+            // console.log(data);
 
             // if errors exist
             if (!data.success) {

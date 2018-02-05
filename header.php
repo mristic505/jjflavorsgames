@@ -33,6 +33,19 @@ document.write('<iframe src="https://8096545.fls.doubleclick.net/activityi;src=8
 </noscript>
 <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58591031-1', 'auto', {'allowLinker': true});
+  ga('require', 'linker');
+  ga('linker:autoLink', ['juicyjuicesplashers.com'] );
+  ga('send', 'pageview');
+
+</script>
+
 </head>
 <body class="page-<?php echo $page.' '.$body_class; ?>">
 <header>
