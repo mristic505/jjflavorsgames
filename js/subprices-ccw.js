@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
                 name: 'Fruit <br>Punch',
                 bg: '#df2626',
                 slug: 'fruit_punch',
-                url: '?page=matching-numbers&play=fruit-punch'
+                url: '?page=fruity-match&play=fruit-punch'
             },
             {
                 name: 'Strawberry <br>Watermelon',
@@ -37,13 +37,13 @@ jQuery(document).ready(function($) {
                 name: 'Cranberry <br>Apple',
                 bg: '#892433',
                 slug: 'cran_apple',
-                url: '?page=jigsaw-puzzle&play=cranberry'
+                url: '?page=juicy-jigsaw&play=cranberry'
             },
             {
                 name: 'Passion <br>Dragonfruit',
                 bg: '#9c2164',
                 slug: 'pdrfr',
-                url: '?page=matching-numbers&play=passion-dragonfruit'
+                url: '?page=fruity-match&play=passion-dragonfruit'
             },
             {
                 name: 'Grape',
@@ -67,13 +67,13 @@ jQuery(document).ready(function($) {
                 name: 'Tropical',
                 bg: '#138995',
                 slug: 'tropical',
-                url: '?page=jigsaw-puzzle&play=tropical'
+                url: '?page=juicy-jigsaw&play=tropical'
             },
             {
                 name: 'Apple',
                 bg: '#65a521',
                 slug: 'apple',
-                url: '?page=laugh-factory&play=apple'
+                url: '?page=juicy-jokes&play=apple'
             },
             {
                 name: 'White <br>Grape',
@@ -85,19 +85,19 @@ jQuery(document).ready(function($) {
                 name: 'Strawberry <br>Banana',
                 bg: '#fec53d',
                 slug: 'str_ban',
-                url: '?page=laugh-factory&play=strawberryBanana'
+                url: '?page=juicy-jokes&play=strawberryBanana'
             },
             {
                 name: 'Orange <br>Tangerine',
                 bg: '#f18a23',
                 slug: 'or_tang',
-                url: '?page=laugh-factory&play=orange'
+                url: '?page=juicy-jokes&play=orange'
             },
             {
                 name: 'Peach <br>Apple',
                 bg: '#f27e5a',
                 slug: 'p_apple',
-                url: '?page=jigsaw-puzzle&play=peach'
+                url: '?page=juicy-jigsaw&play=peach'
             },
             {
                 name: 'Mango',
@@ -117,7 +117,8 @@ jQuery(document).ready(function($) {
 
     if ($('body').hasClass('p0')){
         prizes = [0, 1, 2, 3, 4, 5, 6 ,7, 8, 10, 11, 12, 13, 14, 15, 16];
-        var land_on = prizes[Math.floor(Math.random() * prizes.length)];
+        // var land_on = prizes[Math.floor(Math.random() * prizes.length)];
+        var land_on = 13;
     }
     if ($('body').hasClass('p1')){
         var land_on = 9;
@@ -421,7 +422,6 @@ jQuery(document).ready(function($) {
 
     // UNCOMMENT THIS TO FORCE END STATE
     // end_action(end_message, end_fruit);
-    // test
 
     $('.start-game-button').click(function(){
         $('.completed_holder').fadeOut(function(){

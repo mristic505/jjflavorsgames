@@ -50,19 +50,19 @@ if (strpos($url_string, 'page') !== false) {
         $inlcude    = 'hidden_pictures.php';
     }
     if ($page == 'memory-match') {
-        $page_title = 'Fruity Match';
+        $page_title = 'Memory Match';
         $inlcude    = 'memory-match.php';
     }
     if ($page == 'pop-a-fruit') {
         $page_title = 'Pop a Fruit';
         $inlcude    = 'pop_a_fruit.php';
     }
-    if ($page == 'matching-numbers') {
-        $page_title = 'Matching Numbers';
+    if ($page == 'fruity-match') {
+        $page_title = 'Fruity Match';
         $inlcude    = 'matching_numbers.php';
     }
-    if ($page == 'laugh-factory') {
-        $page_title = 'Laugh Factory';
+    if ($page == 'juicy-jokes') {
+        $page_title = 'Juicy Jokes';
         $inlcude    = 'laugh-factory.php';
     }
     if ($page == 'prize-claim-form') {
@@ -85,8 +85,8 @@ if (strpos($url_string, 'page') !== false) {
         $page_title = 'Prizes';
         $inlcude    = 'prizes.php';
     }
-    if ($page == 'jigsaw-puzzle') {
-        $page_title = 'Jigsaw Puzzle';
+    if ($page == 'juicy-jigsaw') {
+        $page_title = 'Juicy Jigsaw';
         $inlcude    = 'jigsaw_puzzle.php';
     }
     if ($page == 'register') {
@@ -128,7 +128,7 @@ if (strpos($url_string, 'page') !== false) {
     $restricted_pages = array(
         'spin',
         'hidden-pictures',
-        'jigsaw-puzzle',
+        'juicy-jigsaw',
         'pop-a-fruit',
         'laugh-factory',
         'memory-match',
