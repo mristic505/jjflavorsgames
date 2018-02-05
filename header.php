@@ -33,6 +33,18 @@ document.write('<iframe src="https://8096545.fls.doubleclick.net/activityi;src=8
 </noscript>
 <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<!-- Global site tag (gtag.js) - Google AdWords: 837587168 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-837587168"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-837587168');
+</script>
+<!-- Event snippet for Juicy Juice Flavor Discovery conversion page -->
+<script>
+  gtag('event', 'conversion', {'send_to': 'AW-837587168/OxZaCKTblHwQ4KGyjwM'});
+</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -45,7 +57,6 @@ document.write('<iframe src="https://8096545.fls.doubleclick.net/activityi;src=8
   ga('send', 'pageview');
 
 </script>
-
 </head>
 <body class="page-<?php echo $page.' '.$body_class; ?>">
 <header>

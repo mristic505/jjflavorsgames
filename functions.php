@@ -224,7 +224,7 @@ if (strpos($url_string, 'page') !== false) {
     }
     // PRIZE HANDLING on the Prize Claim page
     if ($page == 'prize-claim-form') {
-        // if prize won today by the same user
+        // if prize won today by the current user
         if($uemail == $result_2[0]['won_by'] && !empty($result_2)) {
             // check if user already filled out prize claim form
             $result_4 = DB::query("SELECT email FROM flavors_games_winners WHERE email=%s", $uemail);
