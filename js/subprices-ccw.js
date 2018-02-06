@@ -117,8 +117,8 @@ jQuery(document).ready(function($) {
 
     if ($('body').hasClass('p0')){
         prizes = [0, 1, 2, 3, 4, 5, 6 ,7, 8, 10, 11, 12, 13, 14, 15, 16];
-        // var land_on = prizes[Math.floor(Math.random() * prizes.length)];
-        var land_on = 13;
+        var land_on = prizes[Math.floor(Math.random() * prizes.length)];
+        // var land_on = 13;
     }
     if ($('body').hasClass('p1')){
         var land_on = 9;

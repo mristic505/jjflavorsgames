@@ -3,7 +3,7 @@
 include 'db.php';
 
 $base_url_slug = '/';
-$body_class = 'p0';
+$body_class = 'p0 wheel_gray';
 date_default_timezone_set('America/New_York');
 $current_date = date("m-d-Y");
 $current_time = time();
@@ -184,6 +184,10 @@ if (strpos($url_string, 'page') !== false) {
     }
     // PRIZE HANDLING on the Spin page
     if ($page == 'spin') {
+
+        // Check if the same person won in the past ======
+        $result_3 = DB::query("SELECT email FROM flavors_games_winners WHERE email=%s", $uemail);
+
         /**************************************************/
         /**** DETERMINE IF PRIZE AVAILABLE FOR THE DAY ****/
         /**************************************************/
@@ -198,28 +202,38 @@ if (strpos($url_string, 'page') !== false) {
             /**** DETERMINE IF IT IS TIME FOR PRIZE ****/
             /*******************************************/
             // If current time is after the prize time =========
-            if ($current_time > $prize_time) {
-                // Check if the same person won in the past ======
-                $result_3 = DB::query("SELECT email FROM flavors_games_winners WHERE email=%s", $uemail);
-                // If person already won in the past, make prize not available =======
-                if (empty($result_3)) $prize_availability = true; 
+            if ($current_time > $prize_time) {                
                 // If person has never won, make the prize available =======
-                else $prize_availability = false;  
-                // $prize_availability = true;             
+                if (empty($result_3)) {
+                    $prize_availability = true;   
+                    $body_class = "p1 wheel_color";              
+                } 
+                // If person already won in the past, make prize not available =======
+                else {
+                    $prize_availability = false; 
+                    $body_class = "p0 wheel_gray";   
+                }                   
             // If current time is before the prize time ========
-            } else {
-                // ==========
-                $prize_availability = false;                                               
+            } else {                
+                $prize_availability = false;
+                $body_class = "p0";
+                // If person has never won, show the wheel in color =======
+                if (empty($result_3)) {
+                    $body_class .= " wheel_color";
+                } 
+                // If person already won in the past, gray out the wheel =======  
+                else {
+                    $body_class .= " wheel_gray";
+                }                                           
             }            
         }
 
         if (!$prize_availability) {
-            $body_class = "p0";
+            // $body_class = "p0";
         }
         if ($prize_availability) {
             // mark prize as won in DB ===========
             DB::update('flavors_games_awards', array('already_won' => 1, 'won_by' => $uemail), "prize_date=%s", $current_date);
-            $body_class = "p1";
         } 
     }
     // PRIZE HANDLING on the Prize Claim page

@@ -140,11 +140,11 @@ img {
     top: 0;        
 }
 
-.p1 .roulette {
+.wheel_color .roulette {
     background-image: url('../img/wheel-3.png');  
 }
 
-.p0 .roulette {
+.wheel_gray .roulette {
     background-image: url('../img/wheel-no-awards.png');  
 }
 
