@@ -175,7 +175,7 @@ if (strpos($url_string, 'page') !== false) {
     
     if ($page == 'spin' OR $page == 'prize-claim-form') {        
         $prize_availability = true;
-        $daily_prize_availability = 'A';
+        $show_prize_message = true;
         $result_2 = DB::query("SELECT * FROM flavors_games_awards WHERE prize_date=%s", $current_date);
         $already_won = $result_2[0]['already_won'];
         $prize_time = strtotime($result_2[0]['prize_time']);
@@ -194,7 +194,13 @@ if (strpos($url_string, 'page') !== false) {
         // If no prize exists in DB or prize already won
         if(empty($result_2) || $already_won > 0) {
             $prize_availability = false;  
-            if($already_won > 0) $daily_prize_availability = 'NA';                
+            if($already_won > 0) {
+                if (empty($result_3)) {
+                    $show_prize_message = false; 
+                } else {
+                    $show_prize_message = true;
+                }                              
+            }
         }
         // if prize exists in DB and not previously won today
         else {
@@ -212,6 +218,7 @@ if (strpos($url_string, 'page') !== false) {
                 else {
                     $prize_availability = false; 
                     $body_class = "p0 wheel_gray";   
+                    $show_prize_message = true;                     
                 }                   
             // If current time is before the prize time ========
             } else {                
@@ -224,6 +231,7 @@ if (strpos($url_string, 'page') !== false) {
                 // If person already won in the past, gray out the wheel =======  
                 else {
                     $body_class .= " wheel_gray";
+                    $show_prize_message = true;                      
                 }                                           
             }            
         }
